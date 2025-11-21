@@ -4,7 +4,7 @@ import BgCanvasHover from '../ui/BgCanvasHover'
 const BgWhiteHoverComponent = () => {
 
   return (
-    <div className='w-full h-screen bg-white flex fixed top-0 left-0 overflow-hidden'
+    <div className='w-full h-screen bg-white flex fixed top-0 left-0 overflow-hidden z-80'
     >
 
        {/* ✅ Background-Image */}
