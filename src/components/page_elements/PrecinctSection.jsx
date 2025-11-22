@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import InnerImgContant from "../ui/InnerImgContant";
+import TheAddressComponent from "../ui/TheAddressComponent";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -16,20 +18,21 @@ const PrecinctSection = () => {
     const WSA = gsap.timeline({
       scrollTrigger: {
         trigger: ".WDFS",
-        start: "top -10%",
-        end: "bottom bottom",
+        start: "top top",
+        end: "+=100% bottom",
         scrub: true,
-        markers: true,
+        pin:true,
+        // markers: true,
       },
     });
     WSA.fromTo(
       ".svg",
       {
         maskSize: "30%",
-        maskPosition: "20% 70%",
+        maskPosition: "20% 20%",
       },
       {
-        maskSize: "300%",
+        maskSize: "600%",
         maskPosition: "50% 50%",
         ease: "none",
       },
@@ -45,8 +48,8 @@ const PrecinctSection = () => {
 
   return (
     // Wraper-Div-For_Scrolling
-    <div className="WDFS w-full h-[300dvh] z-90 relative bg-[#F5F3EA] ">
-      <div className="w-full h-screen sticky top-0 left-0  overflow-hidden ">
+    <div className=" w-full h-fit z-90 relative bg-[#F5F3EA] ">
+      <div className="WDFS w-full h-fit  ">
 
 
        {/*  TOP-Mention-Contant -Auto Hide */}
@@ -92,11 +95,22 @@ const PrecinctSection = () => {
 
        {/* MASK SVG */}
         <div className="svg">
-          
           {/* Inside-BG-Img */}
-          <div className="img">
+          <div className="img h-fit">
             {/* Image-Top Content */}
-           
+
+            <div className="w-full min-h-screen  px-[40px]">
+
+              {/* Tag-Title*/}
+              <TheAddressComponent />
+
+              {/* Contant-Container */}
+              <div className="w-full h-fit">
+                <InnerImgContant />
+              </div>
+            
+            </div>
+            
           </div>
         </div>
 
