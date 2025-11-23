@@ -1,27 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import ContentDisplay from "../ui/ContentDisplay";
+import SectionTitle from "../common/SectionTitle";
 
 const ModrenAra = () => {
   return (
     <>
       <div className="w-full min-h-screen bg-[#F5F3EA] z-90 pb-[50px] ">
 
-        {/* Draw SVG */}
-        <div className=" w-full h-[50px] flex select-none justify-center items-center mt-[50px]">
-            <Image
-             className=" h-full "
-             src={'/data/TitleDesign.svg'}
-             width={1000}
-             height={1000}
-             alt="SVG"
-            />
-        </div>
-
-        {/* Title */}
-        <div className="w-full h-fit flex justify-center items-center mt-[50px]">
-            <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF">Heritage Refined for the <br /> Modern Era</p>
-        </div>
+        <SectionTitle textData={'Heritage Refined for the Modern Era'} />
 
         {/* Desc */}
         <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[50px]">
