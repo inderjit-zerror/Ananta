@@ -1,13 +1,47 @@
+'use client'
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 
 const FormSection = () => {
+
+  useEffect(()=>{
+    gsap.fromTo('.BGFC',{
+      y:-200,
+    },{
+      y:200,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.BGP',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+  },[])
+
   return (
     <>
-      <div className="w-full min-h-screen z-90 relative BG_Form flex justify-center items-center text-black">
+      <div className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden">
+
+        <Image 
+         src={'/Img/Form/FormBG.jpg'}
+         className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
+         width={1000}
+         height={1000}
+         alt="FBG"
+        />
 
         {/* Inner-Container */}
-        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw]">
+        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] ">
 
           {/* Title-Section */}
           <div className="w-full h-fit flex flex-col justify-center items-center">
@@ -28,8 +62,8 @@ const FormSection = () => {
             </div>
           </div>
 
-          {/* Form Container */}
-          <form className="w-full max-w-[600px] CFF">
+          {/* Form Container max-w-[800px] */}
+          <form className="w-full max-w-[800px]   CFF">
             {/* First + Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
               <div>

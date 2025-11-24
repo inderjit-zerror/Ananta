@@ -1,10 +1,83 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const CraftedSection = () => {
+
+  useEffect(()=>{
+    gsap.fromTo('.Crafted_Img',{
+      y:-500,
+    },{
+      y:500,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.Crafted_Cont',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+
+    gsap.fromTo('.ch1',{
+      y:-100,
+    },{
+      y:100,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.ImgP1',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+    gsap.fromTo('.ch2',{
+      y:-100,
+    },{
+      y:100,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.ImgP2',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+    gsap.fromTo('.ch3',{
+      y:-100,
+    },{
+      y:100,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.ImgP3',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+  },[])
+
   return (
     <>
-      <div className="w-full min-h-screen flex flex-col Crafted_BG p-[40px] bg-[#FEF7EE] z-90">
+      <div className="Crafted_Cont w-full min-h-screen relative overflow-hidden flex flex-col  p-[40px] gap-y-32 py-[100px] bg-[#FEF7EE] z-90">
+
+        <Image 
+        className="w-full Crafted_Img h-full absolute top-0 left-0 z-[-1]"
+         src={'/Img/Crafted/CraftedBG.jpg'}
+         width={1000}
+         height={1000}
+         alt="bg"
+        />
+
         {/* Title-Text-Div */}
         <div className="w-full h-fit flex text-white justify-between items-end">
           {/* title */}
@@ -31,24 +104,24 @@ const CraftedSection = () => {
           {/* LEFT IMAGES */}
           <div className="flex gap-4 items-end">
             {/* Image 1 */}
-            <div className="w-[250px] h-[300px] md:w-[250px] md:h-[300px] overflow-hidden rounded-sm">
+            <div className="w-[250px] h-[300px] ImgP1 md:w-[250px] md:h-[300px] overflow-hidden rounded-sm">
               <Image
                 src={"/Img/Crafted/TMBG1.jpg"}
                 width={1000}
                 height={1000}
                 alt="Interior 1"
-                className="w-full h-full object-cover object-right"
+                className="w-full h-full object-cover object-right ch1"
               />
             </div>
 
             {/* Image 2 */}
-            <div className="w-[250px] h-[330px] md:w-[320px] md:h-[430px] overflow-hidden rounded-sm">
+            <div className="w-[250px] h-[330px] ImgP2 md:w-[320px] md:h-[430px] overflow-hidden rounded-sm">
               <Image
                 src="/Img/Crafted/TMBG1.jpg"
                 width={1000}
                 height={1000}
                 alt="Interior 2"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover ch2"
               />
             </div>
           </div>
@@ -130,13 +203,13 @@ const CraftedSection = () => {
           </p>
 
           {/* Right Image */}
-          <div className="w-full max-w-[350px] h-[350px] md:h-[350px] overflow-hidden rounded-sm ml-auto">
+          <div className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] overflow-hidden rounded-sm ml-auto">
             <Image
               src={'/Img/Crafted/TMBG2.jpg'}  // Replace
               alt="Interior"
               width={1000}
               height={1000}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover ch3"
             />
           </div>
 

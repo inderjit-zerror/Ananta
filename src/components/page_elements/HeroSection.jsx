@@ -11,12 +11,14 @@ const HeroSection = () => {
   
   useEffect(() => {
     gsap.to(".heroVideo", {
-      y: "-100px",
-
+      y: 400,
+      scale:1.2,
+      filter:"brightness(0)",
+      ease:"linear",
       scrollTrigger: {
         trigger: ".HeroSectionCont",
         start: "top top",
-        end: "bottom 80%",
+        end: "bottom top",
         scrub: true,
         // markers: true,
       },
@@ -25,16 +27,16 @@ const HeroSection = () => {
 
   return (
     <div className="HeroSectionCont w-full h-screen z-90 relative overflow-hidden">
-      {/* ☑️ Video Div */}
+      {/* ☑ Video Div */}
       <video
         muted
         autoPlay
         loop
-        className="heroVideo scale-[1.2] w-full h-full object-cover"
+        className="heroVideo brightness-100 w-full h-full object-cover"
         src={"/video/BgVideo1.mp4"}
       ></video>
     </div>
   );
 };
 
-export default HeroSection;
+export default HeroSection;

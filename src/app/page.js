@@ -15,13 +15,13 @@ export default function Home() {
       <div className="w-full h-fit flex flex-col relative text-black ">
 
         {/* ☑️  Bg-White-Hover-Component */}
-        {/* <BgWhiteHoverComponent/> */}
+        <BgWhiteHoverComponent/>
 
         {/* ☑️ Hero-Section */}
-        {/* <HeroSection /> */}
+        <HeroSection />
 
         {/* ☑️ Precinct-Section */}
-        {/* <PrecinctSection /> */}
+        <PrecinctSection />
 
         {/* ☑️ Legacy-Section */}
         {/* <LegacyComponent /> */}
@@ -30,16 +30,16 @@ export default function Home() {
         <ModrenAra />
 
         {/* Crafted Section */}
-        {/* <CraftedSection /> */}
+        <CraftedSection />
 
         {/* ☑️ Residence-Section */}
-        {/* <ResidenceSection /> */}
+        <ResidenceSection />
 
         {/* ☑️ Form-Section */}
-        {/* <FormSection /> */}
+        <FormSection />
 
         {/* ☑️ Footer */}
-        {/* <Footer  /> */}
+        <Footer  />
       
         
       </div>
