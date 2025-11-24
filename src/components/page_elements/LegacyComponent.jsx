@@ -49,22 +49,27 @@ const LegacyComponent = () => {
     gsap.to(item,{
         opacity:1
     })
+    gsap.to('.blurDiv',{
+      opacity:1,
+    })
   }
 
   const HoverPreAction = () => {
     gsap.to('.legacyDiv',{
         opacity:0
     })
-    gsap.to('.legacyDiv7',{
-        opacity:1
+    
+    gsap.to('.blurDiv',{
+      opacity:0,
     })
+   
   }
 
   
 
   return (
     <>
-      <div className="w-full min-h-screen bg-[#F5F3EA] z-90 relative">
+      <div className="w-full min-h-screen z-90 relative pb-[40px]">
         {/* All_Image_Div_Container */}
         <div className="w-full h-screen relative ">
           {AllImgArr.map((item, index) => {
@@ -73,7 +78,7 @@ const LegacyComponent = () => {
                 key={index}
                 className={`${
                   item.call
-                } w-full h-full legacyDiv absolute top-0 left-0 overflow-hidden z-[${
+                } w-full h-full legacyDiv absolute top-0 left-0 overflow-hidden opacity-0 z-[${
                   index + 1
                 }]`}
               >
@@ -90,7 +95,7 @@ const LegacyComponent = () => {
         </div>
 
         {/* Blur Div */}
-        <div className="w-full h-full absolute top-0 left-0 z-10 backdrop-blur-[7px] bg-white/10"></div>
+        <div className="blurDiv w-full h-full absolute top-0 left-0 z-10 backdrop-blur-[7px] bg-white/10 opacity-0"></div>
 
         {/* TOP-Intraction-Container */}
         <div className="w-full h-full absolute top-0 left-0 z-30 flex px-[40px] flex-col ">

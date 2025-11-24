@@ -5,18 +5,18 @@ import SomeInfoText from "../ui/SomeInfoText";
 
 const ResidenceSection = () => {
   return (
-    <div className="w-full min-h-screen flex relative BG_R z-90">
+    <div className="w-full min-h-screen flex relative BG_R z-90 TextBlack pointer-events-none">
       {/* ContantWraper */}
       <div className="w-full min-h-screen flex flex-col pb-[100px] ">
         {/* Title-Cont */}
-        <div className="w-full h-fit flex flex-col justify-center items-center text-white">
+        <div className="w-full h-fit flex flex-col justify-center items-center TextBlack">
           <SectionTitle
             textData={"One Floor. One Residence. Infinite Privacy."}
           />
         </div>
 
         {/* Desc-Cont */}
-        <div className="w-full h-fit flex justify-center select-none items-center CFF text-white gap-[20px] text-[1rem] leading-[1rem] mt-[50px]">
+        <div className="w-full h-fit flex justify-center select-none items-center CFF TextBlack gap-[20px] text-[1rem] leading-[1rem] mt-[50px]">
           {/* Left-Desc */}
           <div className="w-full max-w-[300px] flex text-justify">
             <p>
@@ -45,9 +45,9 @@ const ResidenceSection = () => {
         <Component3DModel />
 
         {/* Some-Residence-info */}
-        <div className="w-full h-fit flex justify-end items-end">
+        <div className="w-full h-fit flex justify-end items-end TextBlack">
           {/* Right-Container */}
-          <div className="w-full max-w-[400px] h-fit flex flex-col text-white mr-[40px]">
+          <div className="w-full max-w-[400px] h-fit flex flex-col  mr-[40px]">
             {/* Name */}
             <div className="w-full h-fit justify-start items-center mb-[30px]">
               <h1 className="text-[2rem] CFF">Key Highlights</h1>

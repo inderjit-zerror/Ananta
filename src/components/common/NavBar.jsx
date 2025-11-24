@@ -6,7 +6,7 @@ import MenuBtn from "../ui/MenuBtn";
 const NavBar = () => {
   return (
     <>
-      <div className="w-full z-95 fixed top-6 left-0 flex justify-between items-center px-[40px] text-black">
+      <div className="w-full z-95 fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite">
         {/* Menu Container */}
         <div className="w-fit h-fit flex justify-center items-center gap-[30px]">
           {/* Home */}

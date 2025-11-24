@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import LegacyComponent from "../page_elements/LegacyComponent";
 
 const InnerImgContant = () => {
   return (
     <>
       <div className="w-full h-fit flex flex-col">
         {/* Title & Desc */}
-        <div className="w-full h-fit pt-[50px] flex justify-between items-end">
+        <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px]">
           <img className="w-[50%]" src={"/data/TitleImg.svg"} alt="Title" />
 
           {/* Desc */}
@@ -19,7 +20,7 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div1-Img-Container */}
-        <div className="w-full h-fit flex items-end mt-[100px]">
+        <div className="w-full h-fit flex items-end mt-[100px] px-[40px]">
           {/* Left-Cont */}
           <div className="w-[50%] h-fit ">
             {/* Img & Text Cont */}
@@ -78,7 +79,7 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div-2-Img-Container */}
-        <div className="w-full h-screen flex justify-center items-center">
+        <div className="w-full h-screen flex justify-center items-center px-[40px]">
 
           {/* Image-Text-Cont */}
           <div className="w-[70%] h-[60%] flex">
@@ -105,6 +106,8 @@ const InnerImgContant = () => {
           </div>
           
         </div>
+
+        <LegacyComponent />
       </div>
     </>
   );

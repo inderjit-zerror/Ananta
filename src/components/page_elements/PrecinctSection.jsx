@@ -29,7 +29,7 @@ const PrecinctSection = () => {
       ".svg",
       {
         maskSize: "30%",
-        maskPosition: "20% 20%",
+        maskPosition: "20% 10%",
       },
       {
         maskSize: "600%",
@@ -50,7 +50,6 @@ const PrecinctSection = () => {
     // Wraper-Div-For_Scrolling
     <div className=" w-full h-fit z-90 relative bg-[#F5F3EA] ">
       <div className="WDFS w-full h-fit  ">
-
 
        {/*  TOP-Mention-Contant -Auto Hide */}
        <div className="w-full h-screen absolute top-0 left-0 bg-transparent">
@@ -96,10 +95,10 @@ const PrecinctSection = () => {
        {/* MASK SVG */}
         <div className="svg">
           {/* Inside-BG-Img */}
-          <div className="img h-fit">
+          <div className="img h-fit relative">
             {/* Image-Top Content */}
 
-            <div className="w-full min-h-screen  px-[40px]">
+            <div className="w-full min-h-screen z-80  ">
 
               {/* Tag-Title*/}
               <TheAddressComponent />
