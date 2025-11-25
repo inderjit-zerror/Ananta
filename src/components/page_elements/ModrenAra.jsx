@@ -2,6 +2,7 @@
 import SectionTitle from "../common/SectionTitle";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFunction'
 
 const slides = [
   {
@@ -227,10 +228,12 @@ const SliderSection = () => {
           {allSlides.map((slide, index) => (
             <div
               key={index}
-              className={`slide ${slide.color} relative shrink-0 w-[50vw] md:w-[20vw] h-[60vh] center overflow-hidden`}
+              onMouseEnter={()=>HoverImageActivate(`.modrenEraImg${index}`)} 
+              onMouseLeave={()=>HoverImageDeActivate(`.modrenEraImg${index}`)}
+              className={`slide ${slide.color} relative shrink-0 w-[50vw] md:w-[20vw] h-[60vh] cursor-pointer center overflow-hidden`}
             >
               <img
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover modrenEraImg${index}`}
                 src={slide.image}
                 alt=""
               />

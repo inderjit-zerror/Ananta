@@ -1,4 +1,5 @@
 import Footer from "@/components/common/Footer";
+import AmenitiesSection from "@/components/page_elements/AmenitiesSection";
 import BgWhiteHoverComponent from "@/components/page_elements/BgWhiteHoverComponent";
 import CraftedSection from "@/components/page_elements/CraftedSection";
 import FormSection from "@/components/page_elements/FormSection";
@@ -24,7 +25,6 @@ export default function Home() {
         <PrecinctSection />
 
         {/* ☑️ Legacy-Section */}
-        {/* <LegacyComponent /> */}
 
         {/* ☑️ Modren Ara */}
         <ModrenAra />
@@ -34,6 +34,9 @@ export default function Home() {
 
         {/* ☑️ Residence-Section */}
         <ResidenceSection />
+
+        {/* ☑️ Amenities-Section */}
+        <AmenitiesSection />
 
         {/* ☑️ Form-Section */}
         <FormSection />

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFunction'
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -104,7 +105,7 @@ const CraftedSection = () => {
           {/* LEFT IMAGES */}
           <div className="flex gap-4 items-end">
             {/* Image 1 */}
-            <div className="w-[250px] h-[300px] ImgP1 md:w-[250px] md:h-[300px] overflow-hidden rounded-sm">
+            <div onMouseEnter={()=>HoverImageActivate('.ch1')} onMouseLeave={()=>HoverImageDeActivate('.ch1')} className="w-[250px] h-[300px] ImgP1 md:w-[250px] md:h-[300px] overflow-hidden rounded-sm cursor-pointer">
               <Image
                 src={"/Img/Crafted/TMBG1.jpg"}
                 width={1000}
@@ -115,7 +116,7 @@ const CraftedSection = () => {
             </div>
 
             {/* Image 2 */}
-            <div className="w-[250px] h-[330px] ImgP2 md:w-[320px] md:h-[430px] overflow-hidden rounded-sm">
+            <div onMouseEnter={()=>HoverImageActivate('.ch2')} onMouseLeave={()=>HoverImageDeActivate('.ch2')} className="w-[250px] h-[330px] ImgP2 md:w-[320px] md:h-[430px] overflow-hidden rounded-sm cursor-pointer">
               <Image
                 src="/Img/Crafted/TMBG1.jpg"
                 width={1000}
@@ -203,7 +204,7 @@ const CraftedSection = () => {
           </p>
 
           {/* Right Image */}
-          <div className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] overflow-hidden rounded-sm ml-auto">
+          <div onMouseEnter={()=>HoverImageActivate('.ch3')} onMouseLeave={()=>HoverImageDeActivate('.ch3')} className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] overflow-hidden rounded-sm ml-auto cursor-pointer">
             <Image
               src={'/Img/Crafted/TMBG2.jpg'}  // Replace
               alt="Interior"

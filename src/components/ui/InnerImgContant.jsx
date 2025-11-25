@@ -1,11 +1,21 @@
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import LegacyComponent from "../page_elements/LegacyComponent";
+import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFunction'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const InnerImgContant = () => {
+
+
   return (
     <>
-      <div className="w-full h-fit flex flex-col">
+      <div className="w-full h-fit flex flex-col BBBBB">
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px]">
           <img className="w-[50%]" src={"/data/TitleImg.svg"} alt="Title" />
@@ -26,9 +36,9 @@ const InnerImgContant = () => {
             {/* Img & Text Cont */}
             <div className="w-[550px] h-[250px] flex select-none ">
               {/* Img */}
-              <div className=" w-[50%] h-full  overflow-hidden ">
+              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont ">
                 <Image
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center innerImgCont1Img"
                   src={"/Img/ContImg1.jpg"}
                   width={1000}
                   height={1000}
@@ -51,9 +61,9 @@ const InnerImgContant = () => {
             {/* Img & Text */}
             <div className="w-fit h-fit flex">
               {/* Img-Cont */}
-              <div className="w-[250px] h-[250px] overflow-hidden bg-amber-200">
+              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] cursor-pointer overflow-hidden bg-amber-200">
                 <Image
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center innerImgCont2Img"
                   src={"/Img/ContImg2.jpg"}
                   width={1000}
                   height={1000}
@@ -85,9 +95,9 @@ const InnerImgContant = () => {
           <div className="w-[70%] h-[60%] flex">
 
             {/* Img-Cont */}
-            <div className="w-full h-full overflow-hidden flex">
+            <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full overflow-hidden flex cursor-pointer">
               <Image
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center innerImgCont3Img"
                 src={"/Img/ContImg3.jpg"}
                 width={1000}
                 height={1000}
