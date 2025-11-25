@@ -26,45 +26,7 @@ const CraftedSection = () => {
       }
     })
 
-    gsap.fromTo('.ch1',{
-      y:-100,
-    },{
-      y:100,
-      ease:'linear',
-      scrollTrigger:{
-        trigger:'.ImgP1',
-        start:'top bottom',
-        end:'bottom top',
-        scrub:true,
-        // markers:true
-      }
-    })
-    gsap.fromTo('.ch2',{
-      y:-100,
-    },{
-      y:100,
-      ease:'linear',
-      scrollTrigger:{
-        trigger:'.ImgP2',
-        start:'top bottom',
-        end:'bottom top',
-        scrub:true,
-        // markers:true
-      }
-    })
-    gsap.fromTo('.ch3',{
-      y:-100,
-    },{
-      y:100,
-      ease:'linear',
-      scrollTrigger:{
-        trigger:'.ImgP3',
-        start:'top bottom',
-        end:'bottom top',
-        scrub:true,
-        // markers:true
-      }
-    })
+  
   },[])
 
   return (
@@ -73,11 +35,15 @@ const CraftedSection = () => {
 
         <Image 
         className="w-full Crafted_Img h-full absolute top-0 left-0 z-[-1]"
-         src={'/Img/Crafted/CraftedBG.jpg'}
+         src={'/Img/Crafted/CraftedBG.webp'}
          width={1000}
          height={1000}
          alt="bg"
         />
+
+        <div className="w-full h-full bg-[#00000062] absolute top-0 left-0 z-[-1]">
+
+        </div>
 
         {/* Title-Text-Div */}
         <div className="w-full h-fit flex text-white justify-between items-end">
@@ -107,7 +73,7 @@ const CraftedSection = () => {
             {/* Image 1 */}
             <div onMouseEnter={()=>HoverImageActivate('.ch1')} onMouseLeave={()=>HoverImageDeActivate('.ch1')} className="w-[250px] h-[300px] ImgP1 md:w-[250px] md:h-[300px] overflow-hidden rounded-sm cursor-pointer">
               <Image
-                src={"/Img/Crafted/TMBG1.jpg"}
+                src={"/Img/Crafted/TMBG1.webp"}
                 width={1000}
                 height={1000}
                 alt="Interior 1"
@@ -206,7 +172,7 @@ const CraftedSection = () => {
           {/* Right Image */}
           <div onMouseEnter={()=>HoverImageActivate('.ch3')} onMouseLeave={()=>HoverImageDeActivate('.ch3')} className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] overflow-hidden rounded-sm ml-auto cursor-pointer">
             <Image
-              src={'/Img/Crafted/TMBG2.jpg'}  // Replace
+              src={'/Img/Crafted/TMBG2.webp'}  // Replace
               alt="Interior"
               width={1000}
               height={1000}

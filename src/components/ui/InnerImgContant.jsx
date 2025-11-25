@@ -1,4 +1,4 @@
-
+'use client'
 import Image from "next/image";
 import React, { useEffect } from "react";
 import LegacyComponent from "../page_elements/LegacyComponent";
@@ -12,16 +12,66 @@ gsap.registerPlugin(ScrollTrigger);
 
 const InnerImgContant = () => {
 
+  useEffect(()=>{
+
+    // Img1
+    gsap.fromTo('.innerImgCont1Img',{
+      y:-60,
+    },{
+      y:60,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.innerImgCont1ImgCont',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+
+    // Img2
+     gsap.fromTo('.innerImgCont2Img',{
+      y:-60,
+    },{
+      y:60,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.innerImgCont2ImgCont',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+
+    // Img3
+     gsap.fromTo('.innerImgCont3Img',{
+      y:-60,
+    },{
+      y:60,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.innerImgCont3ImgCont',
+        start:'top bottom',
+        end:'bottom top',
+        scrub:true,
+        // markers:true
+      }
+    })
+
+
+  },[])
+
 
   return (
     <>
-      <div className="w-full h-fit flex flex-col BBBBB">
+      <div className="w-full h-fit flex flex-col BBBBB text-black">
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px]">
-          <img className="w-[50%]" src={"/data/TitleImg.svg"} alt="Title" />
+          <img className="w-[50%] invert-100" src={"/data/TitleImg.svg"} alt="Title" />
 
           {/* Desc */}
-          <div className="w-[50%] max-w-[500px] h-full flex text-[1rem] text-white pb-[30px]">
+          <div className="w-[50%] max-w-[500px] h-full flex text-[1rem] text-black pb-[30px]">
             <p>
               The location offers easy access to key civic, cultural, and
               lifestyle landmarks — a rare blend of heritage and convenience.
@@ -30,7 +80,7 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div1-Img-Container */}
-        <div className="w-full h-fit flex items-end mt-[100px] px-[40px]">
+        <div className="w-full h-fit flex items-end mt-[100px] px-[40px] ">
           {/* Left-Cont */}
           <div className="w-[50%] h-fit ">
             {/* Img & Text Cont */}
@@ -38,8 +88,8 @@ const InnerImgContant = () => {
               {/* Img */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont ">
                 <Image
-                  className="w-full h-full object-cover object-center innerImgCont1Img"
-                  src={"/Img/ContImg1.jpg"}
+                  className="w-full h-full object-cover innerImgCont1Img scale-[1.5]"
+                  src={"/Img/ContImg1.webp"}
                   width={1000}
                   height={1000}
                   alt="Cont_Img1"
@@ -61,10 +111,10 @@ const InnerImgContant = () => {
             {/* Img & Text */}
             <div className="w-fit h-fit flex">
               {/* Img-Cont */}
-              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] cursor-pointer overflow-hidden bg-amber-200">
+              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] innerImgCont2ImgCont cursor-pointer overflow-hidden ">
                 <Image
-                  className="w-full h-full object-cover object-center innerImgCont2Img"
-                  src={"/Img/ContImg2.jpg"}
+                  className="w-full h-full object-cover object-center innerImgCont2Img sacle-[2]"
+                  src={"/Img/ContImg2.webp"}
                   width={1000}
                   height={1000}
                   alt="Cont_Img2"
@@ -95,10 +145,10 @@ const InnerImgContant = () => {
           <div className="w-[70%] h-[60%] flex">
 
             {/* Img-Cont */}
-            <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full overflow-hidden flex cursor-pointer">
+            <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer">
               <Image
-                className="w-full h-full object-cover object-center innerImgCont3Img"
-                src={"/Img/ContImg3.jpg"}
+                className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]"
+                src={"/Img/ContImg3.webp"}
                 width={1000}
                 height={1000}
                 alt="Cont_Img3"
@@ -117,7 +167,7 @@ const InnerImgContant = () => {
           
         </div>
 
-        <LegacyComponent />
+        
       </div>
     </>
   );

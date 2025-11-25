@@ -7,22 +7,22 @@ import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFu
 const slides = [
   {
     id: 1,
-    image: `/Img/displayContent/DCImg1.jpg`,
+    image: `/Img/displayContent/DCImg1.webp`,
     title: `Crafted With Precision`,
   },
   {
     id: 2,
-    image: `/Img/displayContent/DCImg2.jpg`,
+    image: `/Img/displayContent/DCImg2.webp`,
     title: `Crafted With Precision`,
   },
   {
     id: 3,
-    image: `/Img/displayContent/DCImg3.jpg`,
+    image: `/Img/displayContent/DCImg3.webp`,
     title: `Crafted With Precision`,
   },
   {
     id: 4,
-    image: `/Img/displayContent/DCImg4.jpg`,
+    image: `/Img/displayContent/DCImg4.webp`,
     title: `Crafted With Precision`,
   },
 ];

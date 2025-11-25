@@ -11,31 +11,31 @@ gsap.registerPlugin(useGSAP);
 const LegacyComponent = () => {
   const AllImgArr = [
     {
-      url: `/Img/legacyImg/LImg4.jpg`,
+      url: `/Img/legacyImg/LImg4.webp`,
       call: "legacyDiv1",
     },
     {
-      url: `/Img/legacyImg/LImg2.jpg`,
+      url: `/Img/legacyImg/LImg2.webp`,
       call: "legacyDiv2",
     },
     {
-      url: `/Img/legacyImg/LImg5.jpg`,
+      url: `/Img/legacyImg/LImg5.webp`,
       call: "legacyDiv3",
     },
     {
-      url: `/Img/legacyImg/LImg6.jpg`,
+      url: `/Img/legacyImg/LImg6.webp`,
       call: "legacyDiv4",
     },
     {
-      url: `/Img/legacyImg/LImg7.jpg`,
+      url: `/Img/legacyImg/LImg7.webp`,
       call: "legacyDiv5",
     },
     {
-      url: `/Img/legacyImg/LImg3.jpg`,
+      url: `/Img/legacyImg/LImg3.webp`,
       call: "legacyDiv6",
     },
     {
-      url: `/Img/legacyImg/LImg8.jpg`,
+      url: `/Img/legacyImg/LImg8.webp`,
       call: "legacyDiv7",
     },
   ];
@@ -69,7 +69,7 @@ const LegacyComponent = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen z-90 relative pb-[40px]">
+      <div className="w-full min-h-screen z-90 relative bg-[#F5F3EA]">
         {/* All_Image_Div_Container */}
         <div className="w-full h-screen relative ">
           {AllImgArr.map((item, index) => {
@@ -102,7 +102,7 @@ const LegacyComponent = () => {
 
 
           {/* Title */}
-          <div className="w-full h-[180px] flex justify-center items-center mt-[70px]">
+          <div className="w-full h-[180px] flex justify-center items-center mt-[70px] invert-100 ">
             <Image
               className=" h-full"
               src={"/data/LegacyTitle.svg"}
@@ -118,7 +118,7 @@ const LegacyComponent = () => {
             {/* SVG-Container */}
             <div className="w-full max-w-[650px] h-fit relative">
               <Image
-                className=" w-full object-cover scale-[1.1]"
+                className=" w-full object-cover scale-[1.1] invert-[0.7]"
                 src={"/data/Intreaction.svg"}
                 width={1000}
                 height={1000}

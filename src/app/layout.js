@@ -4,6 +4,7 @@ import NavBar from "@/components/common/NavBar";
 import RevealAnimation from "@/components/common/RevealAnimation";
 import SmoothScrolling from "@/components/common/SmoothScrolling";
 import { Suspense } from "react";
+import IntroLoader from "@/components/common/IntroLoader2";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
-      >
+      > 
+        <IntroLoader />
         <Suspense fallback={null}>
           <SmoothScrolling />
         </Suspense>
-        <RevealAnimation />
+        {/* <RevealAnimation /> */}
         <NavBar />
         {children}
       </body>

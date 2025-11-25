@@ -21,10 +21,13 @@ export default function Home() {
         {/* ☑️ Hero-Section */}
         <HeroSection />
 
+        {/* ☑️ Legacy-Section */}
+        <LegacyComponent />
+
+        
         {/* ☑️ Precinct-Section */}
         <PrecinctSection />
 
-        {/* ☑️ Legacy-Section */}
 
         {/* ☑️ Modren Ara */}
         <ModrenAra />

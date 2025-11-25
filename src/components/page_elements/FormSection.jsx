@@ -1,48 +1,49 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTN from "../common/BTN";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-
 const FormSection = () => {
-
-  useEffect(()=>{
-    gsap.fromTo('.BGFC',{
-      y:-200,
-    },{
-      y:200,
-      ease:'linear',
-      scrollTrigger:{
-        trigger:'.BGP',
-        start:'top bottom',
-        end:'bottom top',
-        scrub:true,
-        // markers:true
+  useEffect(() => {
+    gsap.fromTo(
+      ".BGFC",
+      {
+        y: -200,
+      },
+      {
+        y: 200,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: ".BGP",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          // markers:true
+        },
       }
-    })
-  },[])
+    );
+  }, []);
 
   return (
     <>
       <div className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden">
-
-        <Image 
-         src={'/Img/Form/FormBG.jpg'}
-         className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
-         width={1000}
-         height={1000}
-         alt="FBG"
+        <Image
+          src={"/Img/Form/FormBG.jpg"}
+          className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
+          width={1000}
+          height={1000}
+          alt="FBG"
         />
 
         {/* Inner-Container */}
         <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] ">
-
           {/* Title-Section */}
           <div className="w-full h-fit flex flex-col justify-center items-center">
             {/* SVG */}
@@ -55,7 +56,7 @@ const FormSection = () => {
             />
 
             {/* Desc */}
-            <div className="w-full max-w-[400px] h-fit flex justify-center items-center my-[30px]">
+            <div className="w-full max-w-[460px] h-fit flex justify-center items-center my-[30px] mb-[60px]">
               <p className="CFF text-[2.2rem] leading-[2.2rem] tracking-tight text-center">
                 Your Next Address Begins Here
               </p>
@@ -63,9 +64,10 @@ const FormSection = () => {
           </div>
 
           {/* Form Container max-w-[800px] */}
-          <form className="w-full max-w-[800px]   CFF">
+          <form className="w-full max-w-[800px]  CFF">
             {/* First + Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
+             
               <div>
                 <label className="block text-sm mb-2">First Name</label>
                 <input
@@ -80,7 +82,7 @@ const FormSection = () => {
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-black outline-none pb-1"
-                  placeholder="Doe"
+                  placeholder=""
                 />
               </div>
             </div>
@@ -135,14 +137,10 @@ const FormSection = () => {
 
             {/* Button */}
             <div className="w-full flex justify-center">
-              <button className="px-10 py-3 bg-[#3C553A] text-white rounded-sm font-medium tracking-wide flex items-center gap-2">
-                ✶ Send Message ✶
-              </button>
+             <BTN text={'Send Message'} />
             </div>
           </form>
-
         </div>
-
       </div>
     </>
   );

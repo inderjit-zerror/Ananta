@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const HoverImageActivate = (img) =>{
     gsap.to(img,{
-        scale:1.2,
+        scale:1.1,
         duration:0.3,
         ease:'linear'
     })

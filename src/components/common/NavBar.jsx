@@ -1,14 +1,26 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import FlowerElement from "../ui/FlowerElement";
 import Image from "next/image";
 import MenuBtn from "../ui/MenuBtn";
+import gsap from "gsap";
+import BTN from "./BTN";
 
 const NavBar = () => {
+
+  useEffect(() => {
+      gsap.set(".nav_logo",{
+        opacity:1,
+        delay:2
+      })
+  }, [])
+  
+
   return (
     <>
       <div className="w-full z-95 fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite">
         {/* Menu Container */}
-        <div className="w-fit h-fit flex justify-center items-center gap-[30px]">
+        <div className="w-[15%] h-fit flex justify-center items-center gap-[30px]">
           {/* Home */}
           <MenuBtn item={"Home"} />
 
@@ -23,7 +35,7 @@ const NavBar = () => {
         <div className="w-fit h-fit flex justify-center items-center select-none cursor-pointer">
           <Image
             src={"/data/LogoMain.svg"}
-            className="h-[40px] w-fit"
+            className="h-[40px] w-fit nav_logo opacity-0"
             width={1000}
             height={1000}
             alt="Logo"
@@ -31,10 +43,8 @@ const NavBar = () => {
         </div>
 
         {/* BTN Container */}
-        <div className="bg-[#B3976E]  hover:bg-[#9c6b25] w-fit h-fit px-[10px]  py-[10px] FSB select-none cursor-pointer flex gap-[10px] justify-center items-center">
-          <FlowerElement />
-          <p className="text-[0.875rem] text-[#F5F3EA]">Contact Us</p>
-          <FlowerElement />
+        <div className="w-[15%] flex justify-end">
+        <BTN text={'Contact Us'} />
         </div>
       </div>
     </>
@@ -42,3 +52,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+

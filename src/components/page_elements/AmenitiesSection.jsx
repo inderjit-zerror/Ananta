@@ -1,146 +1,132 @@
-'use client'
-import React from "react";
-import SectionTitle from "../common/SectionTitle";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFunction'
+"use client"
+import React, { useEffect, useState } from 'react'
+import SectionTitle from '../common/SectionTitle';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import gsap from 'gsap';
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+gsap.registerPlugin(ScrollTrigger);
 
-
-// import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+const data = [
+  {
+    id: 1,
+    titel: "INTERIORS & FINISHES ",
+    para1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    para2: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    largeImg1: "/Img/amenities/AImg1.webp",
+    largeImg2: "/Img/amenities/AImg2.webp",
+    smallImg1: "/Img/amenities/AImg3.webp",
+    smallImg2: "/Img/amenities/AImg4.webp",
+  },
+  {
+    id: 2,
+    titel: "AMENITIES & LIFESTYLE",
+    para1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    para2: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    largeImg1: "/Img/amenities/AImg2.webp",
+    largeImg2: "/Img/amenities/AImg1.webp",
+    smallImg1: "/Img/amenities/AImg4.webp",
+    smallImg2: "/Img/amenities/AImg3.webp",
+  },
+  {
+    id: 3,
+    titel: "SECURITY & PRIVACY",
+    para1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    para2: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem veritatis sed nesciunt maxime. Id obcaecati deleniti eligendi atque sequi!",
+    largeImg1: "/Img/amenities/AImg3.webp",
+    largeImg2: "/Img/amenities/AImg4.webp",
+    smallImg1: "/Img/amenities/AImg1.webp",
+    smallImg2: "/Img/amenities/AImg2.webp",
+  },
+]
 
 const AmenitiesSection = () => {
-  const ASData = [
-    {
-      text1: "Concierge lobby",
-      text2: "A warm, refined welcome for residents and guests.",
-      url: `/Img/amenities/AImg1.jpg`,
-    },
-    {
-      text1: "Rooftop Lounge",
-      text2: "Panoramic views of the royal precinct and city skyline.",
-      url: `/Img/amenities/AImg2.jpg`,
-    },
-    {
-      text1: "fitness & Wellness Centre",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg3.jpg`,
-    },
-    {
-      text1: "Landscaped Courtyard",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg4.jpg`,
-    },
-    {
-      text1: "Biometric Access",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg5.jpg`,
-    },
-    {
-      text1: "Concierge lobby",
-      text2: "A warm, refined welcome for residents and guests.",
-      url: `/Img/amenities/AImg1.jpg`,
-    },
-    {
-      text1: "Rooftop Lounge",
-      text2: "Panoramic views of the royal precinct and city skyline.",
-      url: `/Img/amenities/AImg2.jpg`,
-    },
-    {
-      text1: "fitness & Wellness Centre",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg3.jpg`,
-    },
-    {
-      text1: "Landscaped Courtyard",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg4.jpg`,
-    },
-    {
-      text1: "Biometric Access",
-      text2: "Premium equipment for balanced wellbeing.",
-      url: `/Img/amenities/AImg5.jpg`,
-    },
-  ];
 
-  const ImgContComp = ({ text1, text2, url, isOdd, ClsId }) => {
-    return (
-      <>
-        <div
-          className={` w-[330px] h-fit flex flex-col ${
-            isOdd ? "mt-[50px]" : ""
-          }  whitespace-nowrap `}
-        >
-          {/* text1 */}
-          <p className="  uppercase text-[1rem] leading-[1rem] select-none text-[#212121] pb-[30px] flex">
-            {text1}
-          </p>
+  const [activeAmentie, setActiveAmentie] = useState(data[0])
 
-          {/* Img-Cont */}
-          <div onMouseEnter={()=>HoverImageActivate(`.cls${ClsId}`)} onMouseLeave={()=>HoverImageDeActivate(`.cls${ClsId} `)} className="w-full h-[210px] overflow-hidden select-none cursor-pointer">
-            <Image
-              src={url}
-              className={`w-full h-full object-cover object-center cls${ClsId}`}
-              width={1000}
-              height={1000}
-              alt="img"
-            />
-          </div>
-
-          {/* text2 */}
-          <p className="text-[1rem] leading-[1rem] capitalize select-none text-[#3b3b3b] pt-[30px] flex ">
-            {text2}
-          </p>
-        </div>
-      </>
-    );
-  };
+  useEffect(() => {
+      gsap.fromTo(".small_img_1",{
+        top:"20%"
+      }, {
+        scrollTrigger:{
+          trigger:".small_img_1",
+          start:"top bottom",
+          end:"bottom top", 
+          scrub:true
+        },
+        top:"-5%",
+        ease:"linear",
+      })
+      gsap.fromTo(".small_img_2",{
+        top:"20%"
+      }, {
+        scrollTrigger:{
+          trigger:".small_img_2",
+          start:"top bottom",
+          end:"bottom top", 
+          scrub:true
+        },
+        top:"-5%",
+        ease:"linear",
+      })
+  }, [])
+  
 
   return (
-    <div className="w-full min-h-screen flex flex-col z-90 bg-[#F5F3EA] px-[40px]">
-      {/* title */}
-      <div className="w-full h-fit flex flex-col justify-center items-center">
-        <SectionTitle textData={"Amenities Crafted for Everyday Luxury"} />
-      </div>
-
-      {/* Element */}
-
-      <div className="w-full h-fit overflow-x-hidden flex  my-auto text-wrap  whitespace-nowrap">
-        <Swiper
-          slidesPerView={5}
-          spaceBetween={30}
-          freeMode={true}
-        //   pagination={{
-        //     clickable: true,
-        //   }}
-          modules={[FreeMode, Pagination]}
-          className="mySwiper"
-        >
-          {ASData.map((item, index) => {
-            const isOdd = index % 2 !== 0;
-
+    <div>
+      <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90">
+        <SectionTitle textData={"The Art of Refined Living."} />
+        <div className="w-full  flex justify-center mt-20 gap-32 border-b border-black/30">
+          {data.map((item, i) => {
             return (
-              <SwiperSlide>
-                <ImgContComp
-                  key={index}
-                  text1={item.text1}
-                  text2={item.text2}
-                  url={item.url}
-                  isOdd={isOdd}
-                  ClsId={index}
-                />
-              </SwiperSlide>
-            );
+              <div
+                onClick={() => {
+                  setActiveAmentie(item)
+                }} key={i} className="CFF cursor-pointer relative text-lg flex justify-center ">
+                <div className=" w-fit block relative">
+                  {activeAmentie.id === item.id && <div className="absolute w-full bg-black left-0 bottom-0 h-[1px]"></div>}
+                  <p>0{i + 1} &nbsp; {item.titel} </p>
+                </div>
+              </div>
+            )
           })}
-        </Swiper>
+        </div>
+
+        <div className="w-full mt-20 relative flex items-end justify-between ">
+          <div className=" small_img_1 w-[28vw] absolute bg-[#F5F3EA] top-0 left-[15vw] aspect-[4/3] p-10">
+            <div className="w-full h-full overflow-hidden">
+              <img className='w-full h-full object-cover' src={activeAmentie.smallImg1} alt="" />
+            </div>
+          </div>
+
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg">
+            <p>0{activeAmentie.id}</p>
+            <p>{activeAmentie.para1}</p>
+          </div>
+          <div className="w-[60vw] shrink-0 aspect-[5/3] ">
+            <img className='w-full h-full object-cover' src={activeAmentie.largeImg1} alt="" />
+          </div>
+        </div>
+
+        <div className="w-full mt-32 relative flex flex-row-reverse items-end justify-between ">
+          <div className="w-[28vw] small_img_2 absolute bg-[#F5F3EA] top-0 right-[15vw] aspect-[4/3] p-10">
+            <div className="w-full h-full overflow-hidden">
+              <img className='w-full h-full object-cover' src={activeAmentie.smallImg2} alt="" />
+            </div>
+
+          </div>
+
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg">
+            <p>0{activeAmentie.id}</p>
+            <p>{activeAmentie.para2}</p>
+          </div>
+          <div className="w-[60vw] shrink-0 aspect-[5/3] ">
+            <img className='w-full h-full object-cover' src={activeAmentie.largeImg2} alt="" />
+          </div>
+        </div>
+
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AmenitiesSection;
+export default AmenitiesSection
