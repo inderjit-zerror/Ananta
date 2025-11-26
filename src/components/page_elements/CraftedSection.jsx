@@ -31,7 +31,7 @@ const CraftedSection = () => {
 
   return (
     <>
-      <div className="Crafted_Cont w-full min-h-screen relative overflow-hidden flex flex-col  p-[40px] gap-y-32 py-[100px] bg-[#FEF7EE] z-90">
+      <div id="About" className="Crafted_Cont w-full min-h-screen relative overflow-hidden flex flex-col  p-[40px] gap-y-32 py-[100px] bg-[#FEF7EE] z-90">
 
         <Image 
         className="w-full Crafted_Img h-full absolute top-0 left-0 z-[-1]"
@@ -84,7 +84,7 @@ const CraftedSection = () => {
             {/* Image 2 */}
             <div onMouseEnter={()=>HoverImageActivate('.ch2')} onMouseLeave={()=>HoverImageDeActivate('.ch2')} className="w-[250px] h-[330px] ImgP2 md:w-[320px] md:h-[430px] overflow-hidden rounded-sm cursor-pointer">
               <Image
-                src="/Img/Crafted/TMBG1.jpg"
+                src="/Img/Crafted/TMBG1.webp"
                 width={1000}
                 height={1000}
                 alt="Interior 2"

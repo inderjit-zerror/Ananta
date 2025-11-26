@@ -14,9 +14,8 @@ export default function Home() {
     <>
       {/* ☑️ Full-WebPage-Wraper-Container */}
       <div className="w-full h-fit flex flex-col relative text-black ">
-
         {/* ☑️  Bg-White-Hover-Component */}
-        <BgWhiteHoverComponent/>
+        <BgWhiteHoverComponent />
 
         {/* ☑️ Hero-Section */}
         <HeroSection />
@@ -24,16 +23,11 @@ export default function Home() {
         {/* ☑️ Legacy-Section */}
         <LegacyComponent />
 
-        
         {/* ☑️ Precinct-Section */}
         <PrecinctSection />
 
-
         {/* ☑️ Modren Ara */}
         <ModrenAra />
-
-        {/* Crafted Section */}
-        <CraftedSection />
 
         {/* ☑️ Residence-Section */}
         <ResidenceSection />
@@ -41,13 +35,16 @@ export default function Home() {
         {/* ☑️ Amenities-Section */}
         <AmenitiesSection />
 
+        {/* Crafted Section */}
+        <CraftedSection />
+
+       
+
         {/* ☑️ Form-Section */}
         <FormSection />
 
         {/* ☑️ Footer */}
-        <Footer  />
-      
-        
+        <Footer />
       </div>
     </>
   );

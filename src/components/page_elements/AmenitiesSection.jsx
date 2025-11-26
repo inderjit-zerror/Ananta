@@ -70,10 +70,11 @@ const AmenitiesSection = () => {
       })
   }, [])
   
+  //  ${activeAmentie.titel === item.titel? ('opacity-1'):(' opacity-50') } 
 
   return (
     <div>
-      <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90">
+      <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90 pt-[50px]">
         <SectionTitle textData={"The Art of Refined Living."} />
         <div className="w-full  flex justify-center mt-20 gap-32 border-b border-black/30">
           {data.map((item, i) => {
@@ -81,7 +82,7 @@ const AmenitiesSection = () => {
               <div
                 onClick={() => {
                   setActiveAmentie(item)
-                }} key={i} className="CFF cursor-pointer relative text-lg flex justify-center ">
+                }} key={i} className={`CFF cursor-pointer relative text-lg flex justify-center ${activeAmentie.id === item.id ? 'opacity-100' : 'opacity-50'} `}>
                 <div className=" w-fit block relative">
                   {activeAmentie.id === item.id && <div className="absolute w-full bg-black left-0 bottom-0 h-[1px]"></div>}
                   <p>0{i + 1} &nbsp; {item.titel} </p>

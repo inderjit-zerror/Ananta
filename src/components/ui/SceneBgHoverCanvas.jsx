@@ -16,7 +16,7 @@ const SceneBgHoverCanvas = () => {
   // Uniforms initial values
   const uniforms = useRef({
     uMouse: { value: new THREE.Vector2(-10, -10) },
-    uRadius: { value: 200 },
+    uRadius: { value: 250 },
     uResolution: { value: new THREE.Vector2(size.width, size.height) },
   });
 

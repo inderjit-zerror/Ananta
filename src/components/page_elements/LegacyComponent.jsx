@@ -69,7 +69,7 @@ const LegacyComponent = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen z-90 relative bg-[#F5F3EA]">
+      <div id="Address" className="w-full min-h-screen z-90 relative bg-[#e7d9bf]">
         {/* All_Image_Div_Container */}
         <div className="w-full h-screen relative ">
           {AllImgArr.map((item, index) => {
@@ -95,7 +95,7 @@ const LegacyComponent = () => {
         </div>
 
         {/* Blur Div */}
-        <div className="blurDiv w-full h-full absolute top-0 left-0 z-10 backdrop-blur-[7px] bg-white/10 opacity-0"></div>
+        <div className="blurDiv w-full h-full absolute top-0 left-0 z-10 backdrop-blur-[1px] bg-white/30 opacity-0"></div>
 
         {/* TOP-Intraction-Container */}
         <div className="w-full h-full absolute top-0 left-0 z-30 flex px-[40px] flex-col ">

@@ -34,7 +34,7 @@ const ResidenceSection = () => {
 
 
   return (
-    <div className="w-full min-h-screen flex relative BG_R z-90  TextBlack pointer-events-none RIMGCONT overflow-hidden ">
+    <div id="FloorPlan" className="w-full min-h-screen flex relative BG_R z-90  TextBlack pointer-events-none RIMGCONT overflow-hidden ">
       {/* Bg-div */}
 
       <Image
@@ -44,6 +44,11 @@ const ResidenceSection = () => {
         height={1000}
         alt="bg"
       />
+
+      {/* BG-Black */}
+      <div className="w-full h-full absolute top-0 left-0 z-[-1] bg-[#13131385]">
+
+      </div>
 
 
 

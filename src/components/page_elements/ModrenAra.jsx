@@ -2,212 +2,78 @@
 import SectionTitle from "../common/SectionTitle";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
-import {HoverImageActivate, HoverImageDeActivate} from '@/functions/HoverImageFunction'
-
 const slides = [
   {
     id: 1,
     image: `/Img/displayContent/DCImg1.webp`,
-    title: `Crafted With Precision`,
+    title: `Designed for Modern Living`,
   },
   {
     id: 2,
     image: `/Img/displayContent/DCImg2.webp`,
-    title: `Crafted With Precision`,
+    title: `Where Elegance Meets Craftsmanship`,
   },
   {
     id: 3,
     image: `/Img/displayContent/DCImg3.webp`,
-    title: `Crafted With Precision`,
+    title: `Inspired Spaces, Timeless Style`,
   },
   {
     id: 4,
     image: `/Img/displayContent/DCImg4.webp`,
-    title: `Crafted With Precision`,
+    title: `Built to Stand Out`,
+  },
+  {
+    id: 5,
+    image: `/Img/displayContent/DCImg1.webp`,
+    title: `Experience Refined Perfection`,
   },
 ];
-const SliderSection = () => {
-  const sliderContainer = useRef(null);
-  const animationRef = useRef(null);
-  const pausedRef = useRef(false);
-  const lastCenterIndex = useRef(null);
 
-  const allSlides = [...slides, ...slides, ...slides];
+const SliderSection = () => {
+
+  const containerRef = useRef(null);
+
+  const expandSlide = (hovered, all) => {
+    gsap.to(all, {
+      width: "15vw",
+      duration: 0.6,
+      ease: "power3.out",
+    });
+
+    gsap.to(hovered, {
+      width: "50vw",
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  };
+
+  const resetSlides = (all) => {
+    gsap.to(all, {
+      width: `${100 / all.length}vw`,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  };
 
   useEffect(() => {
-    const container = sliderContainer.current;
-    if (!container) return;
+    const slidesEl = gsap.utils.toArray(".modern-slide");
 
-    const slideEls = container.querySelectorAll(".slide");
+    slidesEl.forEach((slide) => {
+      slide.addEventListener("mouseenter", () => expandSlide(slide, slidesEl));
+      slide.addEventListener("mouseleave", () => resetSlides(slidesEl));
+    });
 
-    setTimeout(() => {
-      const totalWidth = Array.from(slideEls).reduce((acc, slide) => {
-        return acc + slide.offsetWidth + 20;
-      }, 0);
-
-      animationRef.current = gsap.to(container, {
-        x: `-=${totalWidth / 3}`,
-        duration: 3,
-        ease: "linear",
-        repeat: -1,
-        paused: false,
-        modifiers: {
-          x: gsap.utils.unitize((x) => parseFloat(x) % (totalWidth / 3)),
-        },
+    return () => {
+      slidesEl.forEach((slide) => {
+        slide.removeEventListener("mouseenter", () => expandSlide(slide, slidesEl));
+        slide.removeEventListener("mouseleave", () => resetSlides(slidesEl));
       });
-
-      const checkCenter = () => {
-        if (pausedRef.current) return requestAnimationFrame(checkCenter);
-
-        const centerX = window.innerWidth / 2 - 12;
-
-        slideEls.forEach((slide, index) => {
-          const rect = slide.getBoundingClientRect();
-          const slideCenter = rect.left + rect.width / 2;
-          const distance = Math.abs(slideCenter - centerX);
-
-          if (distance < 10 && lastCenterIndex.current !== index) {
-            lastCenterIndex.current = index;
-            pausedRef.current = true;
-            animationRef.current.pause();
-
-            const computedCenter = window.getComputedStyle(slide);
-            const originalCenterStyles = {
-              width: slide.offsetWidth + "px",
-              height: slide.offsetHeight + "px",
-              marginLeft: computedCenter.marginLeft,
-              marginRight: computedCenter.marginRight,
-            };
-
-            // Identify side elements
-            const prevSlide = slideEls[index - 2];
-            const nextSlide = slideEls[index + 2];
-
-            // Store side styles
-            const originalSideStyles = {};
-
-            if (prevSlide) {
-              const comp = window.getComputedStyle(prevSlide);
-              originalSideStyles.prev = {
-                width: prevSlide.offsetWidth + "px",
-                height: prevSlide.offsetHeight + "px",
-                marginLeft: comp.marginLeft,
-                marginRight: comp.marginRight,
-              };
-            }
-
-            if (nextSlide) {
-              const comp = window.getComputedStyle(nextSlide);
-              originalSideStyles.next = {
-                width: nextSlide.offsetWidth + "px",
-                height: nextSlide.offsetHeight + "px",
-                marginLeft: comp.marginLeft,
-                marginRight: comp.marginRight,
-              };
-            }
-
-            // Animate all three together
-            const tl = gsap.timeline({
-              onComplete: () => {
-                const resetTl = gsap.timeline({
-                  onComplete: () => {
-                    animationRef.current.resume();
-                    pausedRef.current = false;
-                  },
-                });
-
-                // Reset center
-                resetTl.to(slide, {
-                  ...originalCenterStyles,
-                  duration: 1,
-                  delay: 1.5,
-                  ease: "power2.inOut",
-                });
-
-                // Reset sides
-                if (prevSlide && originalSideStyles.prev) {
-                  resetTl.to(
-                    prevSlide,
-                    {
-                      ...originalSideStyles.prev,
-                      duration: 1,
-                      ease: "power2.inOut",
-                    },
-                    "<"
-                  );
-                }
-
-                if (nextSlide && originalSideStyles.next) {
-                  resetTl.to(
-                    nextSlide,
-                    {
-                      ...originalSideStyles.next,
-                      duration: 1,
-                      ease: "power2.inOut",
-                    },
-                    "<"
-                  );
-                }
-              },
-            });
-
-            // Animate center
-            if (window.innerWidth > 768) {
-              tl.to(slide, {
-                width: "45vw",
-                height: "60vh",
-                duration: 1,
-                ease: "power2.inOut",
-              });
-            } else {
-              tl.to(slide, {
-                width: "92vw",
-                height: "60vh",
-                duration: 1,
-                ease: "power2.inOut",
-              });
-            }
-            if (window.innerWidth > 768) {
-              // Animate sides
-              if (prevSlide) {
-                tl.to(
-                  prevSlide,
-                  {
-                    width: "15vw",
-                    height: "60vh",
-                    duration: 1,
-                    ease: "power2.inOut",
-                  },
-                  "<"
-                ); // parallel
-              }
-            }
-            if (window.innerWidth > 768) {
-              if (nextSlide) {
-                tl.to(
-                  nextSlide,
-                  {
-                    width: "15vw",
-                    height: "60vh",
-                    duration: 1,
-                    ease: "power2.inOut",
-                  },
-                  "<"
-                ); // parallel
-              }
-            }
-          }
-        });
-
-        requestAnimationFrame(checkCenter);
-      };
-
-      requestAnimationFrame(checkCenter);
-    }, 0);
+    };
   }, []);
 
   return (
-    <div className="w-full h-fit z-90 bg-[#F5F3EA]">
+    <div id="Gallery" className="w-full h-fit z-90 bg-[#F5F3EA] pt-[50px]">
       <SectionTitle textData={"Heritage Refined for the Modern Era"} />
 
       {/* Desc */}
@@ -220,25 +86,25 @@ const SliderSection = () => {
         </p>
       </div>
 
-      <div className="w-full my-10 md:my-0 h-[50vh] md:h-screen  flex items-center justify-center overflow-hidden">
+      <div className="w-full  px-[40px] my-10 md:my-0 h-[50vh] md:h-screen  flex items-center justify-center overflow-hidden">
         <div
-          ref={sliderContainer}
-          className="flex gap-5 center will-change-transform"
+          ref={containerRef}
+          className="flex gap-4 justify-center items-center w-full overflow-hidden"
         >
-          {allSlides.map((slide, index) => (
+          {slides.map((slide, index) => (
             <div
               key={index}
-              onMouseEnter={()=>HoverImageActivate(`.modrenEraImg${index}`)} 
-              onMouseLeave={()=>HoverImageDeActivate(`.modrenEraImg${index}`)}
-              className={`slide ${slide.color} relative shrink-0 w-[50vw] md:w-[20vw] h-[60vh] cursor-pointer center overflow-hidden`}
+              className="modern-slide group relative h-[60vh] cursor-pointer overflow-hidden"
+              style={{ width: `${100 / slides.length}vw` }}
             >
               <img
-                className={`w-full h-full object-cover modrenEraImg${index}`}
+                className="w-full h-full object-cover"
                 src={slide.image}
                 alt=""
               />
-              <div className="absolute bottom-5 z-2 left-5">
-                <p className="text-5xl uppercase w-32 CFF text-white">
+
+              <div className=" opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out absolute bottom-10 left-10 ">
+                <p className="slide-title  translate-y-5 text-4xl uppercase w-[50%] CFF text-white ">
                   {slide.title}
                 </p>
               </div>

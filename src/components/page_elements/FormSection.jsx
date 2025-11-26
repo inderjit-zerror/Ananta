@@ -33,9 +33,9 @@ const FormSection = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden">
+      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden">
         <Image
-          src={"/Img/Form/FormBG.jpg"}
+          src={"/Img/Form/FormBG.webp"}
           className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
           width={1000}
           height={1000}
@@ -67,7 +67,6 @@ const FormSection = () => {
           <form className="w-full max-w-[800px]  CFF">
             {/* First + Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
-             
               <div>
                 <label className="block text-sm mb-2">First Name</label>
                 <input
@@ -139,6 +138,7 @@ const FormSection = () => {
             <div className="w-full flex justify-center">
              <BTN text={'Send Message'} />
             </div>
+            
           </form>
         </div>
       </div>
