@@ -69,8 +69,7 @@ const AmenitiesSection = () => {
         ease:"linear",
       })
   }, [])
-  
-  //  ${activeAmentie.titel === item.titel? ('opacity-1'):(' opacity-50') } 
+   
 
   return (
     <div>

@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/common/NavBar";
-import RevealAnimation from "@/components/common/RevealAnimation";
 import SmoothScrolling from "@/components/common/SmoothScrolling";
 import { Suspense } from "react";
 import IntroLoader from "@/components/common/IntroLoader2";
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <SmoothScrolling />
         </Suspense>
-        {/* <RevealAnimation /> */}
+
         <NavBar />
         {children}
       </body>

@@ -49,7 +49,7 @@ const CraftedSection = () => {
         <div className="w-full h-fit flex text-white justify-between items-end">
           {/* title */}
           <div className="w-[50%] h-full">
-            <h1 className="text-[8rem] leading-[8rem] CFF">
+            <h1 className="text-[8rem] leading-[8rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem]">
               Crafted by Masters of Their Discipline
             </h1>
           </div>
@@ -94,7 +94,7 @@ const CraftedSection = () => {
           </div>
 
           {/* TEXT */}
-          <div className="flex justify-center md:justify-start w-fit absolute bottom-0 right-[-50%]">
+          <div className="flex justify-center md:justify-start w-fit absolute bottom-0 right-[-50%] max-[1030px]:right-[-20%]">
             <h2 className="text-white text-4xl md:text-6xl font-serif tracking-wide">
               THE MAKERS
             </h2>

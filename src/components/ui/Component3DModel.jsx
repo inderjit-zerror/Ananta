@@ -12,32 +12,10 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Component3DModel = () => {
-  // const refModel = useRef();
 
-  // useEffect(() => {
-  //   if (!refModel.current) return;
-
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".canvasCont",
-  //       start: "top bottom",
-  //       end: "bottom bottom",
-  //       scrub: true,
-  //       markers: true,
-  //     },
-  //   });
-
-  //   tl.from(refModel.current.rotation, {
-  //     x: 0,
-  //     y: 0,
-  //     z: 0,
-  //     duration: 1,
-  //     ease: "none",
-  //   });
-  // }, []);
 
   return (
-    <div className="w-full h-screen relative canvasCont ">
+    <div className="w-full h-screen relative canvasCont max-[1030px]:h-[80dvh] ">
       {/* 3D Mention */}
       <div className="w-fit h-[40px] bg-white absolute top-[95%] left-[46%] translate-y-[-50%] px-[17px] z-90 flex gap-[10px] justify-center items-center  pointer-events-none">
         <Md360 className="text-[20px]" />

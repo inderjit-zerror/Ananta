@@ -38,8 +38,6 @@ export default function Home() {
         {/* Crafted Section */}
         <CraftedSection />
 
-       
-
         {/* ☑️ Form-Section */}
         <FormSection />
 

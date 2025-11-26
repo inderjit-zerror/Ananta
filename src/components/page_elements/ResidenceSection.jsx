@@ -53,7 +53,7 @@ const ResidenceSection = () => {
 
 
       {/* ContantWraper */}
-      <div className="w-full min-h-screen flex flex-col pb-[100px] ">
+      <div className="w-full min-h-screen flex flex-col pb-[100px] pt-[50px] ">
         {/* Title-Cont */}
         <div className="w-full h-fit flex flex-col justify-center items-center text-white">
           <SectionTitle
@@ -91,7 +91,7 @@ const ResidenceSection = () => {
         <Component3DModel />
 
         {/* Some-Residence-info */}
-        <div className="w-full h-fit flex justify-end items-end text-white">
+        <div className="w-full h-fit flex justify-end items-end text-white pt-[50px]">
           {/* Right-Container */}
           <div className="w-full max-w-[400px] h-fit flex flex-col  mr-[40px]">
             {/* Name */}

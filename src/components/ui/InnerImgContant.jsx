@@ -68,10 +68,10 @@ const InnerImgContant = () => {
       <div className="w-full h-fit flex flex-col BBBBB text-black">
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px]">
-          <img className="w-[50%] invert-100" src={"/data/TitleImg.svg"} alt="Title" />
+          <img className="w-[50%] invert-100 max-[1030px]:w-[60%]" src={"/data/TitleImg.svg"} alt="Title" />
 
           {/* Desc */}
-          <div className="w-[50%] max-w-[500px] h-full flex text-[1rem] text-black pb-[30px]">
+          <div className="w-[50%] max-w-[500px] h-full flex text-[1rem] text-black pb-[30px] max-[1030px]:max-w-[300px]">
             <p>
               The location offers easy access to key civic, cultural, and
               lifestyle landmarks — a rare blend of heritage and convenience.
@@ -80,11 +80,11 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div1-Img-Container */}
-        <div className="w-full h-fit flex items-end mt-[100px] px-[40px] ">
+        <div className="w-full h-fit flex items-end mt-[100px] px-[40px]  max-[1030px]:flex-col max-[1030px]:gap-[120px] ">
           {/* Left-Cont */}
-          <div className="w-[50%] h-fit ">
+          <div className="w-[50%] h-fit max-[1030px]:w-full">
             {/* Img & Text Cont */}
-            <div className="w-[550px] h-[250px] flex select-none ">
+            <div className="w-[550px] h-[250px] flex select-none bg-amber-700 ">
               {/* Img */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont ">
                 <Image
@@ -142,7 +142,7 @@ const InnerImgContant = () => {
         <div className="w-full h-screen flex justify-center items-center px-[40px]">
 
           {/* Image-Text-Cont */}
-          <div className="w-[70%] h-[60%] flex">
+          <div className="w-[70%] h-[60%] flex max-[1030px]:w-[90%]">
 
             {/* Img-Cont */}
             <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer">

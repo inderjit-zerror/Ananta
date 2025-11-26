@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import React from "react";
-import TheAddressComponent from "../ui/TheAddressComponent";
+import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -42,34 +41,54 @@ const LegacyComponent = () => {
 
   // ------------------------------------- FUNCTION
 
-  const HoverAction = (item) => { 
-    gsap.to('.legacyDiv',{
-        opacity:0
-    })
-    gsap.to(item,{
-        opacity:1
-    })
-    gsap.to('.blurDiv',{
-      opacity:1,
-    })
-  }
+  const HoverAction = (item) => {
+    gsap.to(".legacyDiv", {
+      opacity: 0,
+    });
+    gsap.to(item, {
+      opacity: 1,
+    });
+    gsap.to(".blurDiv", {
+      opacity: 1,
+    });
+  };
 
   const HoverPreAction = () => {
-    gsap.to('.legacyDiv',{
-        opacity:0
-    })
-    
-    gsap.to('.blurDiv',{
-      opacity:0,
-    })
-   
-  }
+    gsap.to(".legacyDiv", {
+      opacity: 0,
+    });
 
-  
+    gsap.to(".blurDiv", {
+      opacity: 0,
+    });
+  };
+
+  useEffect(() => {
+    const gtl = gsap.timeline();
+    gtl.to(".DivHoverShow", {
+      opacity: 1,
+      scale: 1.1,
+      stagger: 0.05,
+      ease: "linear",
+      repeat: -1,
+    });
+    gtl.to(".DivHoverShow", {
+      opacity: 1,
+      scale: 1.1,
+      backgroundColor: "transparent",
+      border: "1px solid white",
+      stagger: 0.05,
+      ease: "linear",
+      repeat: -1,
+    });
+  }, []);
 
   return (
     <>
-      <div id="Address" className="w-full min-h-screen z-90 relative bg-[#e7d9bf]">
+      <div
+        id="Address"
+        className="w-full min-h-screen z-90 relative bg-[#e7d9bf]"
+      >
         {/* All_Image_Div_Container */}
         <div className="w-full h-screen relative ">
           {AllImgArr.map((item, index) => {
@@ -99,8 +118,6 @@ const LegacyComponent = () => {
 
         {/* TOP-Intraction-Container */}
         <div className="w-full h-full absolute top-0 left-0 z-30 flex px-[40px] flex-col ">
-
-
           {/* Title */}
           <div className="w-full h-[180px] flex justify-center items-center mt-[70px] invert-100 ">
             <Image
@@ -114,7 +131,6 @@ const LegacyComponent = () => {
 
           {/* Intraction-Container */}
           <div className=" w-full h-fit flex justify-center items-center mt-[50px]">
-
             {/* SVG-Container */}
             <div className="w-full max-w-[650px] h-fit relative">
               <Image
@@ -126,42 +142,95 @@ const LegacyComponent = () => {
               />
 
               {/* HoverDiv1 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv1')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[27%] left-[43%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv1")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute  top-[27%] left-[43%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv2 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv2')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[39%] left-[44%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv2")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[39%] left-[44%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv3 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv3')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[54%] left-[52%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv3")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[54%] left-[52%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv4 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv4')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[64%] left-[52%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv4")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[64%] left-[52%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv5 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv5')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[72%] left-[44%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv5")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[72%] left-[44%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv6 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv6')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[85%] left-[41%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv6")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[85%] left-[41%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
 
               {/* HoverDiv7 */}
-              <div onMouseEnter={()=>HoverAction('.legacyDiv7')} onMouseLeave={()=>HoverPreAction()} className="w-[20px] h-[20px] absolute top-[50%] left-[23%] rounded-full cursor-pointer ">
-
+              <div
+                onMouseEnter={() => HoverAction(".legacyDiv7")}
+                onMouseLeave={() => HoverPreAction()}
+                className="w-[20px] h-[20px] absolute top-[50%] left-[23%] rounded-full cursor-pointer "
+              >
+                <div className="w-[20px] h-[20px] rounded-full relative">
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                  <div className="w-[20px] h-[20px] bg-[#ffffffb4] DivHoverShow opacity-0 rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
               </div>
-
-              
-
             </div>
           </div>
         </div>
