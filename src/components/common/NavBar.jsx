@@ -18,7 +18,7 @@ const NavBar = () => {
     <>
       <div className="w-full z-95 fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite">
         {/* Menu Container */}
-        <div className="w-[17%] h-fit flex justify-center items-center gap-[30px]">
+        <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px]">
           {/* Home */}
           <a href="#Address">
             <MenuBtn item={"Address"} />
