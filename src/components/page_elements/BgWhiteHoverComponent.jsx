@@ -4,13 +4,13 @@ import BgCanvasHover from '../ui/BgCanvasHover'
 const BgWhiteHoverComponent = () => {
 
   return (
-    <div className='w-full h-screen bg-[#e7d9bf] flex fixed top-0 left-0 overflow-hidden z-80'
+    <div className='w-full h-screen bg-[#e7d9bf] flex fixed top-0 left-0 overflow-hidden z-80 max-sm:hidden'
     >
 
        {/* ✅ Background-Image */}
       <Image
        src={'/Img/BgImgPattren1.svg'}
-       className='w-full h-full object-cover scale-[1.1]'
+       className='w-full h-full object-cover scale-[1.1] '
        width={1000}
        height={1000}
        alt='Background Pattren Image'

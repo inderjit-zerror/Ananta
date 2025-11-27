@@ -65,9 +65,9 @@ const InnerImgContant = () => {
 
   return (
     <>
-      <div className="w-full h-fit flex flex-col BBBBB text-black">
+      <div className="w-full h-fit flex flex-col BBBBB text-black max-sm:bg-[#E7D9BF]">
         {/* Title & Desc */}
-        <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px]">
+        <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px] max-sm:hidden">
           <img className="w-[50%] invert-100 max-[1030px]:w-[60%]" src={"/data/TitleImg.svg"} alt="Title" />
 
           {/* Desc */}
@@ -79,14 +79,21 @@ const InnerImgContant = () => {
           </div>
         </div>
 
+        {/* max-sm: Title & desc*/}
+        <div className="w-full h-fit CFF text-[45px] leading-[45px] px-[10px] text-[#464238] sm:hidden py-[30px]">
+          <p>Modern</p>
+          <p>Convenience In </p>
+          <p>A Historic Core </p>
+        </div>
+
         {/* Cont-Div1-Img-Container */}
-        <div className="w-full h-fit flex items-end mt-[100px] px-[40px]  max-[1030px]:flex-col max-[1030px]:gap-[120px] ">
+        <div className="w-full h-fit flex items-end mt-[100px] max-sm:mt-[10px] px-[40px] max-sm:px-[10px]  max-[1030px]:flex-col max-[1030px]:gap-[120px] max-sm:gap-[20px]">
           {/* Left-Cont */}
-          <div className="w-[50%] h-fit max-[1030px]:w-full">
+          <div className="w-[50%] h-fit max-[1030px]:w-full max-sm:w-full  max-sm:flex max-sm:flex-col ">
             {/* Img & Text Cont */}
-            <div className="w-[550px] h-[250px] flex select-none bg-amber-700 ">
+            <div className="w-[550px] h-[250px] flex select-none bg-amber-700  max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col ">
               {/* Img */}
-              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont ">
+              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont max-sm:w-full max-sm:h-[500px]">
                 <Image
                   className="w-full h-full object-cover innerImgCont1Img scale-[1.5]"
                   src={"/Img/ContImg1.webp"}
@@ -97,7 +104,7 @@ const InnerImgContant = () => {
               </div>
 
               {/* Text */}
-              <div className=" w-[50%] h-full bg-[#F5F3EA] flex justify-center items-center px-[40px]">
+              <div className=" w-[50%] h-full bg-[#F5F3EA] flex justify-center items-center px-[40px] max-sm:w-full max-sm:py-[100px]">
                 <p className="text-[18px] leading-[18px] text-[#212121] CFF text-center">
                   Beyond its heritage, the location offers seamless access to
                   the city`s civic, lifestyle, and institutional landmarks. 
@@ -107,11 +114,11 @@ const InnerImgContant = () => {
           </div>
 
           {/* Right-Cont */}
-          <div className="w-[50%] h-fit  flex justify-end items-end">
+          <div className="w-[50%] h-fit  flex justify-end items-end max-sm:w-full  ">
             {/* Img & Text */}
-            <div className="w-fit h-fit flex">
+            <div className="w-fit h-fit flex max-sm:w-full max-sm:flex max-sm:flex-col">
               {/* Img-Cont */}
-              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] innerImgCont2ImgCont cursor-pointer overflow-hidden ">
+              <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] innerImgCont2ImgCont cursor-pointer overflow-hidden max-sm:w-full max-sm:h-[500px] ">
                 <Image
                   className="w-full h-full object-cover object-center innerImgCont2Img sacle-[2]"
                   src={"/Img/ContImg2.webp"}
@@ -122,7 +129,7 @@ const InnerImgContant = () => {
               </div>
 
               {/* Text-Cont */}
-              <div className="w-[400px] h-[450px] bg-[#F5F3EA] p-[30px] flex flex-col justify-between">
+              <div className="w-[400px] h-[450px] bg-[#F5F3EA] p-[30px] flex flex-col justify-between max-sm:w-full">
                 <p className="text-[18px] leading-[18px]">
                   At the Centre of <br /> Significance.
                 </p>
@@ -139,13 +146,13 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div-2-Img-Container */}
-        <div className="w-full h-screen flex justify-center items-center px-[40px]">
+        <div className="w-full h-screen flex justify-center items-center px-[40px] max-sm:w-full max-sm:h-fit max-sm:px-[10px] max-sm:pt-[20px]">
 
           {/* Image-Text-Cont */}
-          <div className="w-[70%] h-[60%] flex max-[1030px]:w-[90%]">
+          <div className="w-[70%] h-[60%] flex max-[1030px]:w-[90%] max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col ">
 
             {/* Img-Cont */}
-            <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer">
+            <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer max-sm:w-full">
               <Image
                 className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]"
                 src={"/Img/ContImg3.webp"}
@@ -156,7 +163,7 @@ const InnerImgContant = () => {
             </div>
 
             {/* Text */}
-            <div className=" w-[250px] h-[250px] bg-[#F5F3EA] flex justify-center items-center px-[30px]">
+            <div className=" w-[250px] h-[250px] bg-[#F5F3EA] flex justify-center items-center px-[30px] max-sm:w-full">
               <p className="text-[18px] leading-[18px] text-[#212121] CFF text-center">
                 Beyond its heritage, the location offers seamless access to the
                 city`s civic, lifestyle, and institutional landmarks. 

@@ -33,7 +33,7 @@ const FormSection = () => {
 
   return (
     <>
-      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden">
+      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden max-sm:p-[10px]">
         <Image
           src={"/Img/Form/FormBG.webp"}
           className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
@@ -45,19 +45,19 @@ const FormSection = () => {
         {/* Inner-Container */}
         <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] ">
           {/* Title-Section */}
-          <div className="w-full h-fit flex flex-col justify-center items-center">
+          <div className="w-full h-fit flex flex-col justify-center items-center max-sm:pt-[20px]">
             {/* SVG */}
             <Image
               src={"/data/TitleDesign.svg"}
-              className="w-full max-w-[400px]"
+              className="w-full h-[50px] max-sm:h-[50px]"
               width={1000}
               height={1000}
               alt="bg"
             />
 
             {/* Desc */}
-            <div className="w-full max-w-[460px] h-fit flex justify-center items-center my-[30px] mb-[60px]">
-              <p className="CFF text-[2.2rem] leading-[2.2rem] tracking-tight text-center">
+            <div className="w-full max-w-[460px] h-fit flex justify-center items-center my-[30px] mb-[60px] max-sm:px-[20px]">
+              <p className="CFF text-[2.2rem] leading-[2.2rem] tracking-tight text-center text-[#464238] max-sm:text-[2.1rem] max-sm:leading-[2.1rem] ">
                 Your Next Address Begins Here
               </p>
             </div>

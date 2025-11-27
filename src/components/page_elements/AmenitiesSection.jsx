@@ -73,17 +73,18 @@ const AmenitiesSection = () => {
 
   return (
     <div>
-      <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90 pt-[50px]">
+      <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90 pt-[50px] max-sm:h-fit max-sm:overflow-x-hidden max-sm:px-[10px] max-sm:pb-[20px]">
         <SectionTitle textData={"The Art of Refined Living."} />
-        <div className="w-full  flex justify-center mt-20 gap-32 border-b border-black/30">
+
+        <div className="w-full  flex justify-center mt-20 gap-32 border-b border-black/30 max-sm:border-b-0 max-sm:flex-col max-sm:gap-[10px] max-sm:mt-[30px] ">
           {data.map((item, i) => {
             return (
               <div
                 onClick={() => {
                   setActiveAmentie(item)
-                }} key={i} className={`CFF cursor-pointer relative text-lg flex justify-center ${activeAmentie.id === item.id ? 'opacity-100' : 'opacity-50'} `}>
+                }} key={i} className={`CFF cursor-pointer relative text-lg flex justify-center max-sm:justify-start max-sm: border-b border-black/30 pb-[5px] ${activeAmentie.id === item.id ? 'opacity-100' : 'opacity-50'}  `}>
                 <div className=" w-fit block relative">
-                  {activeAmentie.id === item.id && <div className="absolute w-full bg-black left-0 bottom-0 h-[1px]"></div>}
+                  {activeAmentie.id === item.id && <div className="absolute w-full bg-black left-0 bottom-0 h-[1px] max-sm:h-[0px]"></div>}
                   <p>0{i + 1} &nbsp; {item.titel} </p>
                 </div>
               </div>
@@ -91,36 +92,52 @@ const AmenitiesSection = () => {
           })}
         </div>
 
-        <div className="w-full mt-20 relative flex items-end justify-between ">
-          <div className=" small_img_1 w-[28vw] absolute bg-[#F5F3EA] top-0 left-[15vw] aspect-[4/3] p-10">
+        {/* Top */}
+        <div className="w-full mt-20 relative flex items-end justify-between max-sm:h-fit  max-sm:flex-col max-sm:mt-[20px] ">
+          <div className=" small_img_1 w-[28vw] absolute bg-[#F5F3EA] top-0 left-[15vw] aspect-[4/3] p-10 max-sm:w-[70vw] max-sm:left-[-3%] max-sm:h-[300px] max-sm:p-[10px]">
             <div className="w-full h-full overflow-hidden">
               <img className='w-full h-full object-cover' src={activeAmentie.smallImg1} alt="" />
             </div>
           </div>
 
-          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg">
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg max-sm:hidden">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para1}</p>
           </div>
-          <div className="w-[60vw] shrink-0 aspect-[5/3] ">
+
+          <div className="w-[60vw] shrink-0 aspect-[5/3] max-sm:w-full max-sm:h-[500px] max-sm:mt-[200px] ">
             <img className='w-full h-full object-cover' src={activeAmentie.largeImg1} alt="" />
+          </div>
+
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg text-black max-sm:hidden max-sm:w-full sm:hidden max-sm:h-fit ">
+            <p>0{activeAmentie.id}</p>
+            <p>{activeAmentie.para1}</p>
           </div>
         </div>
 
-        <div className="w-full mt-32 relative flex flex-row-reverse items-end justify-between ">
-          <div className="w-[28vw] small_img_2 absolute bg-[#F5F3EA] top-0 right-[15vw] aspect-[4/3] p-10">
+        {/* Bottom */}
+        <div className="w-full mt-32 relative flex flex-row-reverse items-end justify-between max-sm:h-fit max-sm:mt-[20px] max-sm:flex-col ">
+
+          <div className="w-[28vw] small_img_2 absolute bg-[#F5F3EA] top-0 right-[15vw] aspect-[4/3] p-10 max-sm:w-[70%] max-sm:left-[-2%] max-sm:p-[10px] max-sm:h-[300px] ">
             <div className="w-full h-full overflow-hidden">
               <img className='w-full h-full object-cover' src={activeAmentie.smallImg2} alt="" />
             </div>
 
           </div>
 
-          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg">
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg max-sm:hidden">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para2}</p>
           </div>
-          <div className="w-[60vw] shrink-0 aspect-[5/3] ">
+
+          <div className="w-[60vw] shrink-0 aspect-[5/3] max-sm:w-full max-sm:h-[500px] max-sm:mt-[100px] ">
             <img className='w-full h-full object-cover' src={activeAmentie.largeImg2} alt="" />
+          </div>
+
+
+          <div className="w-[20%] flex gap-2 CFF leading-tight text-lg sm:hidden max-sm:w-full max-sm:mt-[20px]">
+            <p>0{activeAmentie.id}</p>
+            <p>{activeAmentie.para2}</p>
           </div>
         </div>
 

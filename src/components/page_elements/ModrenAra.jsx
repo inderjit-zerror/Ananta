@@ -2,6 +2,15 @@
 import SectionTitle from "../common/SectionTitle";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+import Image from "next/image";
+
 const slides = [
   {
     id: 1,
@@ -77,8 +86,8 @@ const SliderSection = () => {
       <SectionTitle textData={"Heritage Refined for the Modern Era"} />
 
       {/* Desc */}
-      <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[50px]">
-        <p className=" capitalize text-center text-[1.2rem] leading-[1.2rem] CFF">
+      <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[50px] max-sm:px-[30px]">
+        <p className=" capitalize text-center text-[1.2rem] leading-[1.2rem] CFF max-sm:text-[1rem] leading-[1rem] text-[#313131]">
           Designed by leading architects, Ananta embodies a rare architectural
           balance— honouring the region’s heritage while embracing modern
           refinement. Its façade reflects a refined interplay of textures and
@@ -86,10 +95,10 @@ const SliderSection = () => {
         </p>
       </div>
 
-      <div className="w-full  px-[40px] my-10 md:my-0 h-[50vh] md:h-screen  flex items-center justify-center overflow-hidden">
+      <div className="w-full  px-[40px] max-sm:px-[10px] my-10 md:my-0 h-[50vh] md:h-screen  flex items-center justify-center overflow-hidden max-sm:hidden">
         <div
           ref={containerRef}
-          className="flex gap-4 justify-center items-center w-full overflow-hidden"
+          className="flex gap-4 justify-center items-center w-full overflow-hidden " 
         >
           {slides.map((slide, index) => (
             <div
@@ -111,7 +120,52 @@ const SliderSection = () => {
             </div>
           ))}
         </div>
+
+
+        {/* Max-sm:code */}
       </div>
+
+
+      {/* max-sm: Code */}
+
+      <div className="w-full h-[500px] overflow-x-scroll flex sm:hidden gap-[20px] max-sm:mt-[40px]">
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination]}
+        className="mySwiper"
+      >
+
+        {
+            slides.map((item, index)=>{
+              return(
+                <SwiperSlide key={index}>
+                  <div className="w-full h-full  flex justify-center items-center">
+                    {/* Img-Div */}
+                    <div className="w-[95%] h-full bg-amber-600 overflow-hidden">
+                      <Image 
+                       src={item.image}
+                       className="w-full h-full object-center object-cover"
+                       width={1000}
+                       height={1000}
+                       alt="img"
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            })
+        }
+      </Swiper>
+
+      </div>
+      
+
+
     </div >
   );
 };

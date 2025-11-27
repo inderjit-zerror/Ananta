@@ -16,8 +16,8 @@ const SectionTitle = ({textData}) => {
       </div>
 
       {/* Title */}
-      <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px]">
-        <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF">
+      <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px]">
+        <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
           {textData}
         </p>
       </div>
