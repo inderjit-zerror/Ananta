@@ -46,7 +46,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="w-full h-screen z-90  flex flex-col pt-[80px] bg-[#FEF7EE] text-black VText max-sm:overflow-x-hidden">
+    <div className="w-full h-screen z-90  flex flex-col pt-[80px] bg-[#FEF7EE] text-[#9c6b25] VText max-sm:overflow-x-hidden">
       {/* Title_Div */}
       <div className="w-full h-fit flex justify-center items-center  gap-[10px] px-[40px]">
         <p className="text-[5rem] max-sm:text-[2.7rem] ">ANANTA</p>

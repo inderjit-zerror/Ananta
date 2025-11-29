@@ -74,7 +74,12 @@ const AmenitiesSection = () => {
   return (
     <div>
       <div className="w-full  pb-20 px-[40px] bg-[#F5F3EA] relative z-90 py-[100px] max-sm:py-[80px] max-sm:px-[20px] max-sm:h-fit max-sm:overflow-x-hidden max-sm:px-[10px] max-sm:pb-[20px]">
-        <SectionTitle textData={"The Art of Refined Living."} />
+        <SectionTitle  />
+        <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px] text-[#9c6b25] ">
+            <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
+              The Art of Refined Living.
+            </p>
+          </div>
 
         <div className="w-full  flex justify-center mt-20 gap-32  max-sm:pt-[20px] border-b border-black/30 max-sm:border-b-0 max-sm:flex-col max-sm:gap-[10px] max-sm:mt-[30px] ">
           {data.map((item, i) => {
@@ -85,7 +90,7 @@ const AmenitiesSection = () => {
                 }} key={i} className={`CFF cursor-pointer capitalize relative text-lg flex justify-center max-sm:justify-start max-sm:border-b border-black/30 pb-[5px] ${activeAmentie.id === item.id ? 'opacity-100' : 'opacity-50'}  `}>
                 <div className=" w-fit block relative capitalize">
                   {activeAmentie.id === item.id && <div className="absolute w-full capitalize bg-black left-0 bottom-[-17%] h-[1px] max-sm:h-[0px]"></div>}
-                  <p className=' capitalize text-[25px] max-sm:text-[24px]'>0{i + 1} &nbsp; {item.titel} </p>
+                  <p className=' capitalize text-[25px] max-sm:text-[24px] text-[#9c6b25]'>0{i + 1} &nbsp; {item.titel} </p>
                 </div>
               </div>
             )
@@ -100,7 +105,7 @@ const AmenitiesSection = () => {
             </div>
           </div>
 
-          <div className="w-[20%] flex gap-2 STF  text-[20px] leading-[22px] max-sm:hidden">
+          <div className="w-[20%] flex gap-2 STF  text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25]">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para1}</p>
           </div>
@@ -109,7 +114,7 @@ const AmenitiesSection = () => {
             <img className='w-full h-full object-cover' src={activeAmentie.largeImg1} alt="" />
           </div>
 
-          <div className="w-[20%] flex gap-2 STF text-[20px] leading-[22px] text-black max-sm:hidden max-sm:w-full sm:hidden max-sm:h-fit ">
+          <div className="w-[20%] flex gap-2 STF text-[20px] leading-[22px] text-black max-sm:hidden max-sm:w-full sm:hidden max-sm:h-fit text-[#9c6b25] ">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para1}</p>
           </div>
@@ -125,7 +130,7 @@ const AmenitiesSection = () => {
 
           </div>
 
-          <div className="w-[20%] flex gap-2 STF text-[20px] leading-[22px] max-sm:hidden">
+          <div className="w-[20%] flex gap-2 STF text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25]">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para2}</p>
           </div>
@@ -135,7 +140,7 @@ const AmenitiesSection = () => {
           </div>
 
 
-          <div className="w-[20%] max-sm:py-[20px] flex gap-2 STF text-[20px] leading-[22px] sm:hidden max-sm:w-full max-sm:mt-[20px]">
+          <div className="w-[20%] max-sm:py-[20px] flex gap-2 STF text-[20px] leading-[22px] sm:hidden max-sm:w-full max-sm:mt-[20px] text-[#9c6b25]">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para2}</p>
           </div>

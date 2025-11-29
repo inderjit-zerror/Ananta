@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect } from "react";
 import SectionTitle from "../common/SectionTitle";
 import Component3DModel from "../ui/Component3DModel";
@@ -8,33 +8,36 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const ResidenceSection = () => {
-
-
-   useEffect(()=>{
-      // bg ----------------
-        gsap.fromTo('.RIMG',{
-          y:-500,
-        },{
-          y:500,
-          ease:'linear',
-          scrollTrigger:{
-            trigger:'.RIMGCONT',
-            start:'top bottom',
-            end:'bottom top',
-            scrub:true,
-            // markers:true
-          }
-        })
-  },[])
-
+  useEffect(() => {
+    // bg ----------------
+    gsap.fromTo(
+      ".RIMG",
+      {
+        y: -500,
+      },
+      {
+        y: 500,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: ".RIMGCONT",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          // markers:true
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div id="FloorPlan" className="w-full min-h-screen flex relative BG_R z-90 pt-[50px]  TextBlack pointer-events-none RIMGCONT overflow-hidden max-sm:hidden ">
+    <div
+      id="FloorPlan"
+      className="w-full min-h-screen flex relative BG_R z-90 pt-[50px]  TextBlack pointer-events-none RIMGCONT overflow-hidden max-sm:hidden "
+    >
       {/* Bg-div */}
 
       <Image
@@ -46,19 +49,18 @@ const ResidenceSection = () => {
       />
 
       {/* BG-Black */}
-      <div className="w-full h-full absolute top-0 left-0 z-[-1] bg-[#13131385]">
-
-      </div>
-
-
+      <div className="w-full h-full absolute top-0 left-0 z-[-1] bg-[#13131385]"></div>
 
       {/* ContantWraper */}
       <div className="w-full min-h-screen flex flex-col pb-[100px] pt-[50px] ">
         {/* Title-Cont */}
         <div className="w-full h-fit flex flex-col justify-center items-center text-white">
-          <SectionTitle
-            textData={"One Floor. One Residence. Infinite Privacy."}
-          />
+          <SectionTitle />
+          <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px]  ">
+            <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
+              One Floor. One Residence. Infinite Privacy.
+            </p>
+          </div>
         </div>
 
         {/* Desc-Cont */}

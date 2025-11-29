@@ -85,9 +85,15 @@ const SliderSection = () => {
     <div id="Gallery" className="w-full h-fit z-90 bg-[#F5F3EA] pt-[100px] max-sm:pt-[80px]">
       <SectionTitle textData={"Heritage Refined for the Modern Era"} />
 
+       <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px] text-[#9c6b25] ">
+        <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
+          Heritage Refined for the Modern Era
+        </p>
+      </div>
+
       {/* Desc */}
       <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[20px] max-sm:px-[30px]">
-        <p className=" capitalize text-center text-[20px] leading-[22px] max-sm:leading-[20px] STF max-sm:text-[1rem]  text-[#313131]">
+        <p className=" capitalize text-center text-[20px] leading-[22px] max-sm:leading-[20px] STF max-sm:text-[1rem] text-[#9c6b25]">
           Designed by leading architects, Ananta embodies a rare architectural
           balance— honouring the region’s heritage while embracing modern
           refinement. Its façade reflects a refined interplay of textures and

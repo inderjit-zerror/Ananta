@@ -30,7 +30,7 @@ const ImelessSection = () => {
   }, []);
 
   return (
-    <div className="w-full Timeless_Cont h-[200dvh]  relative z-[90] overflow-hidden">
+    <div className="w-full Timeless_Cont  max-sm:h-[100dvh] h-[200dvh]  relative z-[90] overflow-hidden">
       {/* Title */}
       <div className="w-full h-fit flex justify-center items-center absolute top-[5%] left-0 px-[40px] max-sm:px-[20px] ">
         {/* PC */}
@@ -57,8 +57,8 @@ const ImelessSection = () => {
       </div>
 
       <Image
-        className="w-full TimeLessImg h-full object-cover object-center object-top absolute top-0 left-0 z-[-1]"
-        src={"/Img/imeless/ImelessImg.webp"}
+        className="sm:w-full TimeLessImg h-full object-cover sm:object-center object-top absolute top-0 left-0 z-[-1]"
+        src={"/Img/imeless/BigBuilding.webp"}
         width={1000}
         height={1000}
         alt="ai"
