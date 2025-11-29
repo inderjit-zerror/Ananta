@@ -71,7 +71,7 @@ const NavBar = () => {
         <div className="w-fit h-fit flex justify-center items-center select-none cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-0 lg:left-[50%]  lg:translate-x-[-50%]">
           <Image
             src={"/data/LogoMain.svg"}
-            className={`h-[40px] w-fit nav_logo opacity-0 ${navStatus === true? ('max-sm:invert-100'):('')}  `}
+            className={`h-[40px] max-sm:w-[150px] sm:w-fit nav_logo opacity-0 ${navStatus === true? ('max-sm:invert-100'):('')}  `}
             width={1000}
             height={1000}
             alt="Logo"

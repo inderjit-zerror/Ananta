@@ -82,12 +82,12 @@ const SliderSection = () => {
   }, []);
 
   return (
-    <div id="Gallery" className="w-full h-fit z-90 bg-[#F5F3EA] pt-[50px]">
+    <div id="Gallery" className="w-full h-fit z-90 bg-[#F5F3EA] pt-[100px] max-sm:pt-[80px]">
       <SectionTitle textData={"Heritage Refined for the Modern Era"} />
 
       {/* Desc */}
-      <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[50px] max-sm:px-[30px]">
-        <p className=" capitalize text-center text-[1.2rem] leading-[1.2rem] CFF max-sm:text-[1rem] leading-[1rem] text-[#313131]">
+      <div className="w-full h-fit max-w-[600px] m-auto flex justify-center items-center mt-[20px] max-sm:px-[30px]">
+        <p className=" capitalize text-center text-[20px] leading-[22px] max-sm:leading-[20px] STF max-sm:text-[1rem]  text-[#313131]">
           Designed by leading architects, Ananta embodies a rare architectural
           balance— honouring the region’s heritage while embracing modern
           refinement. Its façade reflects a refined interplay of textures and
@@ -95,7 +95,7 @@ const SliderSection = () => {
         </p>
       </div>
 
-      <div className="w-full  px-[40px] max-sm:px-[10px] my-10 md:my-0 h-[50vh] md:h-screen  flex items-center justify-center overflow-hidden max-sm:hidden">
+      <div className="w-full  px-[40px] max-sm:px-[10px] my-[10px] md:my-0 h-[50vh] md:h-fit  py-[90px]  flex items-center justify-center overflow-hidden max-sm:hidden">
         <div
           ref={containerRef}
           className="flex gap-4 justify-center items-center w-full overflow-hidden " 
@@ -113,7 +113,7 @@ const SliderSection = () => {
               />
 
               <div className=" opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out absolute bottom-10 left-10 ">
-                <p className="slide-title  translate-y-5 text-4xl uppercase w-[50%] CFF text-white ">
+                <p className="slide-title  translate-y-5 text-4xl capitalize w-[80%] CFF text-white ">
                   {slide.title}
                 </p>
               </div>
@@ -122,7 +122,6 @@ const SliderSection = () => {
         </div>
 
 
-        {/* Max-sm:code */}
       </div>
 
 

@@ -33,7 +33,7 @@ const FormSection = () => {
 
   return (
     <>
-      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden max-sm:p-[10px]">
+      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center text-black overflow-hidden max-sm:p-[0px]  ">
         <Image
           src={"/Img/Form/FormBG.webp"}
           className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
@@ -43,7 +43,7 @@ const FormSection = () => {
         />
 
         {/* Inner-Container */}
-        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] ">
+        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] max-sm:pt-[40px] max-sm:px-[30px]  ">
           {/* Title-Section */}
           <div className="w-full h-fit flex flex-col justify-center items-center max-sm:pt-[20px]">
             {/* SVG */}
@@ -68,7 +68,7 @@ const FormSection = () => {
             {/* First + Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
               <div>
-                <label className="block text-sm mb-2">First Name</label>
+                <label className="block text-[18px] CFF mb-2">First Name</label>
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-black outline-none pb-1"
@@ -77,7 +77,7 @@ const FormSection = () => {
               </div>
 
               <div>
-                <label className="block text-sm mb-2">Last Name</label>
+                <label className="block text-[18px] CFF mb-2">Last Name</label>
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-black outline-none pb-1"
@@ -89,7 +89,7 @@ const FormSection = () => {
             {/* Email + Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
               <div>
-                <label className="block text-sm mb-2">Email</label>
+                <label className="block text-[18px] CFF mb-2">Email</label>
                 <input
                   type="email"
                   className="w-full bg-transparent border-b border-black outline-none pb-1"
@@ -97,7 +97,7 @@ const FormSection = () => {
               </div>
 
               <div>
-                <label className="block text-sm mb-2">Phone Number</label>
+                <label className="block text-[18px] CFF mb-2">Phone Number</label>
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-black outline-none pb-1"
@@ -107,7 +107,7 @@ const FormSection = () => {
 
             {/* Subject */}
             <div className="mb-10">
-              <label className="block text-sm mb-3">Select Subject?</label>
+              <label className="block text-[18px] mb-3 CFF">Select Subject?</label>
               <div className="flex flex-wrap gap-6">
                 {[1, 2, 3, 4].map((i) => (
                   <label
@@ -119,7 +119,7 @@ const FormSection = () => {
                       name="subject"
                       className="appearance-none w-4 h-4 rounded-full border border-gray-500 checked:bg-black"
                     />
-                    <span className="text-sm">General Inquiry</span>
+                    <span className="text-[14px] STF">General Inquiry</span>
                   </label>
                 ))}
               </div>
@@ -127,9 +127,9 @@ const FormSection = () => {
 
             {/* Message */}
             <div className="mb-10">
-              <label className="block text-sm mb-2">Message</label>
+              <label className="block text-[18px] mb-2 CFF">Message</label>
               <textarea
-                rows="2"
+                rows="1"
                 className="w-full bg-transparent border-b border-black outline-none pb-1 resize-none"
               />
             </div>

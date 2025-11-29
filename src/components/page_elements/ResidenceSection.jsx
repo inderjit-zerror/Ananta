@@ -34,7 +34,7 @@ const ResidenceSection = () => {
 
 
   return (
-    <div id="FloorPlan" className="w-full min-h-screen flex relative BG_R z-90  TextBlack pointer-events-none RIMGCONT overflow-hidden max-sm:hidden ">
+    <div id="FloorPlan" className="w-full min-h-screen flex relative BG_R z-90 pt-[50px]  TextBlack pointer-events-none RIMGCONT overflow-hidden max-sm:hidden ">
       {/* Bg-div */}
 
       <Image
@@ -62,9 +62,9 @@ const ResidenceSection = () => {
         </div>
 
         {/* Desc-Cont */}
-        <div className="w-full h-fit flex justify-center select-none items-center CFF text-white gap-[20px] text-[1rem] leading-[1rem] mt-[50px]">
+        <div className="w-full h-fit flex justify-center select-none items-center STF text-white gap-[40px] text-[20px] leading-[22px] mt-[50px]">
           {/* Left-Desc */}
-          <div className="w-full max-w-[300px] flex text-justify">
+          <div className="w-full max-w-[400px] flex text-justify STF">
             <p>
               honour heritage while embracing modern luxury. Its architecture
               balances classical symmetry with contemporary minimalism, built
@@ -73,7 +73,7 @@ const ResidenceSection = () => {
           </div>
 
           {/* Right-Desc */}
-          <div className="w-full max-w-[300px] flex text-justify">
+          <div className="w-full max-w-[400px] flex text-justify STF">
             <p>
               honour heritage while embracing modern luxury. Its architecture
               balances classical symmetry with contemporary minimalism, built

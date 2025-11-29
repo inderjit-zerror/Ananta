@@ -16,7 +16,7 @@
 
       
       // White color with calculated opacity
-      gl_FragColor = vec4(0.90588, 0.85098, 0.74902, alpha * 0.80);
+      gl_FragColor = vec4(0.90588, 0.85098, 0.74902, alpha * 0.75);
     }
   `;
 

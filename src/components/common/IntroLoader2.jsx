@@ -50,7 +50,7 @@ const IntroLoader = () => {
             </div>
                 <Image
                     src={"/data/LogoMain.svg"}
-                    className="h-[4vw] introLogo absolute  z-10 invert-100 w-fit"
+                    className="md:h-[4vw] w-[150px] introLogo absolute  z-10 invert-100 "
                     width={1000}
                     height={1000}
                     alt="Logo"

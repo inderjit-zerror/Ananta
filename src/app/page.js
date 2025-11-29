@@ -4,6 +4,7 @@ import BgWhiteHoverComponent from "@/components/page_elements/BgWhiteHoverCompon
 import CraftedSection from "@/components/page_elements/CraftedSection";
 import FormSection from "@/components/page_elements/FormSection";
 import HeroSection from "@/components/page_elements/HeroSection";
+import ImelessSection from "@/components/page_elements/ImelessSection";
 import LegacyComponent from "@/components/page_elements/LegacyComponent";
 import ModrenAra from "@/components/page_elements/ModrenAra";
 import PrecinctSection from "@/components/page_elements/PrecinctSection";
@@ -19,6 +20,9 @@ export default function Home() {
 
         {/* ☑️ Hero-Section */}
         <HeroSection />
+
+        {/* Imeless */}
+        <ImelessSection />
 
         {/* ☑️ Legacy-Section */}
         <LegacyComponent />
