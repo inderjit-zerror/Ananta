@@ -15,10 +15,10 @@ const FormSection = () => {
     gsap.fromTo(
       ".BGFC",
       {
-        y: -200,
+        y: -100,
       },
       {
-        y: 200,
+        y: 100,
         ease: "linear",
         scrollTrigger: {
           trigger: ".BGP",
