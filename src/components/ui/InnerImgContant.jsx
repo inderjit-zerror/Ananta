@@ -14,6 +14,9 @@ const InnerImgContant = () => {
 
   useEffect(()=>{
 
+    // Disable animation on mobile
+    if (window.innerWidth < 768) return;
+
     // Img1
     gsap.fromTo('.innerImgCont1Img',{
       y:-60,
@@ -136,12 +139,12 @@ const InnerImgContant = () => {
               </div>
 
               {/* Text-Cont */}
-              <div className="w-[400px] h-[450px] max-sm:h-[300px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
-                <p className="text-[18px] leading-[18px] CFF">
-                  At the Centre of <br /> Significance.
+              <div className="w-[400px] h-[450px] max-sm:h-[250px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
+                <p className="text-[18px] leading-[18px] CFF max-sm:text-center">
+                  At the Centre of <br className="max-sm:hidden" /> Significance.
                 </p>
 
-                <p className="text-[20px] leading-[22px] text-justify STF capitalize ">
+                <p className="text-[20px] leading-[22px] text-center STF capitalize ">
                   This neighbourhood is home to iconic temples, historic
                   institutions, and a sense of dignity that has shaped the citys
                   identity through generations. Within this storied setting,
@@ -170,7 +173,7 @@ const InnerImgContant = () => {
             </div>
 
             {/* Text */}
-            <div className=" w-[250px] h-[150px] bg-[#F5F3EA91] flex justify-center items-center px-[30px] max-sm:px-[40px] max-sm:w-full">
+            <div className=" w-[250px] h-[150px] bg-[#F5F3EA91] flex justify-center items-center px-[30px] max-sm:px-[40px] md:py-[100px] max-sm:w-full">
               <p className="text-[18px] leading-[20px] text-[#212121] STF text-center">
                 Beyond its heritage, the location offers seamless access to the
                 city`s civic, lifestyle, and institutional landmarks. 

@@ -11,6 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
   useEffect(() => {
+    // Disable animation on mobile
+    if (window.innerWidth < 768) return;
+    
     gsap.to(".heroVideo", {
       y: 400,
       scale: 1.2,

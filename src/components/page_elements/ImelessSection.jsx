@@ -10,6 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ImelessSection = () => {
   useEffect(() => {
+
+    // Disable animation on mobile
+    if (window.innerWidth < 768) return;
+
     gsap.fromTo(
       ".TimeLessImg",
       {

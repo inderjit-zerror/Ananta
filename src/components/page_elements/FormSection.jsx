@@ -12,6 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FormSection = () => {
   useEffect(() => {
+    // Disable animation on mobile
+    if (window.innerWidth < 768) return;
+
     gsap.fromTo(
       ".BGFC",
       {
@@ -33,7 +36,10 @@ const FormSection = () => {
 
   return (
     <>
-      <div id="form" className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center bg-[#FEF7EE] text-black overflow-hidden max-sm:p-[0px]  ">
+      <div
+        id="form"
+        className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center bg-[#FEF7EE] text-[#9c6b25] overflow-hidden max-sm:p-[0px]  "
+      >
         <Image
           src={"/Img/Form/FormBG.webp"}
           className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]"
@@ -71,7 +77,7 @@ const FormSection = () => {
                 <label className="block text-[18px] CFF mb-2">First Name</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-black outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                   placeholder=""
                 />
               </div>
@@ -80,7 +86,7 @@ const FormSection = () => {
                 <label className="block text-[18px] CFF mb-2">Last Name</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-black outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                   placeholder=""
                 />
               </div>
@@ -92,22 +98,26 @@ const FormSection = () => {
                 <label className="block text-[18px] CFF mb-2">Email</label>
                 <input
                   type="email"
-                  className="w-full bg-transparent border-b border-black outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                 />
               </div>
 
               <div>
-                <label className="block text-[18px] CFF mb-2">Phone Number</label>
+                <label className="block text-[18px] CFF mb-2">
+                  Phone Number
+                </label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-black outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                 />
               </div>
             </div>
 
             {/* Subject */}
             <div className="mb-10">
-              <label className="block text-[18px] mb-3 CFF">Select Subject?</label>
+              <label className="block text-[18px] mb-3 CFF">
+                Select Subject?
+              </label>
               <div className="flex flex-wrap gap-6">
                 {[1, 2, 3, 4].map((i) => (
                   <label
@@ -117,7 +127,7 @@ const FormSection = () => {
                     <input
                       type="radio"
                       name="subject"
-                      className="appearance-none w-4 h-4 rounded-full border border-gray-500 checked:bg-black"
+                      className="appearance-none w-4 h-4 rounded-full border border-[#9c6b25] checked:bg-[#9c6b25]"
                     />
                     <span className="text-[14px] STF">General Inquiry</span>
                   </label>
@@ -130,15 +140,14 @@ const FormSection = () => {
               <label className="block text-[18px] mb-2 CFF">Message</label>
               <textarea
                 rows="1"
-                className="w-full bg-transparent border-b border-black outline-none pb-1 resize-none"
+                className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1 resize-none"
               />
             </div>
 
             {/* Button */}
             <div className="w-full flex justify-center">
-             <BTN text={'Send Message'} />
+              <BTN text={"Send Message"} />
             </div>
-            
           </form>
         </div>
       </div>

@@ -7,19 +7,18 @@ import BTN from "./BTN";
 import { RiMenu4Fill } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
 import MenuComponent from "./MenuComponent";
+import Hamburger from "hamburger-react";
 
 const NavBar = () => {
   const [navStatus, SetNavStatus] = useState(false);
 
-
-  const CheckNavBarStatus = () =>{
-    if(navStatus == false){
-      SetNavStatus(true)
+  const CheckNavBarStatus = () => {
+    if (navStatus == false) {
+      SetNavStatus(true);
+    } else {
+      SetNavStatus(false);
     }
-    else{
-      SetNavStatus(false)
-    }
-  }
+  };
 
   useEffect(() => {
     gsap.set(".nav_logo", {
@@ -55,23 +54,35 @@ const NavBar = () => {
         </div>
 
         {/* Menu Btn */}
-        <div onClick={CheckNavBarStatus} className="w-fit h-fit absolute left-[4%] top-[5%]  sm:hidden z-[100]">
-          {navStatus === false ? (
+        <div
+          onClick={CheckNavBarStatus}
+          className="w-fit h-fit absolute left-[4%] top-[5%]  sm:hidden z-[100]"
+        >
+          {/* {navStatus === false ? (
             <>
-              <RiMenu4Fill className={`text-white text-[40px] `} />
+              <RiMenu4Fill className={`text-[#9c6b25] text-[40px] `} />
             </>
           ) : (
             <>
-              <CgMenuLeft className={`text-[40px] text-black `} />
+              <CgMenuLeft className={`text-[40px] text-[#9c6b25] `} />
             </>
-          )}
+          )} */}
+
+          <Hamburger
+            toggled={navStatus}
+            toggle={SetNavStatus}
+            color="#9c6b25"
+            size={28}
+          />
         </div>
 
         {/* Logo Container */}
-        <div className="w-fit h-fit flex justify-center items-center select-none cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-0 lg:left-[50%]  lg:translate-x-[-50%]">
+        <div
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="w-fit h-fit flex justify-center items-center select-none cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-0 lg:left-[50%]  lg:translate-x-[-50%]">
           <Image
             src={"/data/LogoMain.svg"}
-            className={`h-[40px] max-sm:w-[150px] sm:w-fit nav_logo opacity-0 ${navStatus === true? ('max-sm:invert-100'):('')}  `}
+            className={`h-[40px] max-sm:w-[150px] sm:w-fit nav_logo opacity-0 `}
             width={1000}
             height={1000}
             alt="Logo"
