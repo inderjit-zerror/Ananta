@@ -155,9 +155,9 @@ const LegacyComponent = () => {
 
         {/* Hover Div */}
         <div className="w-full h-fit relative z-[999]  px-[30px] ">
-          <div className=" w-full h-fit flex justify-center items-center py-[100px] overflow-hidden pb-[150px] ">
+          <div className=" w-full h-fit flex justify-center items-center py-[100px] overflow-hidden pb-[150px]  ">
             {/* SVG-Container */}
-            <div className="w-full max-w-[650px] h-fit relative  scale-[1.3]">
+            <div className="w-full max-w-[650px] h-fit relative  ">
               <Image
                 className=" w-full object-cover scale-[1.1] "
                 src={"/data/Intreaction.svg"}
@@ -165,6 +165,14 @@ const LegacyComponent = () => {
                 height={1000}
                 alt="Intreaction SVG"
               />
+              <Image
+                className=" w-full absolute z-[-1] top-0 left-0 object-cover   "
+                src={"Img/Vectorbg.svg"}
+                width={1000}
+                height={1000}
+                alt="Intreaction SVG"
+              />
+              
 
               {/* HoverDiv1 */}
               <div

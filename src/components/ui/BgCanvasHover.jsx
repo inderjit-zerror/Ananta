@@ -33,7 +33,7 @@ const BgCanvasHover = () => {
 
   return (
     <>
-      <Canvas className='w-full h-screen '
+      <Canvas className='w-full h-full '
        gl={{ antialias: true, alpha: true }}
        orthographic={false}
        >

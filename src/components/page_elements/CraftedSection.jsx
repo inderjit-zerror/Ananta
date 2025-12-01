@@ -123,7 +123,7 @@ const CraftedSection = () => {
         {/* 3-Section */}
         <div className="  my-[100px] max-sm:my-[20px] CFF w-full flex  items-center   justify-between max-sm:flex-col">
           {/* LEFT SIDE CONTENT BLOCK */}
-          <div className="flex flex-col gap-8 text-white md:w-1/2 px-[10px]">
+          <div className="flex flex-col gap-8 text-white md:w-1/2">
             {/* Heading */}
             <h1 className="text-4xl CFF md:text-6xl  flex">Elite Developers</h1>
 
@@ -189,9 +189,9 @@ const CraftedSection = () => {
           </div>
 
           {/* RIGHT SIDE CONTENT BLOCK */}
-          <div className="flex flex-col  text-white md:w-1/2 pr-[50px]  max-sm:pr-[10px]  mt-[30px] max-sm:w-full max-sm:items-center  max-sm:pb-[50px]">
+          <div className="flex flex-col  text-white md:w-1/2 pr-[50px]  max-sm:pr-[0px]  mt-[30px] max-sm:w-full max-sm:items-center  max-sm:pb-[50px]">
             {/* Right Paragraph */}
-            <p className="max-w-[350px] text-[20px] leading-[22px] STF md:text-base CFF ml-auto max-sm:w-full text-justify max-sm:hidden max-sm:justify-center pb-[30px]">
+            <p className="max-w-[350px] text-[20px] leading-[22px]  STF md:text-base ml-auto max-sm:w-full text-justify max-sm:hidden max-sm:justify-center pb-[30px]">
               The Result Is A Home That Transcends Trends — An Architectural
               Expression That Is Sophisticated, Rooted In Heritage, And Crafted
               To Remain Relevant For Generations.
@@ -201,7 +201,7 @@ const CraftedSection = () => {
             <div
               onMouseEnter={() => HoverImageActivate(".ch3")}
               onMouseLeave={() => HoverImageDeActivate(".ch3")}
-              className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden rounded-sm ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
+              className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  rounded-sm ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
             >
               <Image
                 src={"/Img/Crafted/TMBG2.webp"} // Replace
@@ -212,7 +212,7 @@ const CraftedSection = () => {
               />
             </div>
             {/* Right Paragraph */}
-            <p className="max-w-[350px] text-[1rem] leading-[1rem] md:text-base max-sm:text-[14px] max-sm:leading-[16px] STF ml-auto max-sm:w-full text-justify sm:hidden mt-[20px] max-sm:ml-0 ">
+            <p className="max-w-[355px] text-[1rem] leading-[1rem]  md:text-base max-sm:text-[14px] max-sm:leading-[16px] STF ml-auto max-sm:w-full text-justify sm:hidden mt-[20px] max-sm:ml-0 ">
               The Result Is A Home That Transcends Trends — An Architectural
               Expression That Is Sophisticated, Rooted In Heritage, And Crafted
               To Remain Relevant For Generations.

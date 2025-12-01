@@ -16,8 +16,7 @@ export default function Home() {
       {/* ☑️ Full-WebPage-Wraper-Container */}
       <div className="w-full h-fit flex flex-col relative text-black ">
         {/* ☑️  Bg-White-Hover-Component */}
-        <BgWhiteHoverComponent />
-
+        
         {/* ☑️ Hero-Section */}
         <HeroSection />
 

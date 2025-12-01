@@ -58,16 +58,6 @@ const NavBar = () => {
           onClick={CheckNavBarStatus}
           className="w-fit h-fit absolute left-[4%] top-[5%]  sm:hidden z-[100]"
         >
-          {/* {navStatus === false ? (
-            <>
-              <RiMenu4Fill className={`text-[#9c6b25] text-[40px] `} />
-            </>
-          ) : (
-            <>
-              <CgMenuLeft className={`text-[40px] text-[#9c6b25] `} />
-            </>
-          )} */}
-
           <Hamburger
             toggled={navStatus}
             toggle={SetNavStatus}

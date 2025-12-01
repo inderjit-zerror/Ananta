@@ -13,10 +13,7 @@ const SectionTitle = ({textData}) => {
           height={1000}
           alt="SVG"
         />
-      </div>
-
-      {/* Title */}
-     
+      </div>     
     </>
   );
 };

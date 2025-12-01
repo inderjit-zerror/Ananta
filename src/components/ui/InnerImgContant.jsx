@@ -68,7 +68,7 @@ const InnerImgContant = () => {
 
   return (
     <>
-      <div className="w-full h-fit flex flex-col BBBBB max-sm:pb-[30px] text-black max-sm:bg-[#E7D9BF] max-sm:px-[10px]">
+      <div className="w-full h-fit flex relative z-[100] flex-col BBBBB max-sm:pb-[30px] text-black max-sm:bg-[#E7D9BF] max-sm:px-[10px]">
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px] max-sm:hidden ">
 
@@ -139,12 +139,12 @@ const InnerImgContant = () => {
               </div>
 
               {/* Text-Cont */}
-              <div className="w-[400px] h-[450px] max-sm:h-[250px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
-                <p className="text-[18px] leading-[18px] CFF max-sm:text-center">
+              <div className="w-[400px] h-[450px] max-sm:h-[300px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
+                <p className="text-[30px] leading-[32px] CFF max-sm:text-center text-[#212121] ">
                   At the Centre of <br className="max-sm:hidden" /> Significance.
                 </p>
 
-                <p className="text-[20px] leading-[22px] text-center STF capitalize ">
+                <p className="text-[20px] leading-[22px] text-center STF text-[#212121] ">
                   This neighbourhood is home to iconic temples, historic
                   institutions, and a sense of dignity that has shaped the citys
                   identity through generations. Within this storied setting,
