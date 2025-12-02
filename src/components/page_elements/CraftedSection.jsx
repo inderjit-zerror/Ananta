@@ -201,7 +201,7 @@ const CraftedSection = () => {
             <div
               onMouseEnter={() => HoverImageActivate(".ch3")}
               onMouseLeave={() => HoverImageDeActivate(".ch3")}
-              className="w-full sm:max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  rounded-sm ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
+              className="w-full sm:max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
             >
               <Image
                 src={"/Img/Crafted/TMBG2.webp"} // Replace
