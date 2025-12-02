@@ -34,7 +34,7 @@ const ImelessSection = () => {
   }, []);
 
   return (
-    <div className="w-full Timeless_Cont  max-sm:h-[100dvh] h-[200dvh]  relative z-[90] overflow-hidden">
+    <div className="w-full Timeless_Cont  max-sm:h-[100vh] h-[200vh]  relative z-[90] overflow-hidden">
       {/* Title */}
       <div className="w-full h-fit flex justify-center items-center absolute top-[5%] left-0 px-[40px] max-sm:px-[20px] ">
         {/* PC */}

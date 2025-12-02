@@ -29,7 +29,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full z-[100] fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite">
+      <div className="w-full z-[100] fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite ">
         {/* Menu Container */}
         <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px] max-[1030]:w-full max-[1030]:gap-[17px]  max-[1030]:justify-start  max-[1030]:pl-0 lg:w-full lg:gap-[17px]  lg:justify-start  lg:pl-0 max-sm:hidden">
           {/* Address */}
@@ -56,12 +56,13 @@ const NavBar = () => {
         {/* Menu Btn */}
         <div
           onClick={CheckNavBarStatus}
-          className="w-fit h-fit absolute left-[4%] top-[5%]  sm:hidden z-[100]"
+          className="w-fit h-fit absolute left-[4%] mt-[40px] sm:hidden z-[100] "
         >
           <Hamburger
             toggled={navStatus}
             toggle={SetNavStatus}
             color="#9c6b25"
+            className=""
             size={28}
           />
         </div>

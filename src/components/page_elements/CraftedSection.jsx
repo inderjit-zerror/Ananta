@@ -78,9 +78,9 @@ const CraftedSection = () => {
         </div>
 
         {/* Second-Section */}
-        <div className="flex my-[100px] max-sm:my-[20px]   flex-col md:flex-row items-center relative gap-10 md:gap-16 max-sm:gap-[5px] max-w-6xl mx-auto max-sm:w-full">
+        <div className="flex my-[100px] max-sm:my-[20px]  relative  flex-col md:flex-row items-center relative gap-10 md:gap-16 max-sm:gap-[5px] max-w-6xl mx-auto max-sm:w-full">
           {/* LEFT IMAGES */}
-          <div className="flex gap-4 items-end">
+          <div className="flex gap-4 items-end  ">
             {/* Image 1 */}
             <div
               onMouseEnter={() => HoverImageActivate(".ch1")}
@@ -113,8 +113,8 @@ const CraftedSection = () => {
           </div>
 
           {/* TEXT */}
-          <div className="flex justify-center md:justify-start w-fit absolute bottom-0 right-[-20%] max-[1030px]:right-[-20%] max-sm:bottom-[-10%] max-sm:right-[20%]">
-            <h2 className="text-white text-4xl CFF md:text-6xl capitalize tracking-wide max-sm:text-[3rem]">
+          <div className="flex justify-center md:justify-start w-fit absolute bottom-0   right-[-20%] max-[1030px]:right-[-20%] max-sm:bottom-[-10%] max-sm:right-[0%] max-sm:w-full max-sm:h-fit max-sm:justify-center max-sm:items-center">
+            <h2 className="text-white text-4xl CFF md:text-6xl capitalize tracking-wide max-sm:text-[2.5rem]">
               The Makers
             </h2>
           </div>
@@ -201,7 +201,7 @@ const CraftedSection = () => {
             <div
               onMouseEnter={() => HoverImageActivate(".ch3")}
               onMouseLeave={() => HoverImageDeActivate(".ch3")}
-              className="w-full max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  rounded-sm ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
+              className="w-full sm:max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  rounded-sm ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
             >
               <Image
                 src={"/Img/Crafted/TMBG2.webp"} // Replace
@@ -212,7 +212,7 @@ const CraftedSection = () => {
               />
             </div>
             {/* Right Paragraph */}
-            <p className="max-w-[355px] text-[1rem] leading-[1rem]  md:text-base max-sm:text-[14px] max-sm:leading-[16px] STF ml-auto max-sm:w-full text-justify sm:hidden mt-[20px] max-sm:ml-0 ">
+            <p className="sm:max-w-[355px] text-[1rem] leading-[1rem]  md:text-base max-sm:text-[14px] max-sm:leading-[16px] STF ml-auto max-sm:w-full text-justify sm:hidden mt-[20px] max-sm:ml-0 ">
               The Result Is A Home That Transcends Trends — An Architectural
               Expression That Is Sophisticated, Rooted In Heritage, And Crafted
               To Remain Relevant For Generations.

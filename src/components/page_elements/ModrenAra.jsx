@@ -133,15 +133,15 @@ const SliderSection = () => {
 
       {/* max-sm: Code */}
 
-      <div className="w-full h-[500px] overflow-x-scroll flex sm:hidden  gap-[10px] max-sm:mt-[40px]">
+      <div className="w-full h-[500px] overflow-x-scroll  flex sm:hidden max-sm:mt-[40px]">
         <Swiper
         slidesPerView={1.2}
-        spaceBetween={10}
+        spaceBetween={20}
         // freeMode={true}
         // pagination={{
         //   clickable: true,
         // }}
-        centeredSlides={"auto"}
+        centeredSlides={""}
         modules={[Pagination]}
         className="mySwiper"
       >
@@ -150,9 +150,9 @@ const SliderSection = () => {
             slides.map((item, index)=>{
               return(
                 <SwiperSlide key={index}>
-                  <div className={`w-full h-full  flex justify-center items-center  `}>
+                  <div className={`w-full h-full  flex justify-center items-center ${index === 0? ("pl-[20px]"):("")}  `}>
                     {/* Img-Div */}
-                    <div className="w-[100%] h-full bg-amber-600 overflow-hidden">
+                    <div className="w-[100%] h-full overflow-hidden">
                       <Image 
                        src={item.image}
                        className="w-full h-full object-center object-cover"
