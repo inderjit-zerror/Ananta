@@ -31,7 +31,7 @@ const NavBar = () => {
     <>
       <div className="w-full z-[100] fixed top-6 left-0 flex justify-between items-center px-[40px] TextWhite ">
         {/* Menu Container */}
-        <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px] max-[1030]:w-full max-[1030]:gap-[17px]  max-[1030]:justify-start  max-[1030]:pl-0 lg:w-full lg:gap-[17px]  lg:justify-start  lg:pl-0 max-sm:hidden">
+        <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px] max-[1030]:w-full max-[1030]:gap-[10px]  max-[1030]:justify-start  max-[1030]:pl-0 lg:w-full lg:gap-[17px]  lg:justify-start  lg:pl-0 max-md:hidden">
           {/* Address */}
           <a href="#Address">
             <MenuBtn item={"Address"} />
@@ -56,7 +56,7 @@ const NavBar = () => {
         {/* Menu Btn */}
         <div
           onClick={CheckNavBarStatus}
-          className="w-fit h-fit absolute left-[4%] mt-[40px] sm:hidden z-[100] "
+          className="w-fit h-fit absolute left-[4%] mt-[40px] md:hidden z-[100] "
         >
           <Hamburger
             toggled={navStatus}
@@ -73,7 +73,7 @@ const NavBar = () => {
         className="w-fit h-fit flex justify-center items-center select-none cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-0 lg:left-[50%]  lg:translate-x-[-50%]">
           <Image
             src={"/data/LogoMain.svg"}
-            className={`h-[40px] max-sm:w-[150px] sm:w-fit nav_logo opacity-0 `}
+            className={`h-[40px] max-lg:w-[150px] sm:w-fit nav_logo opacity-0 `}
             width={1000}
             height={1000}
             alt="Logo"

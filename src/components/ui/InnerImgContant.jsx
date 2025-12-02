@@ -104,13 +104,14 @@ const InnerImgContant = () => {
             <div className="w-[550px] h-[250px] flex select-none   max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col max-lg:mt-[0px] max-xl:mt-[440px] ">
               {/* Img */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont max-sm:w-full max-sm:h-[230px] ">
-                <Image
+                {/* <Image
                   className="w-full h-full object-cover innerImgCont1Img scale-[1.5]"
-                  src={"/Img/ContImg1.webp"}
+                  src={"/Img/ContImg1.jpg"}
                   width={1000}
                   height={1000}
                   alt="Cont_Img1"
-                />
+                /> */}
+                <img  className="w-full h-full object-cover innerImgCont1Img scale-[1.5]" src="/Img/ContImg1.jpg" alt="" />
               </div>
 
               {/* Text */}
@@ -129,13 +130,14 @@ const InnerImgContant = () => {
             <div className="w-fit h-fit flex max-sm:w-full max-sm:flex max-sm:flex-col">
               {/* Img-Cont */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] innerImgCont2ImgCont cursor-pointer overflow-hidden max-sm:w-full max-sm:h-[230px] ">
-                <Image
+                {/* <Image
                   className="w-full h-full object-cover object-center innerImgCont2Img sacle-[2]"
-                  src={"/Img/ContImg2.webp"}
+                  src={"/Img/ContImg2.jpg"}
                   width={1000}
                   height={1000}
                   alt="Cont_Img2"
-                />
+                /> */}
+                <img  className="w-full h-full object-cover object-center innerImgCont2Img scale-[1.5]" src="/Img/ContImg2.jpg" alt="" />
               </div>
 
               {/* Text-Cont */}

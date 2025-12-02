@@ -12,7 +12,7 @@ const ImelessSection = () => {
   useEffect(() => {
 
     // Disable animation on mobile
-    if (window.innerWidth < 768) return;
+    if (window.innerWidth < 1024) return;
 
     gsap.fromTo(
       ".TimeLessImg",

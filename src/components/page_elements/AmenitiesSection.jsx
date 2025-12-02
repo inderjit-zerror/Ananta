@@ -50,7 +50,7 @@ const AmenitiesSection = () => {
 
   useEffect(() => {
     // Disable animation on mobile
-    if (window.innerWidth < 768) return;
+    if (window.innerWidth <= 1024) return;
     gsap.fromTo(
       ".small_img_1",
       {
@@ -95,7 +95,7 @@ const AmenitiesSection = () => {
           </p>
         </div>
 
-        <div className="w-full  flex justify-center mt-20 gap-32  max-sm:pt-[20px] border-b border-black/30 max-sm:border-b-0 max-sm:flex-col max-sm:gap-[10px] max-sm:mt-[30px] ">
+        <div className="w-full  flex justify-center mt-20 gap-20 lg:gap-32 max-xl:gap-7  max-sm:pt-[20px] border-b border-black/30 max-sm:border-b-0 max-sm:flex-col max-sm:gap-[10px] max-sm:mt-[30px] ">
           {data.map((item, i) => {
             return (
               <div
@@ -111,7 +111,7 @@ const AmenitiesSection = () => {
                   {activeAmentie.id === item.id && (
                     <div className="absolute w-full capitalize bg-[#9c6b25] left-0 bottom-[-16%] h-[1px] max-sm:h-[0px]"></div>
                   )}
-                  <p className=" capitalize text-[25px] max-sm:text-[24px] text-[#9c6b25]">
+                  <p className=" capitalize text-[25px] max-sm:text-[24px] max-xl:text-[24px] text-[#9c6b25] whitespace-nowrap">
                     0{i + 1} &nbsp; {item.titel}{" "}
                   </p>
                 </div>
@@ -132,7 +132,8 @@ const AmenitiesSection = () => {
             </div>
           </div>
 
-          <div className="w-[20%] flex gap-2 STF  text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25]">
+          {/* PC */}
+          <div className="w-[20%] md:w-[40%] lg:w-[20%] flex gap-2 STF  text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25]">
             <p>0{activeAmentie.id}</p>
             <p>{activeAmentie.para1}</p>
           </div>
@@ -145,6 +146,7 @@ const AmenitiesSection = () => {
             />
           </div>
 
+          {/* Mobile */}
           <div className="w-[20%] flex gap-2 STF text-[20px] pt-[32px] leading-[22px] text-[#9c6b25] sm:hidden max-sm:w-full sm:hidden max-sm:h-fit text-[#9c6b25] ">
             <p>01</p>
             <p>{activeAmentie.para1}</p>
@@ -152,7 +154,7 @@ const AmenitiesSection = () => {
         </div>
 
         {/* Bottom */}
-        <div className="w-full mt-32 relative flex flex-row-reverse items-end justify-between max-sm:h-fit max-sm:mt-[20px] max-sm:flex-col ">
+        <div className="w-full mt-32 relative flex md:gap-x-5 flex-row-reverse items-end justify-between max-sm:h-fit max-sm:mt-[20px] max-sm:flex-col ">
           <div className="w-[28vw] small_img_2 absolute bg-[#F5F3EA] top-0 max-sm:top-[5%] right-[15vw] aspect-[4/3] p-10 max-sm:w-[70%] max-sm:left-[-2%] max-sm:p-[10px] max-sm:h-[300px] ">
             <div className="w-full h-full overflow-hidden">
               <img
@@ -163,7 +165,8 @@ const AmenitiesSection = () => {
             </div>
           </div>
 
-          <div className="w-[20%] flex gap-2 STF text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25]">
+          {/* PC */}
+          <div className="w-[20%] md:w-[37%] lg:w-[20%] flex gap-2 STF text-[20px] leading-[22px] max-sm:hidden text-[#9c6b25] ">
             <p>02</p>
             <p>{activeAmentie.para2}</p>
           </div>
@@ -176,6 +179,7 @@ const AmenitiesSection = () => {
             />
           </div>
 
+          {/* Mobile */}
           <div className="w-[20%] max-sm:py-[20px] flex gap-2 STF text-[20px] leading-[22px] sm:hidden max-sm:w-full max-sm:mt-[20px] text-[#9c6b25]">
             <p>02</p>
             <p>{activeAmentie.para2}</p>

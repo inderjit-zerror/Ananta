@@ -66,7 +66,7 @@ const ResidenceSection = () => {
         {/* Desc-Cont */}
         <div className="w-full h-fit flex justify-center select-none items-center STF text-white gap-[40px] text-[20px] leading-[22px] mt-[50px]">
           {/* Left-Desc */}
-          <div className="w-full max-w-[400px] flex text-justify STF">
+          <div className="w-full max-w-[400px] max-lg:max-w-[300px] flex text-justify STF">
             <p>
               honour heritage while embracing modern luxury. Its architecture
               balances classical symmetry with contemporary minimalism, built
@@ -75,7 +75,7 @@ const ResidenceSection = () => {
           </div>
 
           {/* Right-Desc */}
-          <div className="w-full max-w-[400px] flex text-justify STF">
+          <div className="w-full max-w-[400px] max-lg:max-w-[300px] flex text-justify STF">
             <p>
               honour heritage while embracing modern luxury. Its architecture
               balances classical symmetry with contemporary minimalism, built
