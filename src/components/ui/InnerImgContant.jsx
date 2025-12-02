@@ -163,13 +163,14 @@ const InnerImgContant = () => {
 
             {/* Img-Cont */}
             <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer max-sm:w-full max-sm:h-[230px]">
-              <Image
+              {/* <Image
                 className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]"
                 src={"/Img/ContImg3.webp"}
                 width={1000}
                 height={1000}
                 alt="Cont_Img3"
-              />
+              /> */}
+              <img src="/Img/ContImg3.webp" className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]" alt="load" />
             </div>
 
             {/* Text */}

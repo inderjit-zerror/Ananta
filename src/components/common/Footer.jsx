@@ -65,13 +65,14 @@ const Footer = () => {
 
       {/* Img-Cont */}
       <div className="w-full h-[60vh] overflow-hidden FooterImgCont">
-        <Image
-          src={"/Img/footer/FooterImg.jpg"}
-          className="w-full h-full object-cover object-center FooterImg"
+        {/* <Image
+          src={"/Img/footer/FooterImg.webp"}
+          className="w-full h-full object-cover object-bottom FooterImg"
           width={1000}
           height={1000}
           alt="bg"
-        />
+        /> */}
+        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover object-center" alt="" />
       </div>
 
       {/* Info */}
