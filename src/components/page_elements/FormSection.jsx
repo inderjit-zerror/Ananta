@@ -38,7 +38,7 @@ const FormSection = () => {
     <>
       <div
         id="form"
-        className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center bg-[#FEF7EE] text-[#9c6b25] overflow-hidden max-sm:p-[0px]  "
+        className="w-full min-h-screen z-90 relative BGP BG_Form flex justify-center items-center bg-[#FEF7EE] text-[#9c6b25]  overflow-hidden max-sm:p-[0px]  "
       >
         {/* <Image
           src={"/Img/Form/FormBG.webp"}
@@ -50,7 +50,7 @@ const FormSection = () => {
         <img src="/Img/Form/FormBG.webp" className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]" alt="oad" />
 
         {/* Inner-Container */}
-        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] max-sm:pt-[40px] max-sm:px-[30px]  ">
+        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] max-sm:pt-[40px] max-sm:px-[30px]  max-md:w-full max-md:h-full ">
           {/* Title-Section */}
           <div className="w-full h-fit flex flex-col justify-center items-center max-sm:pt-[20px]">
             {/* SVG */}
@@ -150,6 +150,7 @@ const FormSection = () => {
               <BTN text={"Send Message"} />
             </div>
           </form>
+          
         </div>
       </div>
     </>

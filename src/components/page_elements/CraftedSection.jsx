@@ -121,9 +121,9 @@ const CraftedSection = () => {
         </div>
 
         {/* 3-Section */}
-        <div className="  my-[100px] max-sm:my-[20px] CFF w-full flex  items-center   justify-between max-sm:flex-col">
+        <div className="  my-[100px] max-sm:my-[20px] CFF w-full flex  items-center    justify-between max-sm:flex-col">
           {/* LEFT SIDE CONTENT BLOCK */}
-          <div className="flex flex-col gap-8 text-white md:w-1/2">
+          <div className="flex flex-col gap-8 text-white md:w-1/2 max-md:w-full  ">
             {/* Heading */}
             <h1 className="text-4xl CFF md:text-6xl  flex">Elite Developers</h1>
 
@@ -135,7 +135,7 @@ const CraftedSection = () => {
             </p>
 
             {/* STATS SECTION */}
-            <div className="grid grid-cols-2 gap-10 mt-6">
+            <div className="grid grid-cols-2 gap-10 mt-6   ">
               {/* Stat 1 */}
               <div className="flex w-fit h-fit flex-col gap-[20px] max-sm:gap-[10px]">
                 <h2 className="text-[3rem] max-sm:text-[30px] CFF">20+</h2>

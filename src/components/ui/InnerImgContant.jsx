@@ -68,7 +68,7 @@ const InnerImgContant = () => {
 
   return (
     <>
-      <div className="w-full h-fit flex relative z-[100] flex-col BBBBB max-sm:pb-[30px] text-black max-sm:bg-[#E7D9BF] max-sm:px-[10px]">
+      <div className="w-full h-fit flex relative z-[100] flex-col BBBBB max-sm:pb-[30px] text-black RGBR max-lg:bg-[#E7D9BF] max-sm:px-[10px]">
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px] max-sm:hidden ">
 
@@ -97,11 +97,11 @@ const InnerImgContant = () => {
         </div>
 
         {/* Cont-Div1-Img-Container */}
-        <div className="w-full h-fit flex items-end mt-[100px] max-sm:mt-[10px] px-[40px] max-sm:px-[10px]  max-[1030px]:flex-col max-[1030px]:gap-[120px] max-sm:gap-[40px]">
+        <div className="w-full h-fit flex items-end max-xl:items-start max-lg:items-end mt-[100px]  max-sm:mt-[10px] px-[40px] max-sm:px-[10px]  max-[1030px]:flex-col max-[1030px]:gap-[120px] max-sm:gap-[40px] ">
           {/* Left-Cont */}
-          <div className="w-[50%] h-fit max-[1030px]:w-full max-sm:w-full  max-sm:flex max-sm:flex-col ">
+          <div className="w-[50%] h-fit max-[1030px]:w-full max-sm:w-full  max-sm:flex max-sm:flex-col TabMT   ">
             {/* Img & Text Cont */}
-            <div className="w-[550px] h-[250px] flex select-none   max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col ">
+            <div className="w-[550px] h-[250px] flex select-none   max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col max-lg:mt-[0px] max-xl:mt-[440px] ">
               {/* Img */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont max-sm:w-full max-sm:h-[230px] ">
                 <Image

@@ -72,7 +72,7 @@ const Footer = () => {
           height={1000}
           alt="bg"
         /> */}
-        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover object-center" alt="" />
+        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover object-bottom FooterImg" alt="" />
       </div>
 
       {/* Info */}
