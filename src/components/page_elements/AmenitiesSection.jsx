@@ -109,7 +109,7 @@ const AmenitiesSection = () => {
               >
                 <div className=" w-fit block relative capitalize">
                   {activeAmentie.id === item.id && (
-                    <div className="absolute w-full capitalize bg-black left-0 bottom-[-17%] h-[1px] max-sm:h-[0px]"></div>
+                    <div className="absolute w-full capitalize bg-[#9c6b25] left-0 bottom-[-16%] h-[1px] max-sm:h-[0px]"></div>
                   )}
                   <p className=" capitalize text-[25px] max-sm:text-[24px] text-[#9c6b25]">
                     0{i + 1} &nbsp; {item.titel}{" "}

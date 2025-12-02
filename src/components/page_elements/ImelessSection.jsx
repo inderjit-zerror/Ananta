@@ -34,11 +34,11 @@ const ImelessSection = () => {
   }, []);
 
   return (
-    <div className="w-full Timeless_Cont  max-sm:h-[100vh] h-[200vh]  relative z-[90] overflow-hidden">
+    <div className="w-full Timeless_Cont  max-sm:h-[100vh] h-[200vh] bg-[#F7F0E4]  relative z-[90] overflow-hidden">
       {/* Title */}
       <div className="w-full h-fit flex justify-center items-center absolute top-[5%] left-0 px-[40px] max-sm:px-[20px] ">
         {/* PC */}
-        <div className="w-full max-w-[600px] sm:hidden">
+        {/* <div className="w-full max-w-[600px] sm:hidden">
           <Image
             className="w-full h-full object-cover object-center object-top"
             src={"data/TimeLessSMTitle.svg"}
@@ -46,10 +46,10 @@ const ImelessSection = () => {
             height={1000}
             alt="ai"
           />
-        </div>
+        </div> */}
 
         {/* Mobile */}
-        <div className="w-full max-w-[600px] max-sm:hidden">
+        <div className="w-full max-w-[600px] pl-[5px] flex justify-center items-center ">
           <Image
             className="w-full h-full object-cover object-center object-top"
             src={"data/TimelessTitle.svg"}
@@ -62,7 +62,7 @@ const ImelessSection = () => {
 
       <Image
         className="sm:w-full TimeLessImg h-full object-cover sm:object-center object-top absolute top-0 left-0 z-[-1]"
-        src={"/Img/imeless/BigBuilding.webp"}
+        src={"/Img/imeless/BigBuilding.png"}
         width={1000}
         height={1000}
         alt="ai"
