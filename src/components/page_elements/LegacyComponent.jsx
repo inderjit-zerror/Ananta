@@ -13,35 +13,35 @@ const LegacyComponent = () => {
 
   const AllImgArr = [
     {
-      url: `/Img/legacyImg/LImg4.webp`,
+      url: `/Img/legacyImg/L1.webp`,
       call: "legacyDiv1",
     },
     {
-      url: `/Img/legacyImg/LImg2.webp`,
+      url: `/Img/legacyImg/L2.webp`,
       call: "legacyDiv2",
     },
     {
-      url: `/Img/legacyImg/LImg5.webp`,
+      url: `/Img/legacyImg/L3.webp`,
       call: "legacyDiv3",
     },
     {
-      url: `/Img/legacyImg/LImg6.webp`,
+      url: `/Img/legacyImg/L4.webp`,
       call: "legacyDiv4",
     },
     {
-      url: `/Img/legacyImg/LImg7.webp`,
+      url: `/Img/legacyImg/L5.webp`,
       call: "legacyDiv5",
     },
     {
-      url: `/Img/legacyImg/LImg3.webp`,
+      url: `/Img/legacyImg/L6.webp`,
       call: "legacyDiv6",
     },
     {
-      url: `/Img/legacyImg/LImg8.webp`,
+      url: `/Img/legacyImg/L7.webp`,
       call: "legacyDiv7",
     },
     {
-      url: `/Img/legacyImg/LImg6.webp`,
+      url: `/Img/legacyImg/L7.webp`,
       call: "legacyDiv8",
     },
   ];

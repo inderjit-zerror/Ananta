@@ -74,7 +74,7 @@ const Footer = () => {
         /> */}
 
         {/* PC */}
-        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover max-sm:hidden object-center FooterImg" alt="" />
+        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover max-sm:hidden object-bottom FooterImg" alt="" />
         {/* Mobile */}
         <img src="/Img/footer/FooterImgSM.webp" className="w-full h-full object-cover sm:hidden max-sm:object-right object-bottom FooterImg" alt="" />
       </div>
