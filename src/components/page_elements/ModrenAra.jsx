@@ -1,17 +1,19 @@
 "use client";
 import SectionTitle from "../common/SectionTitle";
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { FreeMode, Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { FreeMode, Pagination } from "swiper/modules";
 import Image from "next/image";
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 
 const slides = [
   {
@@ -42,8 +44,10 @@ const slides = [
 ];
 
 const SliderSection = () => {
-
   const containerRef = useRef(null);
+
+  // ✅ FIX: You forgot this line before
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   const expandSlide = (hovered, all) => {
     gsap.to(all, {
@@ -77,17 +81,22 @@ const SliderSection = () => {
 
     return () => {
       slidesEl.forEach((slide) => {
-        slide.removeEventListener("mouseenter", () => expandSlide(slide, slidesEl));
+        slide.removeEventListener("mouseenter", () =>
+          expandSlide(slide, slidesEl)
+        );
         slide.removeEventListener("mouseleave", () => resetSlides(slidesEl));
       });
     };
   }, []);
 
   return (
-    <div id="Gallery" className="w-full h-fit z-90 bg-[#F5F3EA] pt-[100px] max-sm:pt-[80px]">
+    <div
+      id="Gallery"
+      className="w-full h-fit z-90 bg-[#F5F3EA] pt-[100px] max-sm:pt-[80px]"
+    >
       <SectionTitle textData={"Heritage Refined for the Modern Era"} />
 
-       <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px] text-[#9c6b25] ">
+      <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px] text-[#9c6b25] ">
         <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
           Heritage Refined for the Modern Era
         </p>
@@ -106,7 +115,7 @@ const SliderSection = () => {
       <div className="w-full  px-[40px] max-sm:px-[10px] my-[10px] md:my-0 h-[50vh] md:h-fit  py-[90px]  flex items-center justify-center overflow-hidden max-sm:hidden">
         <div
           ref={containerRef}
-          className="flex gap-4 justify-center items-center w-full overflow-hidden " 
+          className="flex gap-4 justify-center items-center w-full overflow-hidden "
         >
           {slides.map((slide, index) => (
             <div
@@ -128,56 +137,65 @@ const SliderSection = () => {
             </div>
           ))}
         </div>
-
-
       </div>
-
 
       {/* max-sm: Code */}
 
-      <div className="w-full h-[500px] overflow-x-scroll  flex sm:hidden max-sm:mt-[40px]">
+      {/* Mobile Slider */}
+      <div className="w-full h-[500px] overflow-hidden flex sm:hidden max-sm:mt-[40px] relative">
         <Swiper
-        slidesPerView={1.2}
-        spaceBetween={20}
-        // freeMode={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        navigation={true} 
-        modules={[Navigation]}
-        centeredSlides={""}
-        // modules={[Pagination]}
-        className="mySwiper"
-      >
+          slidesPerView={1.2}
+          spaceBetween={20}
+          navigation={false}
+          modules={[Navigation]}
+          centeredSlides={false}
+          className="mySwiper customSwiper"
+          onSwiper={setSwiperInstance} // <-- Now works
+        >
+          {slides.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={`w-full h-full flex justify-center items-center ${
+                  index === 0 ? "pl-[20px]" : ""
+                }`}
+              >
+                <div className="w-[100%] h-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    className="w-full h-full object-center object-cover"
+                    width={1000}
+                    height={1000}
+                    alt="img"
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        {
-            slides.map((item, index)=>{
-              return(
-                <SwiperSlide key={index}>
-                  <div className={`w-full h-full  flex justify-center items-center ${index === 0? ("pl-[20px]"):("")}  `}>
-                    {/* Img-Div */}
-                    <div className="w-[100%] h-full overflow-hidden">
-                      <Image 
-                       src={item.image}
-                       className="w-full h-full object-center object-cover"
-                       width={1000}
-                       height={1000}
-                       alt="img"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              )
-            })
-        }
-      </Swiper>
+        {/* Custom Navigation Buttons */}
+        <div className="custom-nav  w-full h-fit absolute top-[50%] flex justify-between translate-y-[-50%] px-[20px]">
+          <button
+            className="custom-arrow left"
+            onClick={() => swiperInstance?.slidePrev()}
+          >
+            {/* <img src="/icons/arrowLeft.svg" alt="Left" /> */}
+            <FaChevronLeft className="text-[#9c6b25]" />
+          </button>
 
+          <button
+            className="custom-arrow right"
+            onClick={() => swiperInstance?.slideNext()}
+          >
+            {/* <img src="/icons/arrowRight.svg" alt="Right" /> */}
+            <FaChevronRight className="text-[#9c6b25]"/>
+          </button>
+        </div>
       </div>
       
-
-
-    </div >
+    </div>
   );
 };
 
 export default SliderSection;
+
