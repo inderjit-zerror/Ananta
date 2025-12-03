@@ -143,7 +143,7 @@ const LegacyComponent = () => {
         </div>
 
         {/* Title IMG */}
-        <div className="w-full relative  z-[99]  flex justify-center items-center pt-[70px] max-sm:pt-[30px] invert-100 px-[50px] ">
+        <div className="w-full relative  z-[99]  flex justify-center items-center pt-[70px] max-sm:pt-[30px] px-[50px] ">
           <Image
             className="w-[35vw] max-sm:w-full  "
             src={"/data/LegacyTitle.svg"}
@@ -154,10 +154,10 @@ const LegacyComponent = () => {
         </div>
 
         {/* Hover Div */}
-        <div className="w-full h-fit relative z-[999]  px-[30px] ">
-          <div className=" w-full h-fit flex justify-center items-center py-[100px] overflow-hidden pb-[150px]  ">
+        <div className="w-full h-fit relative z-[999]  px-[30px] max-sm:px-[10px] ">
+          <div className=" w-full h-fit flex justify-center items-center py-[100px]  overflow-hidden pb-[150px]  ">
             {/* SVG-Container */}
-            <div className="w-full max-w-[650px] h-fit relative  ">
+            <div className="w-full max-w-[650px] h-fit relative">
               <Image
                 className=" w-full object-cover scale-[1.1] "
                 src={"/data/Intreaction.svg"}
@@ -285,6 +285,7 @@ const LegacyComponent = () => {
                   <div className="Outer_T2 absolute w-full h-full rounded-full border-4 border-white bg-transparent scale-0 "></div>
                 </div>
               </div>
+
               {/* HoverDiv8 */}
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv8")}

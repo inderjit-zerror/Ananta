@@ -39,7 +39,7 @@ const IntroLoader = () => {
 
     return (
         <div className=' intro_div  w-full h-screen fixed z-[999]  flex items-center justify-center'>
-            <p className='loader_txt absolute bottom-20 uppercase text-sm z-10 text-[#9c6b25]'>Loading...</p>
+            <div className='loader_txt absolute bottom-20 uppercase text-sm z-10 text-[#9c6b25] flex gap-[20px] justify-center items-center'>Loading <span className="loader"></span> </div>
             <div
                 className=" intro_clip_1 h-full w-1/2 bg-[#F5F3EA] top-0 left-0 absolute z-[-1]">
                 {/* <img className='   w-full h-full object-cover opacity-[.3]' src="/Img/BgImgPattren1.svg" alt="" /> */}

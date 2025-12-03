@@ -72,7 +72,7 @@ const InnerImgContant = () => {
         {/* Title & Desc */}
         <div className="w-full h-fit pt-[50px] flex justify-between items-end px-[40px] max-sm:hidden ">
 
-          <div className="w-[50%] max-[1030px]:w-[60%] flex  flex-col text-[5.1rem] leading-[5.1rem] CFF capitalize max-sm:hidden">
+          <div className="w-[50%] max-[1030px]:w-[60%] flex text-[#9c6b25]  flex-col text-[5.1rem] leading-[5.1rem] CFF capitalize max-sm:hidden">
             <p>modern</p>
             <p>Convenience in </p>
             <p>a Historic Core</p>
@@ -81,7 +81,7 @@ const InnerImgContant = () => {
           {/* <img className="w-[50%] invert-100 max-[1030px]:w-[60%]" src={"/data/TitleImg.svg"} alt="Title" /> */}
 
           {/* Desc */}
-          <div className="w-[50%] max-w-[500px] h-full flex text-[20px] leading-[24px] text-black pb-[30px] max-[1030px]:max-w-[300px] STF">
+          <div className="w-[50%] max-w-[500px] h-full flex text-[20px] leading-[24px] text-[#9c6b25] pb-[30px] max-[1030px]:max-w-[300px] STF">
             <p>
               The location offers easy access to key civic, cultural, and
               lifestyle landmarks — a rare blend of heritage and convenience.
@@ -90,7 +90,7 @@ const InnerImgContant = () => {
         </div>
 
         {/* max-sm: Title & desc*/}
-        <div className="w-full h-fit CFF text-[45px] leading-[40px] px-[10px] text-[#464238] sm:hidden py-[30px]">
+        <div className="w-full h-fit CFF text-[45px] leading-[40px] px-[10px] text-[#9c6b25] sm:hidden py-[30px]">
           <p>Modern</p>
           <p>Convenience In </p>
           <p>A Historic Core </p>
@@ -111,12 +111,12 @@ const InnerImgContant = () => {
                   height={1000}
                   alt="Cont_Img1"
                 /> */}
-                <img  className="w-full h-full object-cover innerImgCont1Img scale-[1.5]" src="/Img/ContImg1.jpg" alt="" />
+                <img  className="w-full h-full object-cover object-bottom innerImgCont1Img scale-[1.5]" src="/Img/ContImg1.webp" alt="" />
               </div>
 
               {/* Text */}
               <div className=" w-[50%] h-full bg-[#F5F3EA91]  flex justify-center items-center px-[40px] max-sm:w-full max-sm:py-[40px]  ">
-                <p className="text-[20px] leading-[24px] max-sm:leading-[20px] text-[#1D1B18] STF text-center">
+                <p className="text-[20px] leading-[24px] max-sm:leading-[20px] text-[#9c6b25] STF text-center">
                   Beyond its heritage, the location offers seamless access to
                   the city`s civic, lifestyle, and institutional landmarks. 
                 </p>
@@ -137,16 +137,16 @@ const InnerImgContant = () => {
                   height={1000}
                   alt="Cont_Img2"
                 /> */}
-                <img  className="w-full h-full object-cover object-center innerImgCont2Img scale-[1.5]" src="/Img/ContImg2.jpg" alt="" />
+                <img  className="w-full h-full object-cover object-center innerImgCont2Img scale-[1.5]" src="/Img/ContImg2.webp" alt="" />
               </div>
 
               {/* Text-Cont */}
               <div className="w-[400px] h-[450px] max-sm:h-[300px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
-                <p className="text-[30px] leading-[32px] CFF max-sm:text-center text-[#212121] ">
+                <p className="text-[30px] leading-[32px] CFF max-sm:text-center text-[#9c6b25] ">
                   At the Centre of <br className="max-sm:hidden" /> Significance.
                 </p>
 
-                <p className="text-[20px] leading-[22px] text-center STF text-[#212121] ">
+                <p className="text-[20px] leading-[22px] text-center STF text-[#9c6b25] ">
                   This neighbourhood is home to iconic temples, historic
                   institutions, and a sense of dignity that has shaped the citys
                   identity through generations. Within this storied setting,
@@ -177,7 +177,7 @@ const InnerImgContant = () => {
 
             {/* Text */}
             <div className=" w-[250px] h-[150px] bg-[#F5F3EA91] flex justify-center items-center px-[30px] max-sm:px-[40px] md:py-[100px] max-sm:w-full">
-              <p className="text-[18px] leading-[20px] text-[#212121] STF text-center">
+              <p className="text-[18px] leading-[20px] text-[#9c6b25] STF text-center">
                 Beyond its heritage, the location offers seamless access to the
                 city`s civic, lifestyle, and institutional landmarks. 
               </p>
