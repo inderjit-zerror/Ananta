@@ -7,6 +7,8 @@ import HeroSection from "@/components/page_elements/HeroSection";
 import ImelessSection from "@/components/page_elements/ImelessSection";
 import LegacyComponent from "@/components/page_elements/LegacyComponent";
 import ModrenAra from "@/components/page_elements/ModrenAra";
+import NewAmenitiesSection from "@/components/page_elements/NewAmenitiesSection";
+import NewTimelessSection from "@/components/page_elements/NewTimelessSection";
 import PrecinctSection from "@/components/page_elements/PrecinctSection";
 import ResidenceSection from "@/components/page_elements/ResidenceSection";
 
@@ -20,7 +22,8 @@ export default function Home() {
         <HeroSection />
 
         {/* Imeless */}
-        <ImelessSection />
+        {/* <ImelessSection /> */}
+        <NewTimelessSection />
 
         {/* ☑️ Legacy-Section */}
         <LegacyComponent />
@@ -35,7 +38,8 @@ export default function Home() {
         <ResidenceSection />
 
         {/* ☑️ Amenities-Section */}
-        <AmenitiesSection />
+        {/* <AmenitiesSection /> */}
+        <NewAmenitiesSection />
 
         {/* Crafted Section */}
         <CraftedSection />

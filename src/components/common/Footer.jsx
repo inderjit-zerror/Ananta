@@ -63,8 +63,38 @@ const Footer = () => {
         </p>
       </div>
 
+      {/* Info */}
+      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
+        <div
+          onMouseEnter={() => hoverActive(".lineT1T")}
+          onMouseLeave={() => hoverDeActive(".lineT1T")}
+          className=" cursor-pointer flex flex-col gap-[4px]"
+        >
+          +91 9XXXXXXXXX
+          <div className="w-[0px] h-[1px] lineT1T bg-[#9c6b25]"></div>
+        </div>
+
+        <div
+          onMouseEnter={() => hoverActive(".lineT2T")}
+          onMouseLeave={() => hoverDeActive(".lineT2T")}
+          className=" cursor-pointer flex flex-col gap-[4px]"
+        >
+          info@elitedevelopers.com
+          <div className="w-[0px] h-[1px] lineT2T bg-[#9c6b25]"></div>
+        </div>
+
+        <div
+          onMouseEnter={() => hoverActive(".lineT3T")}
+          onMouseLeave={() => hoverDeActive(".lineT3T")}
+          className=" cursor-pointer flex flex-col gap-[4px]"
+        >
+          elitedeveloper.com
+          <div className="w-[0px] h-[1px] lineT3T bg-[#9c6b25]"></div>
+        </div>
+      </div>
+
       {/* Img-Cont */}
-      <div className="w-full h-[60vh] overflow-hidden FooterImgCont">
+      <div className="w-full h-[60vh] overflow-hidden FooterImgCont relative">
         {/* <Image
           src={"/Img/footer/FooterImg.webp"}
           className="w-full h-full object-cover object-bottom FooterImg"
@@ -74,58 +104,56 @@ const Footer = () => {
         /> */}
 
         {/* PC */}
-        <img src="/Img/footer/FooterImg.webp" className="w-full h-full object-cover max-sm:hidden object-bottom FooterImg" alt="" />
+        <img
+          src="/Img/footer/FooterImg.webp"
+          className="w-full h-full object-cover max-sm:hidden object-bottom FooterImg"
+          alt=""
+        />
         {/* Mobile */}
-        <img src="/Img/footer/FooterImgSM.webp" className="w-full h-full object-cover sm:hidden max-sm:object-right object-bottom FooterImg" alt="" />
-      </div>
+        <img
+          src="/Img/footer/FooterImgSM.webp"
+          className="w-full h-full object-cover sm:hidden max-sm:object-right object-bottom FooterImg"
+          alt=""
+        />
 
-      {/* Info */}
-      <div className="w-full h-fit flex py-[20px] max-sm:flex-col max-sm:gap-[20px]">
-        <div className="w-[50%] h-fit flex justify-between px-[40px] text-[18px] STF max-sm:w-full  max-sm:ga-[10px] sm:justify-around">
-          {/* F1 */}
-          <div
-            onMouseEnter={() => hoverActive(".FooterShowDiv1")}
-            onMouseLeave={() => hoverDeActive(".FooterShowDiv1")}
-            className="w-fit h-fit flex flex-col gap-[1px]"
-          >
-            <p className="select-none cursor-pointer">Privacy polity</p>
+        {/* QR */}
+        <div className="w-[443px] h-fit flex absolute top-[40%]  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
-            <div className="FooterShowDiv1 w-[0px] h-[1px] bg-[#9c6b25]"></div>
+          {/* Text */}
+          <div className="w-[400px] h-full flex flex-col justify-between ">
+            <div className="w-fit h-full">
+              <p className="text-[22px] leading-[32px]">RERA Registration</p>
+            <p className="text-[14px] leading-[16px]">K-RERA/PRJ/TVM/1234/2024</p>
+            </div>
+            <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px]">Images, plans, specifications, and areas shown are indicative and subject to change without prior notice.</p>
           </div>
 
-          {/* F2 */}
-          <div
-            onMouseEnter={() => hoverActive(".FooterShowDiv2")}
-            onMouseLeave={() => hoverDeActive(".FooterShowDiv2")}
-            className="w-fit h-fit flex flex-col gap-[1px]"
-          >
-            <p className="select-none cursor-pointer">Terms and conditions</p>
-
-            <div className="FooterShowDiv2 w-[0px] h-[1px] bg-[#9c6b25]"></div>
+          {/* QR Img */}
+          <div className=" h-full">
+            <img src={'/Img/QR.svg'} alt="QR" className=" h-full object-cover object-center" />
           </div>
         </div>
-        <div className="w-[50%] h-fit flex justify-between px-[40px] text-[1rem] CFF max-sm:w-full max-sm:ga-[10px] sm:justify-around ">
-          {/* F1 */}
-          <div
-            onMouseEnter={() => hoverActive(".FooterShowDiv3")}
-            onMouseLeave={() => hoverDeActive(".FooterShowDiv3")}
-            className="w-fit h-fit flex flex-col gap-[1px]"
-          >
-            <p className="select-none cursor-pointer">+9134593583</p>
 
-            <div className="FooterShowDiv3 w-[0px] h-[1px] bg-[#9c6b25]"></div>
-          </div>
+      </div>
 
-          {/* F2 */}
-          <div
-            onMouseEnter={() => hoverActive(".FooterShowDiv4")}
-            onMouseLeave={() => hoverDeActive(".FooterShowDiv4")}
-            className="w-fit h-fit flex flex-col gap-[1px]"
-          >
-            <p className="select-none cursor-pointer">info@ananta.in</p>
+      {/* Infob */}
+      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
+        <div
+          onMouseEnter={() => hoverActive(".lineB1T")}
+          onMouseLeave={() => hoverDeActive(".lineB1T")}
+          className=" cursor-pointer flex flex-col gap-[4px]"
+        >
+          © Elite Developers . All rights reserved.
+          <div className="w-[0px] h-[1px] lineB1T bg-[#9c6b25]"></div>
+        </div>
 
-            <div className="FooterShowDiv4 w-[0px] h-[1px] bg-[#9c6b25]"></div>
-          </div>
+        <div
+          onMouseEnter={() => hoverActive(".lineB2T")}
+          onMouseLeave={() => hoverDeActive(".lineB2T")}
+          className=" cursor-pointer flex flex-col gap-[4px]"
+        >
+          Privacy Policy | Terms & Conditions
+          <div className="w-[0px] h-[1px] lineB2T bg-[#9c6b25]"></div>
         </div>
       </div>
     </div>

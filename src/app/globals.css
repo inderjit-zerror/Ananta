@@ -49,6 +49,10 @@ html {
   font-family: STF;
   src: url("/fonts/subText.woff2");
 }
+@font-face {
+  font-family: GFS_R;
+  src: url("/fonts/GFS_R.ttf");
+}
 
 .STF {
   font-family: STF;
@@ -62,6 +66,9 @@ html {
 }
 .VText {
   font-family: VText;
+}
+.GFS_R {
+  font-family: GFS_R;
 }
 
 .svg {
@@ -213,3 +220,5 @@ html {
 .custom-arrow:hover {
   transform: scale(1.1);
 }
+
+

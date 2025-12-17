@@ -143,7 +143,7 @@ const LegacyComponent = () => {
         </div>
 
         {/* Title IMG */}
-        <div className="w-full relative  z-[99]  flex justify-center items-center pt-[70px] max-sm:pt-[30px] px-[50px] ">
+        <div className="w-full relative  z-[99]  flex flex-col gap-[40px] justify-center items-center pt-[70px] max-sm:pt-[30px] px-[50px] ">
           <Image
             className="w-[35vw] max-sm:w-full  "
             src={"/data/LegacyTitle.svg"}
@@ -151,6 +151,7 @@ const LegacyComponent = () => {
             height={1000}
             alt="Legacy Title"
           />
+          <p className="w-[90%] max-w-[700px] text-center STF text-[20px] leading-[20px] text-[#9c6b25]">Set in Kowdiar, Trivandrum’s elite enclave, Elite Ananta offers quick access to Kowdiar Palace, the Golf and Tennis Clubs, and key business districts—while maintaining a calm, tree-lined neighbourhood feel.</p>
         </div>
 
         {/* Hover Div */}
@@ -160,25 +161,25 @@ const LegacyComponent = () => {
             <div className="w-full max-w-[650px] h-fit relative">
               <Image
                 className=" w-full object-cover scale-[1.1] "
-                src={"/data/Intreaction.svg"}
+                src={"/Img/map.svg"}
                 width={1000}
                 height={1000}
                 alt="Intreaction SVG"
               />
-              <Image
+              {/* <Image
                 className=" w-full absolute z-[-1] top-0 left-0 object-cover   "
                 src={"Img/Vectorbg.svg"}
                 width={1000}
                 height={1000}
                 alt="Intreaction SVG"
-              />
+              /> */}
               
 
               {/* HoverDiv1 */}
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv1")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute  top-[24%] left-[46.6%] rounded-full cursor-pointer  "
+                className="w-[20px] h-[20px] absolute  top-[12%] left-[46.6%] rounded-full cursor-pointer  "
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">01</div>
@@ -194,7 +195,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv2")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[38.9%] left-[47.3%] rounded-full cursor-pointer"
+                className="w-[20px] h-[20px] absolute top-[38%] left-[45.3%] rounded-full cursor-pointer"
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">02</div>
@@ -210,7 +211,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv3")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[57.3%] left-[57.7%] rounded-full cursor-pointer"
+                className="w-[20px] h-[20px] absolute top-[47.3%] left-[76.7%] rounded-full cursor-pointer"
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">03</div>
@@ -226,7 +227,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv4")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[71%] left-[56.5%] rounded-full cursor-pointer"
+                className="w-[20px] h-[20px] absolute top-[62%] left-[74.5%] rounded-full cursor-pointer"
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">04</div>
@@ -242,7 +243,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv5")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[79.2%] left-[47%] rounded-full cursor-pointer "
+                className="w-[20px] h-[20px] absolute top-[67.2%] left-[49%] rounded-full cursor-pointer "
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">05</div>
@@ -258,7 +259,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv6")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[96%] left-[44.1%] rounded-full cursor-pointer  "
+                className="w-[20px] h-[20px] absolute top-[73%] left-[33.1%] rounded-full cursor-pointer  "
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">06</div>
@@ -274,7 +275,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv7")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[52.8%] left-[21.4%] rounded-full cursor-pointer   "
+                className="w-[20px] h-[20px] absolute top-[53.8%] left-[37.5%] rounded-full cursor-pointer   "
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">07</div>
@@ -290,7 +291,7 @@ const LegacyComponent = () => {
               <div
                 onMouseEnter={() => HoverAction(".legacyDiv8")}
                 onMouseLeave={() => HoverPreAction()}
-                className="w-[20px] h-[20px] absolute top-[26.4%] left-[59.1%] rounded-full cursor-pointer  "
+                className="w-[20px] h-[20px] absolute top-[34.4%] left-[29.1%] rounded-full cursor-pointer  "
               >
                 <div className="hotspot-container w-full h-full relative ">
                   <div className="hotspot-inner ">08</div>
