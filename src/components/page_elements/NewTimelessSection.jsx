@@ -23,6 +23,7 @@ const NewTimelessSection = () => {
     //    TitleOpacity-0
     NTL1.to(".Logo_Cont", {
       opacity: 0,
+       delay: 1,
        y:'-25px'
     });
 
@@ -30,61 +31,63 @@ const NewTimelessSection = () => {
     NTL1.to(".tc_1", {
       opacity: 1,
       y:0
-    });
+    },'a1');
     NTL1.to(".tc_1", {
       opacity: 0,
       delay: 1,
        y:'-25px'
-    });
+    },'a2');
     // 2
     NTL1.to(".tc_2", {
       opacity: 1,
       y:0
-    });
+    },'a1');
     NTL1.to(".tc_2", {
       opacity: 0,
       delay: 1,
        y:'-25px'
-    });
+    },'a2');
     // 3
     NTL1.to(".tc_3", {
       opacity: 1,
       y:0
-    });
+    },'a3');
     NTL1.to(".tc_3", {
       opacity: 0,
       delay: 1,
        y:'-25px'
-    });
+    },'a4');
     // 4
     NTL1.to(".tc_4", {
       opacity: 1,
       y:0
 
-    });
+    },'a3');
     NTL1.to(".tc_4", {
       opacity: 0,
       delay: 1,
        y:'-25px'
-    });
+    },'a4');
     // 5
     NTL1.to(".tc_5", {
       opacity: 1,
       y:0
-    });
+    },'a5');
     NTL1.to(".tc_5", {
       opacity: 0,
       delay: 1,
        y:'-25px'
-    });
+    },'a6');
     // 6
     NTL1.to(".tc_6", {
       opacity: 1,
       y:0
-    });
-    // NTL1.to(".tc_6", {
-    //   opacity: 0,
-    // });
+    },'a5');
+    NTL1.to(".tc_6", {
+      opacity: 0,
+       delay: 1,
+       y:'-25px'
+    },'a6');
   }, []);
 
   useEffect(() => {
@@ -102,11 +105,11 @@ const NewTimelessSection = () => {
   }, []);
 
   return (
-    <div className="MainContTimeLess w-full h-[400dvh] bg-[#EFE2C9] relative  ">
+    <div className="MainContTimeLess w-full h-[300vh] bg-[#EFE2C9] relative   ">
       {/* Img Cont */}
-      <div className="TL_ImgCont w-full h-fit fixed top-0 left-0 flex justify-center items-center ">
+      <div className="TL_ImgCont w-full h-[200vh] fixed top-0 left-0 flex justify-center items-center  ">
         <Image
-          className="sm:w-full TimeLessImg w-full object-cover sm:object-center object-top "
+          className="sm:w-full TimeLessImg w-full  h-full object-cover sm:object-center object-top "
           src={"/Img/imeless/BigBuilding.png"}
           width={1000}
           height={1000}
@@ -121,7 +124,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-1-L-Side */}
-        <div className="w-[350px] tc_1 h-fit absolute top-[10%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_1 h-fit absolute top-[12%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             4,300 sq.ft{" "}
           </h1>
@@ -132,7 +135,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-2-R-Side */}
-        <div className="w-[350px] tc_2 h-fit absolute top-[20%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_2 h-fit absolute top-[16%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             one residence per floor
           </h1>
@@ -143,7 +146,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-3-l-Side */}
-        <div className="w-[350px] tc_3 h-fit absolute top-[30%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_3 h-fit absolute top-[20%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             3.4 m floor-to-floor height
           </h1>
@@ -154,7 +157,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-4-R-Side */}
-        <div className="w-[350px] tc_4 h-fit absolute top-[40%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_4 h-fit absolute top-[25%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             Luxe Living Volumes
           </h1>
@@ -165,7 +168,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-5-l-Side */}
-        <div className="w-[350px] tc_5 h-fit absolute top-[50%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_5 h-fit absolute top-[25%] left-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             Dedicated Parking Excellence
           </h1>
@@ -176,7 +179,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-6-R-Side */}
-        <div className="w-[350px] tc_6 h-fit absolute top-[60%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
+        <div className="w-[350px] tc_6 h-fit absolute top-[27%] right-[5%] flex flex-col gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
             Private Service Flow
           </h1>

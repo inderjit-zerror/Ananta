@@ -2,6 +2,7 @@ import Footer from "@/components/common/Footer";
 import AmenitiesSection from "@/components/page_elements/AmenitiesSection";
 import BgWhiteHoverComponent from "@/components/page_elements/BgWhiteHoverComponent";
 import CraftedSection from "@/components/page_elements/CraftedSection";
+import EdgeSection from "@/components/page_elements/EdgeSection";
 import FormSection from "@/components/page_elements/FormSection";
 import HeroSection from "@/components/page_elements/HeroSection";
 import ImelessSection from "@/components/page_elements/ImelessSection";
@@ -43,6 +44,9 @@ export default function Home() {
 
         {/* Crafted Section */}
         <CraftedSection />
+
+        {/* ☑️ EdgeSection */}
+        <EdgeSection />
 
         {/* ☑️ Form-Section */}
         <FormSection />

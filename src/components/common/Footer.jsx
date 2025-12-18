@@ -16,10 +16,10 @@ const Footer = () => {
     gsap.fromTo(
       ".FooterImg",
       {
-        y: -100,
+        y: -10,
       },
       {
-        y: 100,
+        y: 10,
         ease: "linear",
         scrollTrigger: {
           trigger: ".FooterImgCont",
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
 
       {/* Desc */}
-      <div className="w-full h-fit max-w-[400px] m-auto text-center mt-[30px] max-sm:mt-[10px] mb-[70px] max-sm:mb-[60px] px-[40px] max-sm:px-[80px] ">
+      <div className="w-full h-fit max-w-[400px] m-auto text-center mt-[20px] max-sm:mt-[10px] mb-[70px] max-sm:mb-[60px] px-[40px] max-sm:px-[80px] ">
         <p className="text-[2rem] leading-[2rem] STF max-sm:text-[20px] max-sm:leading-[20px] ">
           SanctuaryTimeless Luxury. Infinite Legacy
         </p>
@@ -117,7 +117,7 @@ const Footer = () => {
         />
 
         {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[40%]  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+        <div className="w-[443px] h-fit flex absolute top-[50%]  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
           {/* Text */}
           <div className="w-[400px] h-full flex flex-col justify-between ">

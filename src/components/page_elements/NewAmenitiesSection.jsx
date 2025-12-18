@@ -126,7 +126,7 @@ const NewAmenitiesSection = () => {
   return (
     <div
       onMouseMove={MoveMouse}
-      className="w-full min-h-screen bg-[#EFE2C9] py-[50px] px-[2vw] relative"
+      className="w-full min-h-screen bg-[#EFE2C9] pt-[50px] pb-[100px] px-[2vw] relative"
     >
       <div className=" bg-[#f0dbb5] opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
         <p className="CFF text-[18px] leading-[18px] text-[#9c6b25] pointer-events-none">
@@ -145,7 +145,7 @@ const NewAmenitiesSection = () => {
       </div>
 
       {/* Contant */}
-      <div className="w-full h-fit flex flex-col pt-[50px] text-[#9c6b25] gap-[20px]">
+      <div className="w-full  h-fit flex flex-col pt-[50px] text-[#9c6b25] gap-[20px]">
         {dataArr.map((item, index) => {
           return (
             <div
@@ -153,9 +153,9 @@ const NewAmenitiesSection = () => {
               onMouseLeave={() => handleMouseLeave(index)}
               key={index}
               onClick={() => setOpenIndex(index)}
-              className={`w-full ${
+              className={`w-full transition-all duration-300 ease-in ${
                 index == openindex
-                  ? "h-fit "
+                  ? "h-auto "
                   : " h-[70px] border-b-[1px] border-[##9c6b25] select-none cursor-pointer"
               } flex flex-col overflow-hidden `}
             >

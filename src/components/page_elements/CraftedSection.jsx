@@ -56,23 +56,23 @@ const CraftedSection = () => {
         <div className="w-full h-fit flex text-white  justify-between items-end max-sm:flex-col max-sm:mt-[30px]">
           {/* title */}
           <div className="w-[50%] h-full max-sm:w-full">
-            <h1 className="text-[8rem] leading-[8rem] max-sm:text-[3rem] max-sm:leading-[3rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem]">
-              Crafted by Masters of Their Discipline
+            <h1 className="text-[60px] leading-[60px] max-sm:text-[3rem] max-sm:leading-[3rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem]">
+              Crafted By Masters Of <br /> Their Discipline
             </h1>
+            <p className="mt-[10px] STF max-w-[380px] w-full text-[20px] leading-[20px]">
+              Together, they shape a residence that stands as a benchmark of
+              refined craftsmanship.
+            </p>
           </div>
 
           {/* Desc */}
           <div className="w-[50%] max-w-[500px]  h-full flex STF items-center  md:pr-[40px] max-sm:w-full max-sm:max-w-full max-sm:mt-[50px]">
-            <div className="text-[20px] leading-[22px] max-sm:text-[20px] STF max-sm:leading-[22px] text-justify  ">
+            <div className="text-[20px] leading-[20px] max-sm:text-[20px] STF max-sm:leading-[20px] text-justify  ">
               Ananta is brought to life by a handpicked collective of
               architects, designers, engineers, and artisans — each chosen for
               their mastery, precision, and integrity. From structural experts
               to fine-detail craftsmen, every partner involved reflects a shared
               commitment to excellence and enduring quality. <br />
-              <p className="mt-[20px]">
-                Together, they shape a residence that stands as a benchmark of
-                refined craftsmanship.
-              </p>
             </div>
           </div>
         </div>
@@ -121,102 +121,40 @@ const CraftedSection = () => {
         </div>
 
         {/* 3-Section */}
-        <div className="  my-[100px] max-sm:my-[20px] CFF w-full flex  items-center    justify-between max-sm:flex-col">
-          {/* LEFT SIDE CONTENT BLOCK */}
-          <div className="flex flex-col gap-8 text-white md:w-1/2 max-md:w-full  ">
-            {/* Heading */}
-            <h1 className="text-4xl CFF md:text-6xl  flex">Elite Developers</h1>
-
-            {/* Paragraph */}
-            <p className="max-w-md text-[20px] STF md:text-base leading-[22px] max-sm:text-[1rem] max-sm:leading-[1rem]">
-              The Philosophy Behind Ananta Is Simple Yet Profound: True Luxury
-              Should Endure. Guided By This Belief, Every Design Choice Is Made
-              With Permanence, Balance, And Cultural Resonance In Mind.
-            </p>
-
-            {/* STATS SECTION */}
-            <div className="grid grid-cols-2 gap-10 mt-6   ">
-              {/* Stat 1 */}
-              <div className="flex w-fit h-fit flex-col gap-[20px] max-sm:gap-[10px]">
-                <h2 className="text-[3rem] max-sm:text-[30px] CFF">20+</h2>
-                <p className="text-[20px] mt-1 leading-[22px] STF max-sm:text-[14px] max-sm:leading-[15px]">
-                  Years Of Architectural
-                  <br />
-                  And Development
-                  <br />
-                  Expertise.
-                </p>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="flex w-fit h-fit flex-col gap-[20px] max-sm:gap-[10px]">
-                <h2 className="text-[3rem] max-sm:text-[30px] CFF">
-                  1.5M+ Sq. Ft
-                </h2>
-                <p className="text-[20px] mt-1 leading-[22px] STF max-sm:text-[14px] max-sm:leading-[15px]">
-                  Delivered Across
-                  <br />
-                  Residential And Commercial
-                  <br />
-                  Projects.
-                </p>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="flex w-fit h-fit flex-col gap-[20px] max-sm:gap-[10px]">
-                <h2 className="text-[3rem] max-sm:text-[30px] CFFf">15</h2>
-                <p className="text-[20px] mt-1 leading-[22px] STF max-sm:text-[14px] max-sm:leading-[15px]">
-                  Landmark Projects
-                  <br />
-                  Completed Across Major
-                  <br />
-                  Indian Cities.
-                </p>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="flex w-fit h-fit flex-col gap-[20px] max-sm:gap-[10px]">
-                <h2 className="text-[3rem] max-sm:text-[30px] CFF">98%</h2>
-                <p className="text-[20px] mt-1 leading-[22px] STF max-sm:text-[14px] max-sm:leading-[15px]">
-                  Customer Satisfaction
-                  <br />
-                  Across All Delivered
-                  <br />
-                  Developments.
-                </p>
-              </div>
+        <div className="w-full h-fit px-[40px] flex flex-col gap-[60px] ">
+          {/* TOP1 */}
+          <div className="w-full h-fit flex justify-between text-white items-end ">
+            {/* IM! */}
+            <div className="w-full h-fit max-w-[500px] flex flex-col gap-[31px] ">
+              <h1 className="text-[60px] CFF leading-[62px]">From the house of Elite</h1>
+              <p className="text-[20px] STF leading-[20px]">
+                Elite Developers, headquartered in Thrissur and a key division
+                of the prestigious Elite Foods & Innovations Group, has earned a
+                reputation across Kerala for delivering premium apartments and
+                villas with a strong focus on design, build quality, and
+                long‑term value.
+              </p>
+            </div>
+            {/* IM2 */}
+            <div className="w-full h-fit max-w-[500px] STF text-[20px] leading-[20px] flex flex-col gap-[40px] ">
+              <p>
+                The Elite Ananta extends this legacy into the ultra‑luxury
+                sky‑residence category, combining disciplined engineering and
+                bespoke detailing for a limited number of discerning families.
+              </p>
+              <p>
+                owners enjoy priority maintenance, curated handover services,
+                and long‑term support through Elite’s dedicated after‑sales
+                team, treating each home as a continuing relationship rather
+                than a one‑time transaction, ensuring the experience stays
+                seamless beyond possession.
+              </p>
             </div>
           </div>
 
-          {/* RIGHT SIDE CONTENT BLOCK */}
-          <div className="flex flex-col  text-white md:w-1/2 pr-[50px]  max-sm:pr-[0px]  mt-[30px] max-sm:w-full max-sm:items-center  max-sm:pb-[50px]">
-            {/* Right Paragraph */}
-            <p className="max-w-[350px] text-[20px] leading-[22px]  STF md:text-base ml-auto max-sm:w-full text-justify max-sm:hidden max-sm:justify-center pb-[30px]">
-              The Result Is A Home That Transcends Trends — An Architectural
-              Expression That Is Sophisticated, Rooted In Heritage, And Crafted
-              To Remain Relevant For Generations.
-            </p>
-
-            {/* Right Image */}
-            <div
-              onMouseEnter={() => HoverImageActivate(".ch3")}
-              onMouseLeave={() => HoverImageDeActivate(".ch3")}
-              className="w-full sm:max-w-[350px] ImgP3 h-[350px] md:h-[350px] max-sm:h-[444px] overflow-hidden  ml-auto max-sm:ml-0 cursor-pointer  max-sm:w-full"
-            >
-              <Image
-                src={"/Img/Crafted/TMBG2.webp"} // Replace
-                alt="Interior"
-                width={1000}
-                height={1000}
-                className="w-full h-full object-cover ch3"
-              />
-            </div>
-            {/* Right Paragraph */}
-            <p className="sm:max-w-[355px] text-[1rem] leading-[1rem]  md:text-base max-sm:text-[14px] max-sm:leading-[16px] STF ml-auto max-sm:w-full text-justify sm:hidden mt-[20px] max-sm:ml-0 ">
-              The Result Is A Home That Transcends Trends — An Architectural
-              Expression That Is Sophisticated, Rooted In Heritage, And Crafted
-              To Remain Relevant For Generations.
-            </p>
+          {/* Bottom */}
+          <div className="w-full h-[400px] overflow-hidden ">
+            <img src={'/Img/Crafted/craftBottom.webp'} className="w-full h-full object-center object-cover" alt="Al" />
           </div>
         </div>
       </div>

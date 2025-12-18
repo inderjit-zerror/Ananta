@@ -38,7 +38,7 @@ const IntroLoader = () => {
 
 
     return (
-        <div className=' intro_div  w-full h-screen fixed z-[999]  flex items-center justify-center'>
+        <div className=' intro_div  w-full h-screen fixed z-[999]  flex items-center justify-center '>
             <div className='loader_txt absolute bottom-20 uppercase text-sm z-10 text-[#9c6b25] flex justify-center items-center'>Loading 
                  <div className='w-[80px] h-fit flex relative justify-center items-center '>
                     <span className="loader "></span>
@@ -54,7 +54,7 @@ const IntroLoader = () => {
             </div>
                 <Image
                     src={"/data/LogoMain.svg"}
-                    className="md:h-[4vw] w-[150px] introLogo absolute  z-10  "
+                    className="md:h-[4vw] w-[150px] introLogo absolute  z-10 mix-blend-difference "
                     width={1000}
                     height={1000}
                     alt="Logo"
