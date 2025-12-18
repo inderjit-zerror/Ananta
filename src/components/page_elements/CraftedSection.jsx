@@ -57,7 +57,7 @@ const CraftedSection = () => {
           {/* title */}
           <div className="w-[50%] h-full max-sm:w-full">
             <h1 className="text-[60px] leading-[60px] max-sm:text-[38px] max-sm:leading-[42px] flex CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem] max-sm:mt-[40px]">
-              <span className="AL">C</span> rafted By <br className="sm:hidden " /> Masters Of <br /> Their Discipline
+              Crafted By <br className="sm:hidden " /> Masters Of <br /> Their Discipline
             </h1>
             <p className="mt-[10px] max-sm:hidden STF max-w-[380px] w-full text-[20px] leading-[20px]">
               Together, they shape a residence that stands as a benchmark of
