@@ -94,7 +94,7 @@ const Footer = () => {
       </div>
 
       {/* Img-Cont */}
-      <div className="w-full h-[70vh] overflow-hidden FooterImgCont relative ">
+      <div className="w-full h-[60vh] overflow-hidden flex FooterImgCont relative ">
         {/* <Image
           src={"/Img/footer/FooterImg.webp"}
           className="w-full h-full object-cover object-bottom FooterImg"
@@ -116,24 +116,56 @@ const Footer = () => {
           alt=""
         />
 
-        {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE]  max-sm:px-[10px] max-sm:py-[10px] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
-
-          {/* Text */}
-          <div className="w-fit h-full max-sm:w-fit flex flex-col justify-between ">
-            <div className="w-fit h-full">
-              <p className="text-[22px] leading-[32px] max-sm:text-[16px]  max-sm:leading-[18px]">RERA Registration</p>
-            <p className="text-[14px] leading-[16px] max-sm:text-[12px]  max-sm:leading-[14px]">K-RERA/PRJ/TVM/1234/2024</p>
+        {/* MB OR */}
+        <div className="w-[80%] h-fit absolute top-[30%]  max-sm:left-[10%] sm:hidden flex bg-[#FEF7EE] p-[10px] justify-center  items-center rounded-sm ">
+          <div className="w-fit h-fit">
+            <div className="w-fit h-fit flex flex-col">
+              <p className="text-[16px] leading-[18px]">RERA Registration</p>
+              <p className="text-[12px] leading-[14px]">
+                K-RERA/PRJ/TVM/1234/2024
+              </p>
             </div>
-            <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">Images, plans, specifications, and areas shown are indicative and subject to change without prior notice.</p>
+             <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">
+              Images, plans, specifications, and areas shown are indicative and
+              subject to change without prior notice.
+            </p>
           </div>
-
-          {/* QR Img */}
-          <div className=" h-full">
-            <img src={'/Img/QR.svg'} alt="QR" className=" h-full object-cover object-center" />
+          <div className="w-[90px] h-[90px] flex-shrink-0">
+            <img
+              src={"/Img/QR.svg"}
+              alt="QR"
+              className=" h-full w-full object-cover object-center"
+            />
           </div>
         </div>
 
+        {/* QR */}
+        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:hidden max-sm:left-[10%] max-sm:w-[80%] right-[5%] bg-[#FEF7EE]  max-sm:px-[10px] max-sm:py-[10px] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+          {/* Text */}
+          <div className="w-fit h-full max-sm:w-fit flex flex-col justify-between ">
+            <div className="w-fit h-full">
+              <p className="text-[22px] leading-[32px] max-sm:text-[16px]  max-sm:leading-[18px]">
+                RERA Registration
+              </p>
+              <p className="text-[14px] leading-[16px] max-sm:text-[12px]  max-sm:leading-[14px]">
+                K-RERA/PRJ/TVM/1234/2024
+              </p>
+            </div>
+            <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">
+              Images, plans, specifications, and areas shown are indicative and
+              subject to change without prior notice.
+            </p>
+          </div>
+
+          {/* QR Img */}
+          <div className="w-[90px] h-[90px] flex-shrink-0">
+            <img
+              src={"/Img/QR.svg"}
+              alt="QR"
+              className=" h-full object-cover object-center"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Infob */}
