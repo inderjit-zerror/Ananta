@@ -72,21 +72,21 @@ const EdgeSection = () => {
             alt="LGO"
             className="w-[150px] "
           />
-          <h1 className="CFF text-[60px] leading-[67px] text-[#B3976E] capitalize">
-            experience excellence <br /> beyond ownership
+          <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#B3976E] capitalize">
+            experience excellence <br className="max-sm:hidden" /> beyond ownership
           </h1>
         </div>
       </div>
 
       {/* 2 COnt */}
       <div className="w-full option2 opacity-0 h-full flex flex-col  py-[100px] select-none ">
-        <div className="w-full h-fit flex flex-col justify-center items-center mb-[200px]">
+        <div className="w-full h-fit flex flex-col justify-center items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
           <img
             src={`/Img/edge/EdgeLogo.svg`}
             alt="LGO"
-            className="w-[300px] mb-[50px]"
+            className="w-[150px] mb-[30px]"
           />
-          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] text-[#B3976E]">
+          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] text-[#B3976E] max-sm:text-justify">
             Welcome to an exclusive world of lasting care, convenience, and
             value with Elite Edge — the premier after-sales service program from
             Elite Developers designed to elevate your property ownership
@@ -95,12 +95,12 @@ const EdgeSection = () => {
         </div>
 
         {/*  */}
-        <div className="w-full h-fit flex flex-wrap px-[4vw] gap-[65px] justify-center">
+        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[4vw] gap-[65px] justify-center max-sm:px-[20px]">
           {TU.map((item, index) => {
             return (
               <div
                 key={index}
-                className="w-full max-w-[400px] h-fit flex flex-col"
+                className="w-full max-w-[400px] h-fit flex flex-col "
               >
                 <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px]">
                   <img
@@ -112,7 +112,7 @@ const EdgeSection = () => {
                 <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#B3976E] ">
                   {item.text}
                 </div>
-                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#B3976E] ">
+                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#B3976E] max-sm:text-justify  max-sm:mt-[15px]">
                   {item.desc}
                 </div>
               </div>

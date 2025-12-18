@@ -75,7 +75,7 @@ const FormSection = () => {
             {/* First + Last Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
               <div>
-                <label className="block text-[18px] CFF mb-2">First Name</label>
+                <label className="block text-[18px] CFF mb-2">First Name*</label>
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
@@ -84,9 +84,9 @@ const FormSection = () => {
               </div>
 
               <div>
-                <label className="block text-[18px] CFF mb-2">Last Name</label>
+                <label className="block text-[18px] CFF mb-2">Email*</label>
                 <input
-                  type="text"
+                  type="email"
                   className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                   placeholder=""
                 />
@@ -96,9 +96,9 @@ const FormSection = () => {
             {/* Email + Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
               <div>
-                <label className="block text-[18px] CFF mb-2">Email</label>
+                <label className="block text-[18px] CFF mb-2">City / Country</label>
                 <input
-                  type="email"
+                  type="text"
                   className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
                 />
               </div>
@@ -117,12 +117,12 @@ const FormSection = () => {
             {/* Subject */}
             <div className="mb-10">
               <label className="block text-[18px] mb-3 CFF">
-                Select Subject?
+                Select Preferred Mode*
               </label>
               <div className="flex flex-wrap gap-6">
-                {[1, 2, 3, 4].map((i) => (
+                {['In‑person Visit ', ' Video Call'].map((item,index) => (
                   <label
-                    key={i}
+                    key={index}
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <input
@@ -130,7 +130,7 @@ const FormSection = () => {
                       name="subject"
                       className="appearance-none w-4 h-4 rounded-full border border-[#9c6b25] checked:bg-[#9c6b25]"
                     />
-                    <span className="text-[14px] STF">General Inquiry</span>
+                    <span className="text-[14px] GFS_R">{item}</span>
                   </label>
                 ))}
               </div>
@@ -138,7 +138,7 @@ const FormSection = () => {
 
             {/* Message */}
             <div className="mb-10">
-              <label className="block text-[18px] mb-2 CFF">Message</label>
+              <label className="block text-[18px] mb-2 CFF">Message (Optional)</label>
               <textarea
                 rows="1"
                 className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1 resize-none"

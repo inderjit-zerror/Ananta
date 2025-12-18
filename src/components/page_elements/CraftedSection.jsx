@@ -56,7 +56,7 @@ const CraftedSection = () => {
         <div className="w-full h-fit flex text-white  justify-between items-end max-sm:flex-col max-sm:mt-[30px]">
           {/* title */}
           <div className="w-[50%] h-full max-sm:w-full">
-            <h1 className="text-[60px] leading-[60px] max-sm:text-[3rem] max-sm:leading-[3rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem]">
+            <h1 className="text-[60px] leading-[60px] max-sm:text-[3rem] max-sm:leading-[3rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem] max-sm:mt-[40px]">
               Crafted By Masters Of <br /> Their Discipline
             </h1>
             <p className="mt-[10px] STF max-w-[380px] w-full text-[20px] leading-[20px]">
@@ -121,9 +121,9 @@ const CraftedSection = () => {
         </div>
 
         {/* 3-Section */}
-        <div className="w-full h-fit px-[40px] flex flex-col gap-[60px] ">
+        <div className="w-full h-fit px-[40px] flex flex-col gap-[60px] max-sm:px-[0px] max-sm:mt-[80px] ">
           {/* TOP1 */}
-          <div className="w-full h-fit flex justify-between text-white items-end ">
+          <div className="w-full h-fit flex justify-between text-white items-end max-sm:flex-col ">
             {/* IM! */}
             <div className="w-full h-fit max-w-[500px] flex flex-col gap-[31px] ">
               <h1 className="text-[60px] CFF leading-[62px]">From the house of Elite</h1>
@@ -153,7 +153,7 @@ const CraftedSection = () => {
           </div>
 
           {/* Bottom */}
-          <div className="w-full h-[400px] overflow-hidden ">
+          <div className="w-full h-[400px] overflow-hidden max-sm:mb-[80px] ">
             <img src={'/Img/Crafted/craftBottom.webp'} className="w-full h-full object-center object-cover" alt="Al" />
           </div>
         </div>

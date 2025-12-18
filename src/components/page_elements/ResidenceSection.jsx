@@ -7,6 +7,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTN from "@/components/common/BTN";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -36,7 +37,7 @@ const ResidenceSection = () => {
   return (
     <div
       id="FloorPlan"
-      className="w-full min-h-screen flex relative BG_R z-90 pt-[50px]  TextBlack pointer-events-none RIMGCONT overflow-hidden max-sm:hidden "
+      className="w-full min-h-screen flex relative BG_R z-90 pt-[50px]  TextBlack RIMGCONT overflow-hidden max-sm:hidden "
     >
       {/* Bg-div */}
 
@@ -55,7 +56,8 @@ const ResidenceSection = () => {
       <div className="w-full min-h-screen flex flex-col pb-[100px] pt-[50px] ">
         {/* Title-Cont */}
         <div className="w-full h-fit flex flex-col justify-center items-center text-white">
-          <SectionTitle />
+          {/* <SectionTitle /> */}
+          <img src={`/data/TitleDesignWhite.svg`} alt="" />
           <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px]  ">
             <p className=" capitalize text-center text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
               One Floor. One Residence. Infinite Privacy.
@@ -93,7 +95,7 @@ const ResidenceSection = () => {
         <Component3DModel />
 
         {/* Some-Residence-info */}
-        <div className="w-full h-fit flex justify-end items-end text-white pt-[50px]">
+        <div className="w-full h-fit flex justify-end items-end text-white pt-[50px] z-[100]">
           {/* Right-Container */}
           <div className="w-full max-w-[400px] h-fit flex flex-col  mr-[40px]">
             {/* Name */}
@@ -102,26 +104,30 @@ const ResidenceSection = () => {
             </div>
 
             {/* Text-Data */}
-            <SomeInfoText
-              t1={"Location"}
-              t2={"Royal Precinct, Thiruvananthapuram"}
-            />
-            <SomeInfoText
-              t1={"Architecture"}
-              t2={"Classical Symmetry with Minimal Modern Lines"}
-            />
-            <SomeInfoText
-              t1={"Amenities"}
-              t2={"rooftop Lounge, Fitness Suite, Courtyard"}
-            />
-            <SomeInfoText
-              t1={"Privacy"}
-              t2={"Private Lift Lobby + Controlled Access"}
-            />
-            <SomeInfoText
-              t1={"Views"}
-              t2={"Unobstructed City & Temple-Side Vistas"}
-            />
+            <div className="w-full max-w-[400px] h-fit flex flex-col mb-[20px]">
+              <SomeInfoText
+                t1={"Location"}
+                t2={"Royal Precinct, Thiruvananthapuram"}
+              />
+              <SomeInfoText
+                t1={"Architecture"}
+                t2={"Classical Symmetry with Minimal Modern Lines"}
+              />
+              <SomeInfoText
+                t1={"Amenities"}
+                t2={"rooftop Lounge, Fitness Suite, Courtyard"}
+              />
+              <SomeInfoText
+                t1={"Privacy"}
+                t2={"Private Lift Lobby + Controlled Access"}
+              />
+              <SomeInfoText
+                t1={"Views"}
+                t2={"Unobstructed City & Temple-Side Vistas"}
+              />
+            </div>
+
+            <BTN text={"Download Now"} />
           </div>
         </div>
       </div>

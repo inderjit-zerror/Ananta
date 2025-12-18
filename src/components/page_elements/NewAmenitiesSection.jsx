@@ -126,19 +126,19 @@ const NewAmenitiesSection = () => {
   return (
     <div
       onMouseMove={MoveMouse}
-      className="w-full min-h-screen bg-[#EFE2C9] pt-[50px] pb-[100px] px-[2vw] relative"
+      className="w-full min-h-screen bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pt-[100px] px-[2vw] relative max-sm:px-[20px]"
     >
-      <div className=" bg-[#f0dbb5] opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
-        <p className="CFF text-[18px] leading-[18px] text-[#9c6b25] pointer-events-none">
+      <div className=" bg-[#f0dbb5] max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
+        <p className="CFF text-[18px] leading-[18px] text-white pointer-events-none">
           Click To Open
         </p>
       </div>
 
       {/* Title-Cont */}
-      <div className="w-full h-fit flex flex-col justify-center items-center text-white">
+      <div className="w-full h-fit flex flex-col justify-center items-center text-white ">
         <SectionTitle />
-        <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px] max-sm:px-[30px]  ">
-          <p className=" capitalize text-center text-[#9c6b25] text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem]">
+        <div className="w-full max-w-[650px] m-auto h-fit flex justify-center items-center mt-[50px]   ">
+          <p className=" capitalize text-center text-[#9c6b25] text-[4rem] leading-[4rem] CFF  max-sm:text-[2.5rem] max-sm:leading-[2.5rem] ">
             The Art of Refined <br /> Living.
           </p>
         </div>
@@ -168,7 +168,7 @@ const NewAmenitiesSection = () => {
               </div>
 
               {/* Img */}
-              <div className="w-full h-[580px] flex whitespace-nowrap">
+              <div className="w-full h-[580px] max-sm:h-[382px] flex whitespace-nowrap">
                 <img
                   src={item.url}
                   alt="ik"
@@ -177,22 +177,22 @@ const NewAmenitiesSection = () => {
               </div>
 
               {/* mini-Cont */}
-              <div className="w-full h-fit flex gap-[4vw] justify-between ">
+              <div className="w-full h-fit flex gap-[4vw] justify-between max-sm:flex-col ">
                 {/* left */}
-                <div className="w-[50%] h-full pr-[7vw] py-[40px] flex flex-col gap-[20px]">
+                <div className="w-[50%] h-full pr-[7vw] py-[40px] flex flex-col gap-[20px] max-sm:w-[100%] max-sm:pr-0 ">
                   <p className="CFF text-[32px] leading-[32px]">OverView</p>
                   <p className="STF text-[20px] leading-[22px]">{item.desc}</p>
                 </div>
                 {/* right */}
-                <div className="w-fit h-fit flex flex-col py-[40px] STF ">
+                <div className="w-fit h-fit flex flex-col py-[40px] STF  ">
                   {/* top */}
                   <div className="w-fit h-fit flex flex-col    ">
                     <p className="CFF text-[32px] leading-[32px]">
                       Key Highlight
                     </p>
-                    <div className="w-fit h-fit flex py-[40px] gap-[40px] ">
+                    <div className="w-fit h-fit flex py-[40px] gap-[40px]  ">
                       {/* t1 */}
-                      <div className="w-[200px] h-fit flex flex-col gap-[20px]">
+                      <div className="w-[200px] h-fit flex flex-col gap-[20px] max-sm:w-[50%]">
                         <div className="h-[40px]">
                           <img src={item.url1} alt="" className="h-full" />
                         </div>
@@ -201,7 +201,7 @@ const NewAmenitiesSection = () => {
                         </p>
                       </div>
                       {/* t2 */}
-                      <div className="w-[200px] h-fit flex flex-col gap-[20px]">
+                      <div className="w-[200px] h-fit flex flex-col gap-[20px] max-sm:w-[50%]">
                         <div className="h-[40px]">
                           <img src={item.url2} alt="" className="h-full" />
                         </div>
@@ -213,7 +213,7 @@ const NewAmenitiesSection = () => {
                     {/* b */}
                     <div className="w-fit h-fit flex py-[40px] gap-[40px]">
                       {/* b1 */}
-                      <div className="w-[200px] h-fit flex flex-col gap-[20px]">
+                      <div className="w-[200px] h-fit flex flex-col gap-[20px] max-sm:w-[50%]">
                         <div className="h-[40px]">
                           <img src={item.url3} alt="" className="h-full" />
                         </div>
@@ -222,7 +222,7 @@ const NewAmenitiesSection = () => {
                         </p>
                       </div>
                       {/* b2 */}
-                      <div className="w-[200px] h-fit flex flex-col gap-[20px]">
+                      <div className="w-[200px] h-fit flex flex-col gap-[20px] max-sm:w-[50%]">
                         <div className="h-[40px]">
                           <img src={item.url4} alt="" className="h-full" />
                         </div>

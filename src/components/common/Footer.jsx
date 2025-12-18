@@ -64,7 +64,7 @@ const Footer = () => {
       </div>
 
       {/* Info */}
-      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
+      <div className="w-full h-fit flex py-[20px] max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
         <div
           onMouseEnter={() => hoverActive(".lineT1T")}
           onMouseLeave={() => hoverDeActive(".lineT1T")}
@@ -117,7 +117,7 @@ const Footer = () => {
         />
 
         {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[50%]  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:hidden  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
           {/* Text */}
           <div className="w-[400px] h-full flex flex-col justify-between ">
@@ -137,7 +137,7 @@ const Footer = () => {
       </div>
 
       {/* Infob */}
-      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
+      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[20px] max-sm:justify-center  ">
         <div
           onMouseEnter={() => hoverActive(".lineB1T")}
           onMouseLeave={() => hoverDeActive(".lineB1T")}

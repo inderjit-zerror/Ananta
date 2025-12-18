@@ -1,3 +1,5 @@
+'use client'
+import BTN from "@/components/common/BTN";
 import Footer from "@/components/common/Footer";
 import AmenitiesSection from "@/components/page_elements/AmenitiesSection";
 import BgWhiteHoverComponent from "@/components/page_elements/BgWhiteHoverComponent";
@@ -17,8 +19,15 @@ export default function Home() {
   return (
     <>
       {/* ☑️ Full-WebPage-Wraper-Container */}
-      <div className="w-full h-fit flex flex-col relative text-black ">
-        
+      <div className="w-full h-fit flex flex-col relative text-black  ">
+
+        {/* Nav-Btn-Screen BTN */}
+        <div className="w-fit NAVALLOPTION fixed top-[2%] right-[2%] z-100  max-sm:hidden">
+          <a href="#form">
+            <BTN text={"Contact Us"} />
+          </a>
+        </div>
+
         {/* ☑️ Hero-Section */}
         <HeroSection />
 

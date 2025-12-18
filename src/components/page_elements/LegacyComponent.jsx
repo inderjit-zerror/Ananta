@@ -119,7 +119,7 @@ const LegacyComponent = () => {
       <div className="h-fit w-full relative z-[99] bg-[#e7d9bf] overflow-x-hidden">
         {/* Img_BG */}
         <div className="w-full h-full  absolute z-[1] ">
-          <div className="blurDiv w-full h-full absolute top-0 left-0 z-10 backdrop-blur-[1px] bg-white/30 opacity-0"></div>
+          <div className="blurDiv w-full h-full absolute top-0 left-0 z-10   opacity-0"></div>
           {AllImgArr.map((item, index) => {
             return (
               <div
