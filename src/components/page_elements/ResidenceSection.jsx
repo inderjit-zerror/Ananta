@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BTN from "@/components/common/BTN";
+import DownBTN from "../common/DownBTN";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -127,7 +128,7 @@ const ResidenceSection = () => {
               />
             </div>
 
-            <BTN text={"Download Now"} />
+            <DownBTN text={"Download Now"} />
           </div>
         </div>
       </div>

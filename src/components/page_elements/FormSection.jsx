@@ -50,7 +50,7 @@ const FormSection = () => {
         <img src="/Img/Form/FormBG.webp" className="w-full h-full object-cover BGFC absolute top-0 left-0 z-[-1]" alt="oad" />
 
         {/* Inner-Container */}
-        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] max-sm:pt-[40px] max-sm:px-[30px]  max-md:w-full max-md:h-full ">
+        <div className="w-fit h-fit bg-[#FEF7EE] p-[4vw] pb-[2vw] max-sm:pt-[40px] max-sm:px-[30px]  max-md:w-full max-md:h-full ">
           {/* Title-Section */}
           <div className="w-full h-fit flex flex-col justify-center items-center max-sm:pt-[20px]">
             {/* SVG */}
@@ -149,6 +149,8 @@ const FormSection = () => {
             <div className="w-full flex justify-center">
               <BTN text={"Send Message"} />
             </div>
+
+            <p className=" capitalize mt-[50px] max-sm:text-[14px] STF text-center max-sm:leading-[16px] sm:text-[12px] sm:leading-[14px]">your details are handled only by Elite Developers and are not shared with third‑party brokers or agencies*</p>
           </form>
           
         </div>

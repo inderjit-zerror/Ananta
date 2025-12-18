@@ -94,7 +94,7 @@ const Footer = () => {
       </div>
 
       {/* Img-Cont */}
-      <div className="w-full h-[60vh] overflow-hidden FooterImgCont relative">
+      <div className="w-full h-[60vh] overflow-hidden FooterImgCont relative ">
         {/* <Image
           src={"/Img/footer/FooterImg.webp"}
           className="w-full h-full object-cover object-bottom FooterImg"
@@ -117,19 +117,19 @@ const Footer = () => {
         />
 
         {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:hidden  right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
           {/* Text */}
           <div className="w-[400px] h-full flex flex-col justify-between ">
             <div className="w-fit h-full">
-              <p className="text-[22px] leading-[32px]">RERA Registration</p>
-            <p className="text-[14px] leading-[16px]">K-RERA/PRJ/TVM/1234/2024</p>
+              <p className="text-[22px] leading-[32px] max-sm:text-[16px]  max-sm:leading-[18px]">RERA Registration</p>
+            <p className="text-[14px] leading-[16px] max-sm:text-[12px]  max-sm:leading-[14px]">K-RERA/PRJ/TVM/1234/2024</p>
             </div>
-            <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px]">Images, plans, specifications, and areas shown are indicative and subject to change without prior notice.</p>
+            <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">Images, plans, specifications, and areas shown are indicative and subject to change without prior notice.</p>
           </div>
 
           {/* QR Img */}
-          <div className=" h-full">
+          <div className=" h-full ">
             <img src={'/Img/QR.svg'} alt="QR" className=" h-full object-cover object-center" />
           </div>
         </div>

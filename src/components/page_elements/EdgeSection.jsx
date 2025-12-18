@@ -95,12 +95,12 @@ const EdgeSection = () => {
         </div>
 
         {/*  */}
-        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[4vw] gap-[65px] justify-center max-sm:px-[20px]">
+        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] justify-center max-sm:px-[20px]">
           {TU.map((item, index) => {
             return (
               <div
                 key={index}
-                className="w-full max-w-[400px] h-fit flex flex-col "
+                className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex flex-col max-sm:max-w-full "
               >
                 <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px]">
                   <img

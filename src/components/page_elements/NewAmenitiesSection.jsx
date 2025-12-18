@@ -128,8 +128,8 @@ const NewAmenitiesSection = () => {
       onMouseMove={MoveMouse}
       className="w-full min-h-screen bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pt-[100px] px-[2vw] relative max-sm:px-[20px]"
     >
-      <div className=" bg-[#f0dbb5] max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
-        <p className="CFF text-[18px] leading-[18px] text-white pointer-events-none">
+      <div className=" bg-white max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
+        <p className="CFF text-[18px] leading-[18px] text-[#9c6b25] pointer-events-none">
           Click To Open
         </p>
       </div>

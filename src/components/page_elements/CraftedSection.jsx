@@ -56,17 +56,17 @@ const CraftedSection = () => {
         <div className="w-full h-fit flex text-white  justify-between items-end max-sm:flex-col max-sm:mt-[30px]">
           {/* title */}
           <div className="w-[50%] h-full max-sm:w-full">
-            <h1 className="text-[60px] leading-[60px] max-sm:text-[3rem] max-sm:leading-[3rem] CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem] max-sm:mt-[40px]">
-              Crafted By Masters Of <br /> Their Discipline
+            <h1 className="text-[60px] leading-[60px] max-sm:text-[38px] max-sm:leading-[42px] flex CFF max-[1030px]:text-[5rem] max-[1030px]:leading-[5rem] max-sm:mt-[40px]">
+              <span className="AL">C</span> rafted By <br className="sm:hidden " /> Masters Of <br /> Their Discipline
             </h1>
-            <p className="mt-[10px] STF max-w-[380px] w-full text-[20px] leading-[20px]">
+            <p className="mt-[10px] max-sm:hidden STF max-w-[380px] w-full text-[20px] leading-[20px]">
               Together, they shape a residence that stands as a benchmark of
               refined craftsmanship.
             </p>
           </div>
 
           {/* Desc */}
-          <div className="w-[50%] max-w-[500px]  h-full flex STF items-center  md:pr-[40px] max-sm:w-full max-sm:max-w-full max-sm:mt-[50px]">
+          <div className="w-[50%] max-w-[500px]  h-full flex max-sm:flex-col STF items-center  md:pr-[40px] max-sm:w-full max-sm:max-w-full max-sm:mt-[30px]">
             <div className="text-[20px] leading-[20px] max-sm:text-[20px] STF max-sm:leading-[20px] text-justify  ">
               Ananta is brought to life by a handpicked collective of
               architects, designers, engineers, and artisans — each chosen for
@@ -74,6 +74,10 @@ const CraftedSection = () => {
               to fine-detail craftsmen, every partner involved reflects a shared
               commitment to excellence and enduring quality. <br />
             </div>
+            <p className="mt-[20px] sm:hidden STF max-w-[380px] w-full text-[20px] leading-[20px]">
+              Together, they shape a residence that stands as a benchmark of
+              refined craftsmanship.
+            </p>
           </div>
         </div>
 
@@ -114,7 +118,7 @@ const CraftedSection = () => {
 
           {/* TEXT */}
           <div className="flex justify-center md:justify-start w-fit absolute bottom-0   right-[-20%] max-[1030px]:right-[-20%] max-sm:bottom-[-10%] max-sm:right-[0%] max-sm:w-full max-sm:h-fit max-sm:justify-center max-sm:items-center">
-            <h2 className="text-white text-4xl CFF md:text-6xl capitalize tracking-wide max-sm:text-[2.5rem]">
+            <h2 className="text-white text-4xl CFF md:text-6xl capitalize tracking-wide max-sm:text-[3.5rem]">
               The Makers
             </h2>
           </div>
@@ -126,7 +130,8 @@ const CraftedSection = () => {
           <div className="w-full h-fit flex justify-between text-white items-end max-sm:flex-col ">
             {/* IM! */}
             <div className="w-full h-fit max-w-[500px] flex flex-col gap-[31px] ">
-              <h1 className="text-[60px] CFF leading-[62px]">From the house of Elite</h1>
+              <h1 className="text-[60px] CFF leading-[62px] max-sm:hidden ">From the house of Elite</h1>
+              <h1 className="text-[40px] CFF leading-[42px] sm:hidden "> ELITE <br /> DEVELOPERS</h1>
               <p className="text-[20px] STF leading-[20px]">
                 Elite Developers, headquartered in Thrissur and a key division
                 of the prestigious Elite Foods & Innovations Group, has earned a
