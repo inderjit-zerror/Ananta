@@ -117,7 +117,7 @@ const Footer = () => {
         />
 
         {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+        <div className="w-[443px] h-fit flex absolute top-[20%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
           {/* Text */}
           <div className="w-[400px] h-full flex flex-col justify-between ">
