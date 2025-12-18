@@ -48,7 +48,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full h-screen z-90  flex flex-col pt-[80px] bg-[#FEF7EE] text-[#9c6b25] VText max-sm:overflow-x-hidden">
+    <div className="w-full h-[120vh] z-90  flex flex-col pt-[80px] bg-[#FEF7EE] text-[#9c6b25] VText max-sm:overflow-x-hidden">
       {/* Title_Div */}
       <div className="w-full h-fit flex justify-center items-center  gap-[10px] px-[40px]">
         <p className="text-[5rem] max-sm:text-[2.7rem] ">ANANTA</p>
@@ -117,7 +117,7 @@ const Footer = () => {
         />
 
         {/* QR */}
-        <div className="w-[443px] h-fit flex absolute top-[20%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE]  max-sm:px-[10px] max-sm:py-[10px] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
+        <div className="w-[443px] h-fit flex absolute top-[30%] max-sm:left-[10%]   max-sm:w-[80%] right-[5%] bg-[#FEF7EE]  max-sm:px-[10px] max-sm:py-[10px] px-[20px] py-[20px] GFS_R justify-center items-center rounded-sm select-none cursor-pointer ">
 
           {/* Text */}
           <div className="w-[400px] h-full max-sm:w-fit flex flex-col justify-between ">
