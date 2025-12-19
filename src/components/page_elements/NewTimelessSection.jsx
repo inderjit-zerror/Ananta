@@ -260,68 +260,68 @@ const NewTimelessSection = () => {
       </div>
 
       {/* SM  */}
-      <div className=" w-full h-fit  flex flex-col lg:hidden z-90  justify-center items-center gap-[40px] ">
+      <div className=" w-full h-fit  flex flex-col lg:hidden z-90 px-[7vw]  justify-center items-center gap-[20px] ">
         {/* Div-1-L-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px]">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px]">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             4,300 sq.ft{" "}
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             single-level sky residences with 4 en-suite bedrooms, a family
             lounge, staff room, utility, and expansive balconies.
           </p>
         </div>
 
         {/* Div-2-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px] ">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             one residence per floor
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             Exclusive private lift lobby ensuring total privacy and secure,
             controlled access.
           </p>
         </div>
 
         {/* Div-3-l-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px] ">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             3.4 m floor-to-floor height
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             Creates grand volumes, enhances natural light, and delivers a true
             “villa-in-the-sky” living experience.
           </p>
         </div>
 
         {/* Div-4-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px] ">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Luxe Living Volumes
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             Large-format living and dining with full-height glazing for
             uninterrupted views of the Trivandrum skyline.
           </p>
         </div>
 
         {/* Div-5-l-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px] ">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Dedicated Parking Excellence
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             Every residence comes with 3 exclusive parking slots, supported by
             EV-ready infrastructure.
           </p>
         </div>
 
         {/* Div-6-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[41px]  text-[#9c6b25] bg-[#f5f3eae8] py-[40px] ">
-          <h1 className="CFF text-[42px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
+        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+          <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Private Service Flow
           </h1>
-          <p className=" STF capitalize text-[20px] leading-[20px]">
+          <p className=" STF capitalize text-[14px] leading-[16px]">
             Dedicated staff/service circulation ensures discreet, seamless daily
             operations.
           </p>

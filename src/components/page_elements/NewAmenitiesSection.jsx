@@ -129,7 +129,7 @@ const NewAmenitiesSection = () => {
       className="w-full min-h-screen bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pt-[100px] px-[2vw] relative max-sm:px-[20px]"
     >
       <div className=" bg-white max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 rounded-md">
-        <p className="CFF text-[18px] leading-[18px] text-[#9c6b25] pointer-events-none">
+        <p className="CFF text-[14px] leading-[14px] text-[#9c6b25] pointer-events-none">
           Click To Open
         </p>
       </div>
@@ -153,10 +153,10 @@ const NewAmenitiesSection = () => {
               onMouseLeave={() => handleMouseLeave(index)}
               key={index}
               onClick={() => setOpenIndex(index)}
-              className={`w-full transition-all duration-300 ease-in ${
+              className={`w-full transition-max-h  duration-700 ease-in ${
                 index == openindex
-                  ? "h-auto "
-                  : " h-[70px] border-b-[1px] border-[##9c6b25] select-none cursor-pointer"
+                  ? "max-h-[150vh] "
+                  : " max-h-[70px] border-b-[1px] border-[##9c6b25] select-none cursor-pointer"
               } flex flex-col overflow-hidden `}
             >
               {/* Title */}
@@ -168,7 +168,7 @@ const NewAmenitiesSection = () => {
               </div>
 
               {/* Img */}
-              <div className="w-full h-[580px] max-sm:h-[382px] flex whitespace-nowrap">
+              <div className="w-full h-[580px] max-sm:h-[382px] shrink-0 flex whitespace-nowrap">
                 <img
                   src={item.url}
                   alt="ik"

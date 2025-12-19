@@ -59,7 +59,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div  className="w-full NAVALLOPTION z-[100] fixed top-5 left-0 flex justify-between items-center px-[40px] TextWhite mix-blend-difference ">
+      <div  className="w-full NAVALLOPTION z-[100] fixed top-5 left-0 flex justify-between items-center px-[40px] TextWhite ">
         {/* Menu Container */}
         <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px] max-[1030]:w-full max-[1030]:gap-[10px]  max-[1030]:justify-start  max-[1030]:pl-0 lg:w-full lg:gap-[17px]  lg:justify-start  lg:pl-0 max-md:hidden">
           {/* Address */}

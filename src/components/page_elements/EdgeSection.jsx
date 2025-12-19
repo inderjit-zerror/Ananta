@@ -72,7 +72,7 @@ const EdgeSection = () => {
             alt="LGO"
             className="w-[150px] "
           />
-          <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#B3976E] capitalize">
+          <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#9c6b25] capitalize">
             experience excellence <br className="max-sm:hidden" /> beyond ownership
           </h1>
         </div>
@@ -84,9 +84,9 @@ const EdgeSection = () => {
           <img
             src={`/Img/edge/EdgeLogo.svg`}
             alt="LGO"
-            className="w-[150px] mb-[30px]"
+            className="w-[150px] mb-[80px]"
           />
-          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] text-[#B3976E] max-sm:text-justify">
+          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify">
             Welcome to an exclusive world of lasting care, convenience, and
             value with Elite Edge — the premier after-sales service program from
             Elite Developers designed to elevate your property ownership
@@ -109,10 +109,10 @@ const EdgeSection = () => {
                     className="w-full h-full object-center object-center"
                   />
                 </div>
-                <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#B3976E] ">
+                <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] ">
                   {item.text}
                 </div>
-                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#B3976E] max-sm:text-justify  max-sm:mt-[15px]">
+                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px]">
                   {item.desc}
                 </div>
               </div>

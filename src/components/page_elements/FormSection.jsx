@@ -73,50 +73,50 @@ const FormSection = () => {
           {/* Form Container max-w-[800px] */}
           <form className="w-full max-w-[800px]  CFF">
             {/* First + Last Name */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-7">
               <div>
-                <label className="block text-[18px] CFF mb-2">First Name*</label>
+                <label className="block text-[18px] CFF mb-1">First Name*</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-0"
                   placeholder=""
                 />
               </div>
 
               <div>
-                <label className="block text-[18px] CFF mb-2">Email*</label>
+                <label className="block text-[18px] CFF mb-1">Email*</label>
                 <input
                   type="email"
-                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-0"
                   placeholder=""
                 />
               </div>
             </div>
 
             {/* Email + Phone */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-7">
               <div>
-                <label className="block text-[18px] CFF mb-2">City / Country</label>
+                <label className="block text-[18px] CFF mb-1">City / Country</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-0"
                 />
               </div>
 
               <div>
-                <label className="block text-[18px] CFF mb-2">
+                <label className="block text-[18px] CFF mb-1">
                   Phone Number
                 </label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1"
+                  className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-0"
                 />
               </div>
             </div>
 
             {/* Subject */}
-            <div className="mb-10">
-              <label className="block text-[18px] mb-3 CFF">
+            <div className="mb-7">
+              <label className="block text-[18px] mb-4 CFF">
                 Select Preferred Mode*
               </label>
               <div className="flex flex-wrap gap-6">
@@ -137,11 +137,11 @@ const FormSection = () => {
             </div>
 
             {/* Message */}
-            <div className="mb-10">
-              <label className="block text-[18px] mb-2 CFF">Message (Optional)</label>
+            <div className="mb-7">
+              <label className="block text-[18px] mb-1 CFF">Message (Optional)</label>
               <textarea
                 rows="1"
-                className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-1 resize-none"
+                className="w-full bg-transparent border-b border-[#9c6b25] outline-none pb-0 resize-none"
               />
             </div>
 

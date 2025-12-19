@@ -38,7 +38,7 @@ const slides = [
   },
   {
     id: 5,
-    image: `/Img/displayContent/DCImg1.webp`,
+    image: `/Img/displayContent/M_are_L.webp`,
     title: `Experience Refined Perfection`,
   },
 ];
@@ -148,7 +148,8 @@ const SliderSection = () => {
           spaceBetween={20}
           navigation={false}
           modules={[Navigation]}
-          centeredSlides={false}
+          centeredSlides={true}
+          loop={true}
           className="mySwiper customSwiper"
           onSwiper={setSwiperInstance} // <-- Now works
         >
@@ -156,7 +157,7 @@ const SliderSection = () => {
             <SwiperSlide key={index}>
               <div
                 className={`w-full h-full flex justify-center items-center ${
-                  index === 0 ? "pl-[20px]" : ""
+                  index === 0 ? "pl-[0px]" : ""
                 }`}
               >
                 <div className="w-[100%] h-full overflow-hidden">
