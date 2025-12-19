@@ -162,9 +162,9 @@ const NewTimelessSection = () => {
   }, []);
 
   return (
-    <div className="MainContTimeLess w-full h-[300vh] lg:bg-[#EFE2C9] relative max-lg:h-fit  max-lg:pt-[70vh]  max-lg:pb-[50px]  ">
+    <div className="MainContTimeLess w-full h-[300vh] lg:bg-[#F5F3EA]  relative max-lg:h-fit  max-lg:pt-[70vh]  max-lg:pb-[50px]  ">
       {/* Img Cont */}
-      <div className="TL_ImgCont w-full h-[200vh] fixed top-0 left-0 flex justify-center items-center max-sm:h-[100vh] max-sm:z-[-1] max-lg:bg-[#EFE2C9] ">
+      <div className="TL_ImgCont w-full h-[200vh] fixed top-0 left-0 flex justify-center items-center max-sm:h-[100vh] max-sm:z-[-1] max-lg:bg-[#F5F3EA] ">
         <Image
           className="sm:w-full TimeLessImg w-full  h-full object-cover sm:object-center object-top "
           src={"/Img/imeless/BigBuilding.png"}

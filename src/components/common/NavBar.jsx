@@ -74,7 +74,7 @@ const NavBar = () => {
 
           {/* FloorPlan */}
           <a href="#FloorPlan">
-            <MenuBtn item={"Floor Plan"} />
+            <MenuBtn item={"Floor plan"} />
           </a>
 
           {/* About */}

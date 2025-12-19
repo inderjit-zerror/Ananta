@@ -84,9 +84,9 @@ const EdgeSection = () => {
           <img
             src={`/Img/edge/EdgeLogo.svg`}
             alt="LGO"
-            className="w-[150px] mb-[80px]"
+            className="w-[150px] mb-[80px] max-sm:mb-[50px]"
           />
-          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify">
+          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[14px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
             Welcome to an exclusive world of lasting care, convenience, and
             value with Elite Edge — the premier after-sales service program from
             Elite Developers designed to elevate your property ownership
@@ -102,17 +102,17 @@ const EdgeSection = () => {
                 key={index}
                 className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex flex-col max-sm:max-w-full "
               >
-                <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px]">
+                <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px] max-sm:mb-[40px]">
                   <img
                     src={item.url}
                     alt="alt"
                     className="w-full h-full object-center object-center"
                   />
                 </div>
-                <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] ">
+                <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] max-sm:text-[18px] max-sm:leading-[32px] ">
                   {item.text}
                 </div>
-                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px]">
+                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px] max-sm:text-[14px] max-sm:leading-[16px]">
                   {item.desc}
                 </div>
               </div>

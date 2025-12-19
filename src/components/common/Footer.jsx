@@ -48,7 +48,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full h-screen z-90  flex flex-col pt-[80px] bg-[#FEF7EE] text-[#9c6b25] VText max-sm:overflow-x-hidden">
+    <div className="w-full h-screen z-90  flex flex-col pt-[80px] bg-[#F5F3EA] text-[#9c6b25]  VText max-sm:overflow-x-hidden">
       {/* Title_Div */}
       <div className="w-full h-fit flex justify-center items-center  gap-[10px] px-[40px]">
         <p className="text-[5rem] max-sm:text-[2.7rem] ">ANANTA</p>
@@ -64,7 +64,7 @@ const Footer = () => {
       </div>
 
       {/* Info */}
-      <div className="w-full h-fit flex py-[20px] max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
+      <div className="w-full h-fit flex py-[20px] max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[10px] max-sm:text-[14px] max-sm:text-[16px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
         <div
           onMouseEnter={() => hoverActive(".lineT1T")}
           onMouseLeave={() => hoverDeActive(".lineT1T")}
@@ -117,7 +117,7 @@ const Footer = () => {
         />
 
         {/* MB OR */}
-        <div className="w-[80%] h-fit absolute top-[30%]  max-sm:left-[10%] sm:hidden flex bg-[#FEF7EE] p-[10px] justify-center  items-center rounded-sm ">
+        <div className="w-[80%] h-fit absolute top-[30%]  max-sm:left-[10%] sm:hidden flex bg-[#F5F3EA] p-[10px]  justify-center  items-center rounded-sm ">
           <div className="w-fit h-fit">
             <div className="w-fit h-fit flex flex-col">
               <p className="text-[16px] leading-[18px]">RERA Registration</p>
@@ -169,7 +169,7 @@ const Footer = () => {
       </div>
 
       {/* Infob */}
-      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[20px] max-sm:justify-center  ">
+      <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] max-sm:text-[14px] max-sm:text-[16px] select-none tracking-tight capitalize max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[10px] max-sm:justify-center  ">
         <div
           onMouseEnter={() => hoverActive(".lineB1T")}
           onMouseLeave={() => hoverDeActive(".lineB1T")}

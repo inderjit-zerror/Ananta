@@ -162,7 +162,7 @@ const MenuComponent = ({ navStatus, SetNavStatus }) => {
         className="w-full h-[1.8rem] overflow-hidden flex justify-center items-center"
       >
         <a href="#FloorPlan">
-            <MenuBtn item={"Floor Plan"}  menu={"menuText"} />
+            <MenuBtn item={"Floor plan"}  menu={"menuText"} />
           </a>
       </div>
 

@@ -5,7 +5,7 @@ const SectionTitle = ({textData}) => {
   return (
     <>
       {/* Draw SVG */}
-      <div className=" w-full max-w-[650px] m-auto h-[50px] flex select-none justify-center items-center  ">
+      <div className=" w-full max-w-[650px] m-auto h-[50px] max-sm:h-[40px] flex select-none justify-center items-center  ">
         <Image
           className=" h-full "
           src={"/data/TitleDesign.svg"}
