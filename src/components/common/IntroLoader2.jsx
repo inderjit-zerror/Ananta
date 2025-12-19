@@ -25,7 +25,7 @@ const IntroLoader = () => {
             ease:"power2.inOut"
         })
         gsap.to(".introLogo", {
-            top:"24px",
+            top:"15px",
             height:"40px",
             filter:"invert(0)",
             duration: 1,
@@ -54,7 +54,7 @@ const IntroLoader = () => {
             </div>
                 <Image
                     src={"/data/LogoMain.svg"}
-                    className="md:h-[4vw] w-[150px] introLogo absolute  z-10 "
+                    className="md:h-[4vw] w-[150px] max-sm:w-[100px] introLogo absolute  z-10 "
                     width={1000}
                     height={1000}
                     alt="Logo"

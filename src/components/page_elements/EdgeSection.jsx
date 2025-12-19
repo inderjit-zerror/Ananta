@@ -55,10 +55,10 @@ const EdgeSection = () => {
       opacity: 1,
       ease: "linear",
     });
-  },[]);
+  }, []);
 
   return (
-    <div className="w-full EG_CONT min-h-[200vh] relative bg-[#F5F3EA]">
+    <div className="w-full EG_CONT min-h-[200vh] relative bg-[#FFFEFA]">
       <div className="w-full h-screen sticky top-0 left-0  flex justify-center items-center z-10 pointer-events-none select-none">
         <img
           src={`/Img/edge/EdgeBG.svg`}
@@ -73,20 +73,21 @@ const EdgeSection = () => {
             className="w-[150px] "
           />
           <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#9c6b25] capitalize">
-            experience excellence <br className="max-sm:hidden" /> beyond ownership
+            experience excellence <br className="max-sm:hidden" /> beyond
+            ownership
           </h1>
         </div>
       </div>
 
       {/* 2 COnt */}
-      <div className="w-full option2 opacity-0 h-full flex flex-col  py-[100px] select-none ">
-        <div className="w-full h-fit flex flex-col justify-center items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
+      <div className="w-full option2 opacity-0 h-full flex flex-col py-[100px] select-none ">
+        <div className="w-full h-fit flex flex-col justify-center max-sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
           <img
             src={`/Img/edge/EdgeLogo.svg`}
             alt="LGO"
             className="w-[150px] mb-[80px] max-sm:mb-[50px]"
           />
-          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[14px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
+          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
             Welcome to an exclusive world of lasting care, convenience, and
             value with Elite Edge — the premier after-sales service program from
             Elite Developers designed to elevate your property ownership
@@ -95,12 +96,25 @@ const EdgeSection = () => {
         </div>
 
         {/*  */}
-        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] justify-center max-sm:px-[20px]">
+        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] max-sm:pt-[500px] justify-center max-sm:px-[20px]">
+          <div className="w-full h-fit flex flex-col justify-center sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
+            <img
+              src={`/Img/edge/EdgeLogo.svg`}
+              alt="LGO"
+              className="w-[150px] mb-[80px] max-sm:mb-[50px]"
+            />
+            <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
+              Welcome to an exclusive world of lasting care, convenience, and
+              value with Elite Edge — the premier after-sales service program
+              from Elite Developers designed to elevate your property ownership
+              experience.
+            </p>
+          </div>
           {TU.map((item, index) => {
             return (
               <div
                 key={index}
-                className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex flex-col max-sm:max-w-full "
+                className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex sm:flex-col max-sm:gap-[20px] max-sm:max-w-full "
               >
                 <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px] max-sm:mb-[40px]">
                   <img
@@ -109,11 +123,13 @@ const EdgeSection = () => {
                     className="w-full h-full object-center object-center"
                   />
                 </div>
-                <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] max-sm:text-[18px] max-sm:leading-[32px] ">
-                  {item.text}
-                </div>
-                <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px] max-sm:text-[14px] max-sm:leading-[16px]">
-                  {item.desc}
+                <div className="w-fit h-fit flex flex-col">
+                  <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] max-sm:text-[18px] max-sm:leading-[32px] ">
+                    {item.text}
+                  </div>
+                  <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px] max-sm:text-[14px] max-sm:leading-[16px]">
+                    {item.desc}
+                  </div>
                 </div>
               </div>
             );

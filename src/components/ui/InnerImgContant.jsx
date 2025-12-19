@@ -116,7 +116,7 @@ const InnerImgContant = () => {
 
               {/* Text */}
               <div className=" w-[50%] h-full bg-[#F5F3EA91]  flex justify-center items-center px-[40px] max-sm:w-full max-sm:py-[40px]  ">
-                <p className="text-[20px] leading-[24px] max-sm:text-[14px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
+                <p className="text-[20px] leading-[24px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
                   Beyond its heritage, the location offers seamless access to
                   the city`s civic, lifestyle, and institutional landmarks. 
                 </p>
@@ -146,7 +146,7 @@ const InnerImgContant = () => {
                   At the Centre of <br className="max-sm:hidden" /> Significance.
                 </p>
 
-                <p className="text-[20px] leading-[22px]  max-sm:text-[14px] max-sm:leading-[16px] text-center STF text-[#9c6b25] ">
+                <p className="text-[20px] leading-[22px]  max-sm:text-[15px] max-sm:leading-[16px] text-center STF text-[#9c6b25] ">
                   This neighbourhood is home to iconic temples, historic
                   institutions, and a sense of dignity that has shaped the citys
                   identity through generations. Within this storied setting,
@@ -177,7 +177,7 @@ const InnerImgContant = () => {
 
             {/* Text */}
             <div className=" w-[250px] h-[150px] bg-[#F5F3EA91] flex justify-center items-center px-[30px] max-sm:px-[40px] md:py-[80px] max-sm:w-full">
-              <p className="text-[18px] leading-[20px]  max-sm:text-[14px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
+              <p className="text-[18px] leading-[20px]  max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
                 Beyond its heritage, the location offers seamless access to the
                 city`s civic, lifestyle, and institutional landmarks. 
               </p>

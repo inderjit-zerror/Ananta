@@ -67,14 +67,14 @@ const CraftedSection = () => {
 
           {/* Desc */}
           <div className="w-[50%] max-w-[500px]  h-full flex max-sm:flex-col STF items-center  md:pr-[40px] max-sm:w-full max-sm:max-w-full max-sm:mt-[30px]">
-            <div className="text-[20px] leading-[20px] max-sm:text-[14px] STF max-sm:leading-[16px] text-justify capitalize  ">
+            <div className="text-[20px] leading-[20px] max-sm:text-[15px] STF max-sm:leading-[16px] text-justify capitalize  ">
               Ananta is brought to life by a handpicked collective of
               architects, designers, engineers, and artisans — each chosen for
               their mastery, precision, and integrity. From structural experts
               to fine-detail craftsmen, every partner involved reflects a shared
               commitment to excellence and enduring quality. <br />
             </div>
-            <p className="mt-[20px] sm:hidden STF max-w-[380px] w-full text-[20px] capitalize max-sm:text-[14px] max-sm:leading-[16px] leading-[20px]">
+            <p className="mt-[20px] sm:hidden STF max-w-[380px] w-full text-[20px] capitalize max-sm:text-[15px] max-sm:leading-[16px] leading-[20px]">
               Together, they shape a residence that stands as a benchmark of
               refined craftsmanship.
             </p>
@@ -132,7 +132,7 @@ const CraftedSection = () => {
             <div className="w-full h-fit max-w-[500px] flex flex-col gap-[31px] ">
               <h1 className="text-[60px] CFF leading-[62px] max-sm:hidden ">From the house of Elite</h1>
               <h1 className="text-[40px] CFF leading-[42px] sm:hidden "> ELITE <br /> DEVELOPERS</h1>
-              <p className="text-[20px] STF leading-[20px] max-sm:text-[14px] max-sm:leading-[16px]">
+              <p className="text-[20px] STF leading-[20px] max-sm:text-[15px] max-sm:leading-[16px]">
                 Elite Developers, headquartered in Thrissur and a key division
                 of the prestigious Elite Foods & Innovations Group, has earned a
                 reputation across Kerala for delivering premium apartments and
@@ -141,7 +141,7 @@ const CraftedSection = () => {
               </p>
             </div>
             {/* IM2 */}
-            <div className="w-full h-fit max-w-[500px] STF text-[20px] max-sm:mt-[30px] leading-[20px] flex flex-col max-sm:gap-[10px] gap-[40px] max-sm:text-[14px] max-sm:leading-[16px] ">
+            <div className="w-full h-fit max-w-[500px] STF text-[20px] max-sm:mt-[30px] leading-[20px] flex flex-col max-sm:gap-[10px] gap-[40px] max-sm:text-[15px] max-sm:leading-[16px] ">
               <p>
                 The Elite Ananta extends this legacy into the ultra‑luxury
                 sky‑residence category, combining disciplined engineering and

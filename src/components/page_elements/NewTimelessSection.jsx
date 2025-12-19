@@ -183,7 +183,7 @@ const NewTimelessSection = () => {
       </div>
 
       {/* Text Animate-Cont */}
-      <div className="w-full h-[100dvh] flex  fixed top-0 left-0 max-lg:hidden">
+      <div className="w-full h-[100vh] flex  fixed top-0 left-0 max-lg:hidden">
         <div className="Logo_Cont w-full h-fit flex justify-center items-center pt-[50px] ">
           <img
             className="w-[40%] max-sm:w-[80%]"

@@ -125,10 +125,26 @@ const NewAmenitiesSection = () => {
     handleMouseLeave();
   }, [openindex]);
 
+  useEffect(() => {
+    if (window.innerWidth < 780) {
+      setOpenIndex(null);
+    }
+  }, []);
+
+  const SetClick = (index) => {
+    if (openindex === index) {
+      if (window.innerWidth < 780) {
+        setOpenIndex(null);
+      }
+    } else{
+      setOpenIndex(index);
+    }
+  };
+
   return (
     <div
       onMouseMove={MoveMouse}
-      className="w-full min-h-screen bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pb-[50px] max-sm:pt-[60px] px-[2vw] relative max-sm:px-[20px]"
+      className="w-full min-h-screen max-sm:min-h-fit bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pb-[50px] max-sm:pt-[60px] px-[2vw] relative max-sm:px-[20px]"
     >
       <div className=" bg-white max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 ">
         <p className="CFF text-[14px] leading-[14px] text-[#9c6b25] pointer-events-none">
@@ -154,7 +170,7 @@ const NewAmenitiesSection = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
               key={index}
-              onClick={() => setOpenIndex(index)}
+              onClick={() => SetClick(index)}
               className={`w-full transition-max-h  duration-700 ease-in ${
                 index == openindex
                   ? "max-h-[150vh] "
@@ -163,21 +179,31 @@ const NewAmenitiesSection = () => {
             >
               {/* Title */}
               <div className="w-full h-fit  py-[10px] flex sm:justify-between whitespace-nowrap max-sm:gap-[13px]  ">
-                <p className="text-[28px] leading-[32px] max-sm:text-[16px] max-sm:leading-[18px] CFF sm:hidden "> 0{index + 1}</p>
+                <p className="text-[28px] leading-[32px] max-sm:text-[16px] max-sm:leading-[18px] CFF sm:hidden ">
+                  {" "}
+                  0{index + 1}
+                </p>
                 <p className=" text-[28px] pb-[30px] max-sm:pb-[10px] max-sm:text-[16px] max-sm:leading-[18px] leading-[32px] CFF ">
                   {item.mainTitle}
                 </p>
-                <p className="text-[28px] leading-[32px] CFF max-sm:hidden"> 0{index + 1}</p>
-                {
-                  index == openindex ? (<><p className="text-[28px] leading-[32px] max-sm:text-[22px] max-sm:leading-[18px]  CFF sm:hidden ml-auto "><MdKeyboardArrowUp/></p>
-                </>)
-                  :
-                  (<>
-                  <p className="text-[28px] leading-[32px] max-sm:text-[22px] max-sm:leading-[18px]  CFF sm:hidden ml-auto "><MdKeyboardArrowDown /></p>
-              
-                  </>)
-                }
-                </div>
+                <p className="text-[28px] leading-[32px] CFF max-sm:hidden">
+                  {" "}
+                  0{index + 1}
+                </p>
+                {index == openindex ? (
+                  <>
+                    <p className="text-[28px] leading-[32px] max-sm:text-[22px] max-sm:leading-[18px]  CFF sm:hidden ml-auto ">
+                      <MdKeyboardArrowUp />
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-[28px] leading-[32px] max-sm:text-[22px] max-sm:leading-[18px]  CFF sm:hidden ml-auto ">
+                      <MdKeyboardArrowDown />
+                    </p>
+                  </>
+                )}
+              </div>
 
               {/* Img */}
               <div className="w-full h-[580px] max-sm:h-[382px] shrink-0 flex whitespace-nowrap">
@@ -192,8 +218,12 @@ const NewAmenitiesSection = () => {
               <div className="w-full h-fit flex gap-[4vw] max-sm:gap-[0px] justify-between  max-sm:flex-col ">
                 {/* left */}
                 <div className="w-[50%] h-full pr-[7vw] py-[40px] flex flex-col gap-[20px] max-sm:w-[100%] max-sm:pr-0 ">
-                  <p className="CFF text-[32px] leading-[32px] max-sm:text-[16px] max-sm:leading-[18px]">OverView</p>
-                  <p className="STF text-[20px] leading-[22px] max-sm:text-[14px] max-sm:leading-[16px] ">{item.desc}</p>
+                  <p className="CFF text-[32px] leading-[32px] max-sm:text-[16px] max-sm:leading-[18px]">
+                    OverView
+                  </p>
+                  <p className="STF text-[20px] leading-[22px] max-sm:text-[14px] max-sm:leading-[16px] ">
+                    {item.desc}
+                  </p>
                 </div>
                 {/* right */}
                 <div className="w-fit h-fit flex flex-col py-[40px] STF max-sm:py-[10px] ">

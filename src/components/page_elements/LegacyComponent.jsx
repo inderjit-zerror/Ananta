@@ -151,7 +151,7 @@ const LegacyComponent = () => {
             height={1000}
             alt="Legacy Title"
           />
-          <p className="w-[90%] max-w-[700px] max-sm:w-full text-center STF text-[20px] leading-[20px] max-sm:text-[14px] max-sm:leading-[14px] text-[#9c6b25]">Set in Kowdiar, Trivandrum’s elite enclave, Elite Ananta offers quick access to Kowdiar Palace, the Golf and Tennis Clubs, and key business districts—while maintaining a calm, tree-lined neighbourhood feel.</p>
+          <p className="w-[90%] max-w-[700px] max-sm:w-full text-center STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25]">Set in Kowdiar, Trivandrum’s elite enclave, Elite Ananta offers quick access to Kowdiar Palace, the Golf and Tennis Clubs, and key business districts—while maintaining a calm, tree-lined neighbourhood feel.</p>
         </div>
 
         {/* Hover Div */}
