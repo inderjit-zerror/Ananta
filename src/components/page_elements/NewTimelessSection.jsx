@@ -161,10 +161,26 @@ const NewTimelessSection = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth > 800) {
+      return;
+    }
+    gsap.to(".SM_CC", {
+      backgroundColor: "#e7d9bf",
+      scrollTrigger: {
+        trigger: ".SMUP",
+        start: "top 70%",
+        end: "top 30%",
+        scrub: true,
+        // markers: true,
+      },
+    });
+  });
+
   return (
-    <div className="MainContTimeLess w-full h-[300vh] lg:bg-[#F5F3EA]  relative max-lg:h-fit  max-lg:pt-[70vh]  max-lg:pb-[50px]  ">
+    <div className="MainContTimeLess w-full h-[300vh] lg:bg-[#F5F3EA]  relative max-lg:h-fit  max-lg:pt-[120vh]    ">
       {/* Img Cont */}
-      <div className="TL_ImgCont w-full h-[200vh] fixed top-0 left-0 flex justify-center items-center max-sm:h-[100vh] max-sm:z-[-1] max-lg:bg-[#F5F3EA] ">
+      <div className="TL_ImgCont w-full h-[200vh] fixed top-0 left-0  flex justify-center items-center max-sm:h-[100vh] max-sm:z-[-1] max-lg:bg-[#F5F3EA] ">
         <Image
           className="sm:w-full TimeLessImg w-full  h-full object-cover sm:object-center object-top "
           src={"/Img/imeless/BigBuilding.png"}
@@ -180,10 +196,13 @@ const NewTimelessSection = () => {
             alt="logo"
           />
         </div>
+
+        {/* SM COLOR DIV */}
+        <div className="w-full SM_CC h-screen absolute top-0 left-0 z-90 sm:hidden"></div>
       </div>
 
       {/* Text Animate-Cont */}
-      <div className="w-full h-[100vh] flex  fixed top-0 left-0 max-lg:hidden">
+      <div className="w-full h-[100vh] flex   fixed top-0 left-0 max-lg:hidden">
         <div className="Logo_Cont w-full h-fit flex justify-center items-center pt-[50px] ">
           <img
             className="w-[40%] max-sm:w-[80%]"
@@ -260,9 +279,9 @@ const NewTimelessSection = () => {
       </div>
 
       {/* SM  */}
-      <div className=" w-full h-fit  flex flex-col lg:hidden z-90 px-[7vw]  justify-center items-center gap-[20px] ">
+      <div className=" w-full h-fit SMUP flex flex-col lg:hidden z-90 px-[7vw] pb-[50px] pt-[50px] justify-center items-center gap-[20px] ">
         {/* Div-1-L-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px]">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px]">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             4,300 sq.ft{" "}
           </h1>
@@ -273,7 +292,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-2-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             one residence per floor
           </h1>
@@ -284,7 +303,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-3-l-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             3.4 m floor-to-floor height
           </h1>
@@ -295,7 +314,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-4-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Luxe Living Volumes
           </h1>
@@ -306,7 +325,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-5-l-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Dedicated Parking Excellence
           </h1>
@@ -317,7 +336,7 @@ const NewTimelessSection = () => {
         </div>
 
         {/* Div-6-R-Side */}
-        <div className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
+        <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px] ">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
             Private Service Flow
           </h1>

@@ -82,11 +82,11 @@ const CraftedSection = () => {
         </div>
 
         {/* Second-Section */}
-        <div className="flex my-[100px] max-sm:my-[20px]  relative  flex-col md:flex-row items-center relative gap-10 md:gap-16 max-sm:gap-[5px] max-w-6xl mx-auto max-sm:w-full">
+        <div  className="flex my-[100px] max-sm:my-[20px]  relative  flex-col md:flex-row items-center relative gap-10 md:gap-16 max-sm:gap-[5px] max-w-6xl mx-auto max-sm:w-full">
           {/* LEFT IMAGES */}
           <div className="flex gap-4 items-end  ">
             {/* Image 1 */}
-            <div
+            <div 
               onMouseEnter={() => HoverImageActivate(".ch1")}
               onMouseLeave={() => HoverImageDeActivate(".ch1")}
               className="w-[250px] h-[300px] ImgP1 md:w-[250px] md:h-[300px] overflow-hidden  cursor-pointer max-sm:w-[50%] max-sm:h-[200px] "
@@ -101,7 +101,7 @@ const CraftedSection = () => {
             </div>
 
             {/* Image 2 */}
-            <div
+            <div 
               onMouseEnter={() => HoverImageActivate(".ch2")}
               onMouseLeave={() => HoverImageDeActivate(".ch2")}
               className="w-[250px] h-[330px] ImgP2 md:w-[320px] md:h-[430px] overflow-hidden  cursor-pointer max-sm:w-[50%] max-sm:h-[250px] "
@@ -158,8 +158,8 @@ const CraftedSection = () => {
           </div>
 
           {/* Bottom */}
-          <div className="w-full h-[400px] overflow-hidden max-sm:mb-[80px] ">
-            <img src={'/Img/Crafted/craftBottom.webp'} className="w-full h-full object-center object-cover" alt="Al" />
+          <div   className="w-full h-[400px] overflow-hidden max-sm:mb-[80px]  max-sm:h-fit  ">
+            <img src={'/Img/Crafted/craftBottom.webp'} className="w-full sm:h-full object-center object-cover" alt="Al" />
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@ const InnerImgContant = () => {
           {/* Left-Cont */}
           <div className="w-[50%] h-fit max-[1030px]:w-full max-sm:w-full  max-sm:flex max-sm:flex-col TabMT   ">
             {/* Img & Text Cont */}
-            <div className="w-[550px] h-[250px] flex select-none   max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col max-lg:mt-[0px] max-xl:mt-[440px] ">
+            <div data-aos="fade-up" className="w-[550px] h-[250px] flex select-none   max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col max-lg:mt-[0px] max-xl:mt-[440px] ">
               {/* Img */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont1Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont1Img')}  className=" w-[50%] h-full  overflow-hidden cursor-pointer innerImgCont1ImgCont max-sm:w-full max-sm:h-[230px] ">
                 {/* <Image
@@ -127,7 +127,7 @@ const InnerImgContant = () => {
           {/* Right-Cont */}
           <div className="w-[50%] h-fit  flex justify-end items-end max-sm:w-full  ">
             {/* Img & Text */}
-            <div className="w-fit h-fit flex max-sm:w-full max-sm:flex max-sm:flex-col">
+            <div data-aos="fade-up" className="w-fit h-fit flex max-sm:w-full max-sm:flex max-sm:flex-col">
               {/* Img-Cont */}
               <div onMouseEnter={()=> HoverImageActivate('.innerImgCont2Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont2Img')} className="w-[250px] h-[250px] innerImgCont2ImgCont cursor-pointer overflow-hidden max-sm:w-full max-sm:h-[230px] ">
                 {/* <Image
@@ -161,7 +161,7 @@ const InnerImgContant = () => {
         <div className="w-full h-screen flex justify-center items-center px-[40px] max-sm:w-full max-sm:h-fit max-sm:px-[10px] max-sm:pt-[20px] max-sm:mt-[20px]">
 
           {/* Image-Text-Cont */}
-          <div className="w-[70%] h-[60%] flex max-[1030px]:w-[90%] max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col ">
+          <div data-aos="fade-up" className="w-[70%] h-[60%] flex max-[1030px]:w-[90%] max-sm:w-full max-sm:h-fit max-sm:flex max-sm:flex-col ">
 
             {/* Img-Cont */}
             <div onMouseEnter={()=> HoverImageActivate('.innerImgCont3Img')} onMouseLeave={()=> HoverImageDeActivate('.innerImgCont3Img')} className="w-full h-full innerImgCont3ImgCont overflow-hidden flex cursor-pointer max-sm:w-full max-sm:h-[230px]">

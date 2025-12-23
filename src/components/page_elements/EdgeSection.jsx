@@ -80,7 +80,7 @@ const EdgeSection = () => {
       </div>
 
       {/* 2 COnt */}
-      <div className="w-full option2 opacity-0 h-full flex flex-col py-[100px] select-none ">
+      <div className="w-full option2 opacity-0 h-full flex flex-col  max-sm:pt-[80vh] py-[100px] select-none ">
         <div className="w-full h-fit flex flex-col justify-center max-sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
           <img
             src={`/Img/edge/EdgeLogo.svg`}
@@ -95,8 +95,8 @@ const EdgeSection = () => {
           </p>
         </div>
 
-        {/*  */}
-        <div className="w-full h-fit flex flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] max-sm:pt-[500px] justify-center max-sm:px-[20px]">
+        {/* SM */}
+        <div className="w-full h-fit flex  flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] max-sm:pt-[500px] justify-center max-sm:px-[20px]">
           <div className="w-full h-fit flex flex-col justify-center sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
             <img
               src={`/Img/edge/EdgeLogo.svg`}

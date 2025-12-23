@@ -142,7 +142,7 @@ const SliderSection = () => {
       {/* max-sm: Code */}
 
       {/* Mobile Slider */}
-      <div className="w-full h-[500px] overflow-hidden flex sm:hidden max-sm:mt-[40px] relative">
+      <div  className="w-full h-[500px] overflow-hidden flex sm:hidden max-sm:mt-[40px] relative">
         <Swiper
           slidesPerView={1.2}
           spaceBetween={20}

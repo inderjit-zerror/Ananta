@@ -4,6 +4,8 @@ import NavBar from "@/components/common/NavBar";
 import SmoothScrolling from "@/components/common/SmoothScrolling";
 import { Suspense } from "react";
 import IntroLoader from "@/components/common/IntroLoader2";
+import AOSWrapper from "@/components/common/AOSWrapper";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +33,8 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <SmoothScrolling />
         </Suspense>
+
+        <AOSWrapper/>
 
         <NavBar />
         {children}

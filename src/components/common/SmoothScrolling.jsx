@@ -14,7 +14,7 @@ export default function SmoothScrolling() {
   }, [pathname, searchParams]);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) return;
+    // if (window.innerWidth < 1024) return;
     if (typeof window === "undefined") return;
 
     const instance = new Lenis({
