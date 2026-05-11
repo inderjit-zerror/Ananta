@@ -74,7 +74,7 @@ const Footer = () => {
             onMouseLeave={() => hoverDeActive(".lineT1T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
-            +91 9XXXXXXXXX
+            +91 9946811111
             <div className="w-[0px] h-[1px] lineT1T bg-[#9c6b25]"></div>
           </div>
 
@@ -83,7 +83,7 @@ const Footer = () => {
             onMouseLeave={() => hoverDeActive(".lineT2T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
-            info@elitedevelopers.com
+             info@elitehomesindia.co.in
             <div className="w-[0px] h-[1px] lineT2T bg-[#9c6b25]"></div>
           </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
             onMouseLeave={() => hoverDeActive(".lineT3T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
-            elitedeveloper.com
+             elitedevelopers.co.in
             <div className="w-[0px] h-[1px] lineT3T bg-[#9c6b25]"></div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Footer = () => {
               onMouseLeave={() => hoverDeActive(".lineT1T")}
               className=" cursor-pointer flex flex-col gap-[4px]"
             >
-              +91 9XXXXXXXXX
+              +91 9946811111
               <div className="w-[0px] h-[1px] lineT1T bg-[#9c6b25]"></div>
             </div>
             <div
@@ -114,7 +114,7 @@ const Footer = () => {
               onMouseLeave={() => hoverDeActive(".lineT2T")}
               className=" cursor-pointer flex flex-col gap-[4px]"
             >
-              info@elitedevelopers.com
+              info@elitehomesindia.co.in
               <div className="w-[0px] h-[1px] lineT2T bg-[#9c6b25]"></div>
             </div>
             <div
@@ -122,7 +122,7 @@ const Footer = () => {
               onMouseLeave={() => hoverDeActive(".lineT3T")}
               className=" cursor-pointer flex flex-col gap-[4px]"
             >
-              elitedeveloper.com
+              elitedevelopers.co.in
               <div className="w-[0px] h-[1px] lineT3T bg-[#9c6b25]"></div>
             </div>
           </div>
@@ -188,7 +188,7 @@ const Footer = () => {
             </div>
             <div className="w-[90px] h-[90px] flex-shrink-0">
               <img
-                src={"/Img/QR.svg"}
+                src={"/Img/QR.png"}
                 alt="QR"
                 className=" h-full w-full object-cover object-center"
               />
@@ -216,7 +216,7 @@ const Footer = () => {
             {/* QR Img */}
             <div className="w-[90px] h-[90px] flex-shrink-0">
               <img
-                src={"/Img/QR.svg"}
+                src={"/Img/QR.png"}
                 alt="QR"
                 className=" h-full object-cover object-center"
               />

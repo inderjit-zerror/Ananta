@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FlowerElement from "../ui/FlowerElement";
 import BTN from "../common/BTN";
+import { HiMiniPlay } from "react-icons/hi2";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +48,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="HeroSectionCont w-full h-[100svh] z-90 relative overflow-hidden relative">
+    <div className="HeroSectionCont w-full h-[100svh] z-90 relative overflow-hidden e">
       {/* ☑ Video Div */}
       <video
         muted
@@ -74,6 +76,23 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
+
+        {/* BOTTOM RIGHT BUTTON */}
+          <Link href="/video"><button
+            
+            className="absolute bottom-8 right-8 z-100 group"
+          >
+            <div className="flex items-center gap-4 group bg-white/10 backdrop-blur-md border cursor-pointer border-white/20 pr-5 px-3 py-3 rounded-full hover:bg-white text-white hover:text-black transition-all duration-300">
+              <div className="w-7 h-7 rounded-full overflow-hidden border border-white  group-hover:border-[#B18446] group-hover:bg-[#B18446] flex justify-center items-center">
+                <HiMiniPlay className="text-[white]" />
+              </div>
+
+              <div className="text-left">
+                <p className="text-sm opacity-70 FSB tracking-tighter">Watch Full Video</p>
+              </div>
+            </div>
+          </button>
+          </Link >
     </div>
   );
 };

@@ -8,11 +8,12 @@ import { RiMenu4Fill } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
 import MenuComponent from "./MenuComponent";
 import Hamburger from "hamburger-react";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [navStatus, SetNavStatus] = useState(false);
   const navRef = useRef(null);
-   let lastScroll = 0;
+  let lastScroll = 0;
 
   const CheckNavBarStatus = () => {
     if (navStatus == false) {
@@ -22,6 +23,8 @@ const NavBar = () => {
     }
   };
 
+  const pathname = usePathname();
+
   useEffect(() => {
     gsap.set(".nav_logo", {
       opacity: 1,
@@ -29,21 +32,20 @@ const NavBar = () => {
     });
   }, []);
 
-
-   useEffect(() => {
+  useEffect(() => {
     const onScroll = () => {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 100) {
         // scroll down → hide
-        gsap.to('.NAVALLOPTION', {
+        gsap.to(".NAVALLOPTION", {
           y: "-400%",
           duration: 0.4,
           ease: "power3.out",
         });
       } else {
         // scroll up → show
-        gsap.to('.NAVALLOPTION', {
+        gsap.to(".NAVALLOPTION", {
           y: "0%",
           duration: 0.4,
           ease: "power3.out",
@@ -57,9 +59,22 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Hide Navbar on /video route
+  useEffect(() => {
+    if (pathname === "/video") {
+    gsap.to(".NAVALLOPTION ", {
+      opacity: 0,
+    });
+  }else{
+     gsap.to(".NAVALLOPTION ", {
+      opacity: 1,
+    });
+  }
+  },[pathname])
+
   return (
     <>
-      <div  className="w-full NAVALLOPTION z-[100] fixed top-5 left-0 flex justify-between items-center px-[40px] TextWhite ">
+      <div className="w-full NAVALLOPTION z-[100] fixed top-5 left-0 flex justify-between items-center px-[40px] TextWhite ">
         {/* Menu Container */}
         <div className="w-[18%] h-fit flex justify-center items-center gap-[30px] pl-[5px] max-[1030]:w-full max-[1030]:gap-[10px]  max-[1030]:justify-start  max-[1030]:pl-0 lg:w-full lg:gap-[17px]  lg:justify-start  lg:pl-0 max-md:hidden">
           {/* Address */}
@@ -99,8 +114,9 @@ const NavBar = () => {
 
         {/* Logo Container */}
         <div
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="w-fit h-fit flex justify-center items-center select-none  cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-1 lg:left-[50%]  lg:translate-x-[-50%]">
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="w-fit h-fit flex justify-center items-center select-none  cursor-pointer  max-[1030]:absolute max-[1030]:top-0 max-[1030]:left-[50%] z-[100]  max-[1030]:translate-x-[-50%] lg:absolute lg:top-1 lg:left-[50%]  lg:translate-x-[-50%]"
+        >
           <Image
             src={"/data/LogoMain.svg"}
             className={`h-[30px] max-lg:w-[100px] sm:w-fit nav_logo opacity-0 `}
@@ -117,9 +133,8 @@ const NavBar = () => {
             <BTN text={"Contact Us"} />
           </a>
         </div> */}
-
       </div>
-        <MenuComponent navStatus={navStatus} SetNavStatus={SetNavStatus} />
+      <MenuComponent navStatus={navStatus} SetNavStatus={SetNavStatus} />
     </>
   );
 };

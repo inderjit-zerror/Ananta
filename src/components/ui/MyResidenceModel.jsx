@@ -12,7 +12,7 @@ const MyResidenceModel = () => {
 
 
   return (
-    <group rotation={[0.2, Math.PI / 2, 0]} scale={0.5}>
+    <group rotation={[Math.PI / 2, Math.PI / 2 , 0]} scale={0.5}>
       <primitive object={scene} />
     </group>
   );
