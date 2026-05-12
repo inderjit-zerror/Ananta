@@ -214,54 +214,53 @@ const NewTimelessSection = () => {
         {/* Div-1-L-Side */}
         <div className="w-[350px] tc_1 h-fit absolute top-[12%] left-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            {/* 4,300 sq.ft{" "} */}
-            Expert Maintenance Support
+            4,300 sq.ft{" "}
+           
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            {/* single-level sky residences with 4 en-suite bedrooms, a family
-            lounge, staff room, utility, and expansive balconies. */}
-            Benefit from vetted vendors and a quick-response team for repairs and routine servicing, keeping your investment secure and hassle-free.
+            single-level sky residences with 4 en-suite bedrooms, a family
+            lounge, staff room, utility, and expansive balconies.
+           
           </p>
         </div>
 
         {/* Div-2-R-Side */}
         <div className="w-[350px] tc_2 h-fit absolute top-[16%] right-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            {/* one residence per floor */}
-            Legal and Registration Assistance
+            one residence per floor
+            
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            {/* Exclusive private lift lobby ensuring total privacy and secure,
-            controlled access. */}
-            Our specialists ensure smooth handling of property registration, tax compliance, and all required formalities on your behalf.
+            Exclusive private lift lobby ensuring total privacy and secure,
+            controlled access.
+           
           </p>
         </div>
 
         {/* Div-3-l-Side */}
         <div className="w-[350px] tc_3 h-fit absolute top-[20%] left-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            {/* 3.4 m floor-to-floor height */}
-            Warranty Guidance and Claims
+            3.4 m floor-to-floor height
+           
 
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            {/* Creates grand volumes, enhances natural light, and delivers a true
-            “villa-in-the-sky” living experience. */}
-            Count on Elite Edge to expedite warranty claims and coordinate timely repairs with vendors if any defects arise.
+            Creates grand volumes, enhances natural light, and delivers a true
+            “villa-in-the-sky” living experience.
+            
           </p>
         </div>
 
         {/* Div-4-R-Side */}
         <div className="w-[350px] tc_4 h-fit absolute top-[25%] right-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            {/* Luxe Living Volumes */}
-            Complete Upkeep & Care
+            Luxe Living Volumes
+            
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            {/* Large-format living and dining with full-height glazing for
-            uninterrupted views of the Trivandrum skyline. */}
-            From regular housekeeping to preventive maintenance and security checks, our team will support to ensure your investment remains impeccable and ready for your return at any time.
-          </p>
+            Large-format living and dining with full-height glazing for
+            uninterrupted views of the Trivandrum skyline.
+             </p>
         </div>
 
         {/* Div-5-l-Side */}
@@ -278,14 +277,13 @@ const NewTimelessSection = () => {
         {/* Div-6-R-Side */}
         <div className="w-[350px] tc_6 h-fit absolute top-[27%] right-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            {/* Private Service Flow */}
-            Loyalty Rewards
+            Private Service Flow
+           
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            {/* Dedicated staff/service circulation ensures discreet, seamless daily
-            operations. */}
-            Experience exclusive discounts and investment opportunities on future Elite projects, and special invitations as a cherished member of the Elite family.
-          </p>
+            Dedicated staff/service circulation ensures discreet, seamless daily
+            operations.
+           </p>
         </div>
       </div>
 

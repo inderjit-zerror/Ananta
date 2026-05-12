@@ -32,7 +32,7 @@ const EdgeSection = () => {
     {
       url: `/Img/edge/V5.svg`,
       text: "Complete Upkeep & Care",
-      desc: "Our specialists ensure smooth handling of property registration, tax compliance, and all required formalities on your behalf.",
+      desc: "From regular housekeeping to preventive maintenance and security checks, our team will support to ensure your investment remains impeccable and ready for your return at any time.",
     },
   ];
 
