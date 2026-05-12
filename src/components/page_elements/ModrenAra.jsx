@@ -18,28 +18,23 @@ import { Navigation } from "swiper/modules";
 const slides = [
   {
     id: 1,
-    image: `/Img/displayContent/DCImg1.webp`,
-    title: `Designed for Modern Living`,
+    image: `/Img/amenities/AImg3.webp`,
+    title: `EXQUISITE LIFESTYLE`,
   },
   {
     id: 2,
-    image: `/Img/displayContent/DCImg2.webp`,
-    title: `Where Elegance Meets Craftsmanship`,
+    image: `/Img/amenities/AImg5.webp`,
+    title: `ARCHITECTURAL LUXURY`,
   },
   {
     id: 3,
-    image: `/Img/displayContent/DCImg3.webp`,
-    title: `Inspired Spaces, Timeless Style`,
+    image: `/Img/footer/FooterImgSM.webp`,
+    title: `RESIDENCE & PRIVACY`,
   },
   {
     id: 4,
-    image: `/Img/displayContent/DCImg4.webp`,
-    title: `Built to Stand Out`,
-  },
-  {
-    id: 5,
-    image: `/Img/displayContent/M_are_L.webp`,
-    title: `Experience Refined Perfection`,
+    image: `/Img/displayContent/DCImg1.webp`,
+    title: `SECURITY & SERVICES`,
   },
 ];
 

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import DownBTN from "./DownBTN";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +29,7 @@ const Footer = () => {
           scrub: true,
           // markers:true
         },
-      }
+      },
     );
   }, []);
 
@@ -48,7 +49,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full h-screen z-90 max-sm:justify-between  flex flex-col pt-[80px] bg-[#F5F3EA] text-[#9c6b25]  VText max-sm:overflow-x-hidden">
+    <div className="w-full h-screen z-90 justify-between  flex flex-col pt-[80px] bg-[#F5F3EA] text-[#9c6b25]  VText max-sm:overflow-x-hidden">
       {/* Title_Div */}
 
       <div className="w-full h-fit flex flex-col ">
@@ -67,7 +68,7 @@ const Footer = () => {
       </div>
 
       {/* Info pc */}
-      <div className="w-full h-fit">
+      <div className="w-full h-fit ">
         <div className="w-full h-fit flex py-[20px] max-sm:hidden   max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[10px] max-sm:text-[14px] max-sm:text-[16px]  justify-between GFS_R text-[18px] leading-[20px] px-[40px] select-none tracking-tight capitalize ">
           <div
             onMouseEnter={() => hoverActive(".lineT1T")}
@@ -83,7 +84,7 @@ const Footer = () => {
             onMouseLeave={() => hoverDeActive(".lineT2T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
-             info@elitehomesindia.co.in
+            info@elitehomesindia.co.in
             <div className="w-[0px] h-[1px] lineT2T bg-[#9c6b25]"></div>
           </div>
 
@@ -92,7 +93,7 @@ const Footer = () => {
             onMouseLeave={() => hoverDeActive(".lineT3T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
-             elitedevelopers.co.in
+            elitedevelopers.co.in
             <div className="w-[0px] h-[1px] lineT3T bg-[#9c6b25]"></div>
           </div>
         </div>
@@ -150,7 +151,7 @@ const Footer = () => {
         </div>
 
         {/* Img-Cont */}
-        <div className="w-full max-sm:h-[40vh] sm:h-[60vh] overflow-hidden flex FooterImgCont relative ">
+        <div className="w-full max-md:h-[50vh] md:h-[40vh] overflow-hidden flex FooterImgCont relative ">
           {/* <Image
           src={"/Img/footer/FooterImg.webp"}
           className="w-full h-full object-cover object-bottom FooterImg"
@@ -173,7 +174,7 @@ const Footer = () => {
           />
 
           {/* MB OR */}
-          <div className="w-[80%] h-fit absolute top-[30%]  max-sm:left-[10%] sm:hidden flex bg-[#F5F3EA] p-[10px]  justify-center  items-center rounded-sm ">
+          <div className="w-[80%] h-fit absolute top-[30%] max-md:top-[50%]  max-sm:left-[10%] sm:hidden flex bg-[#F5F3EA] p-[10px]  justify-center  items-center rounded-sm ">
             <div className="w-fit h-fit">
               <div className="w-fit h-fit flex flex-col">
                 <p className="text-[16px] leading-[18px]">RERA Registration</p>
@@ -182,8 +183,8 @@ const Footer = () => {
                 </p>
               </div>
               <p className="text-[14px] mt-[10px] STF leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">
-                Images, plans, specifications, and areas shown are indicative
-                and subject to change without prior notice.
+                Thrissur Office: Elite Gardenia Hills, Near Reliance Petrol Pump
+                Puzhakkal PO. Thrissur- 680553
               </p>
             </div>
             <div className="w-[90px] h-[90px] flex-shrink-0">
@@ -208,10 +209,12 @@ const Footer = () => {
                 </p>
               </div>
               <p className="text-[14px] mt-[10px]  leading-[16px] pr-[70px] max-sm:text-[12px]  max-sm:leading-[12px]">
-                Images, plans, specifications, and areas shown are indicative
-                and subject to change without prior notice.
+                Thrissur Office: Elite Gardenia Hills, Near Reliance Petrol Pump
+                Puzhakkal PO. Thrissur- 680553
               </p>
             </div>
+
+            
 
             {/* QR Img */}
             <div className="w-[90px] h-[90px] flex-shrink-0">
@@ -222,26 +225,54 @@ const Footer = () => {
               />
             </div>
           </div>
+        
+
+          <div className=" absolute top-1/2 translate-y-[-50%] max-md:left-1/2 max-md:w-full max-md:justify-center max-md:items-center max-md:top-[10%] max-md:translate-y-[10%]  max-md:translate-x-[-50%] left-[5vw] flex flex-col text-white gap-3">
+            <p className="  capitalize text-[22px] leading-[22px] max-md:text-[18px] max-md:text-center ">Book yourprivate preview <br/> To A Timeless Experience At Ananta</p>
+
+             <a
+              href="/brochure/Ananta.pdf"
+              download
+
+              
+            >
+            <DownBTN text={"Download Brochure"} />
+            </a>
+
+          </div>
+
+          
         </div>
 
         {/* Infob */}
         <div className="w-full h-fit flex py-[20px]  justify-between GFS_R text-[18px] bg-[#F5F3EA] leading-[20px] px-[40px] max-sm:text-[14px] max-sm:text-[16px] select-none tracking-tight capitalize max-sm:flex-wrap max-sm:px-[20px] max-sm:gap-[10px] max-sm:justify-center  ">
           <div
-            onMouseEnter={() => hoverActive(".lineB1T")}
-            onMouseLeave={() => hoverDeActive(".lineB1T")}
+            // onMouseEnter={() => hoverActive(".lineB1T")}
+            // onMouseLeave={() => hoverDeActive(".lineB1T")}
             className=" cursor-pointer flex flex-col gap-[4px]"
           >
             © Elite Developers . All rights reserved.
-            <div className="w-[0px] h-[1px] lineB1T bg-[#9c6b25]"></div>
+            {/* <div className="w-[0px] h-[1px] lineB1T bg-[#9c6b25]"></div> */}
           </div>
 
-          <div
-            onMouseEnter={() => hoverActive(".lineB2T")}
-            onMouseLeave={() => hoverDeActive(".lineB2T")}
-            className=" cursor-pointer flex flex-col gap-[4px] max-sm:hidden"
-          >
-            Privacy Policy | Terms & Conditions
-            <div className="w-[0px] h-[1px] lineB2T bg-[#9c6b25]"></div>
+          <div className="flex gap-[4px] max-sm:hidden">
+            <div
+              onMouseEnter={() => hoverActive(".lineB2T")}
+              onMouseLeave={() => hoverDeActive(".lineB2T")}
+              className=" cursor-pointer flex flex-col gap-[4px] max-sm:hidden"
+            >
+              Privacy Policy
+              <div className="w-[0px] h-[1px] lineB2T bg-[#9c6b25]"></div>
+            </div>
+            |
+            <div
+              onMouseEnter={() => hoverActive(".lineB3T")}
+              onMouseLeave={() => hoverDeActive(".lineB3T")}
+              className=" cursor-pointer flex flex-col gap-[4px] max-sm:hidden"
+            >
+              Terms & Conditions
+              <div className="w-[0px] h-[1px] lineB3T bg-[#9c6b25]"></div>
+            </div>
           </div>
         </div>
       </div>

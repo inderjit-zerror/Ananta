@@ -8,10 +8,10 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 const NewAmenitiesSection = () => {
   const dataArr = [
     {
-      mainTitle: "Exquisite Lifestyle",
-      url: `/Img/amenities/AImg2.webp`,
+      mainTitle: " The Art of Refined Everday Living.",
+      url: `/Img/displayContent/DCImg4.webp`,
       descT: "Overview",
-      desc: "Crafted for elevated everyday living with premium leisure amenities. Designed to blend comfort, exclusivity, and indulgence, every space elevates.",
+      desc: "A living room designed around proportion and openness. Textural finishes that elevate simplicity into quiet luxury. Seamless transitions between spaces, crafted for intuitive living.",
       url1: `/Img/ex1.svg`,
       text1:
         "Rooftop temperature-controlled pool, sauna, sun deck with palace views",
@@ -23,10 +23,15 @@ const NewAmenitiesSection = () => {
       text4: "Rooftop temperature-controlled",
     },
     {
-      mainTitle: "Residence & Privacy",
-      url: `/Img/amenities/AImg3.webp`,
+      mainTitle: "The Retreat Into Relaxation",
+      url: `/Img/bd.png`,
       descT: "Overview",
-      desc: "Crafted for elevated everyday living with premium leisure amenities. Designed to blend comfort, exclusivity, and indulgence, every space elevates.",
+      desc: `Bedrooms shaped for rest and retreat.
+Restrooms designed with balance, precision, and
+serene materiality.
+
+A home where privacy, light, and spaciousness
+come together in quiet harmony.`,
       url1: `/Img/ex1.svg`,
       text1:
         "Rooftop temperature-controlled pool, sauna, sun deck with palace views",
@@ -38,8 +43,8 @@ const NewAmenitiesSection = () => {
       text4: "Rooftop temperature-controlled",
     },
     {
-      mainTitle: "Architectural Luxury",
-      url: `/Img/amenities/AImg4.webp`,
+      mainTitle: "Reflections Of Timeless Living",
+      url: `/Img/VideoPlayBackIMG.png`,
       descT: "Overview",
       desc: "Crafted for elevated everyday living with premium leisure amenities. Designed to blend comfort, exclusivity, and indulgence, every space elevates.",
       url1: `/Img/ex1.svg`,
@@ -52,39 +57,10 @@ const NewAmenitiesSection = () => {
       url4: `/Img/ex4.svg`,
       text4: "Rooftop temperature-controlled",
     },
-    {
-      mainTitle: "Intelligent Engineering",
-      url: `/Img/amenities/AImg5.webp`,
-      descT: "Overview",
-      desc: "Crafted for elevated everyday living with premium leisure amenities. Designed to blend comfort, exclusivity, and indulgence, every space elevates.",
-      url1: `/Img/ex1.svg`,
-      text1:
-        "Rooftop temperature-controlled pool, sauna, sun deck with palace views",
-      url2: `/Img/ex2.svg`,
-      text2: "Rooftop temperature-controlled",
-      url3: `/Img/ex3.svg`,
-      text3: "Rooftop temperature",
-      url4: `/Img/ex4.svg`,
-      text4: "Rooftop temperature-controlled",
-    },
-    {
-      mainTitle: "Security & Services",
-      url: `/Img/amenities/AImg1.webp`,
-      descT: "Overview",
-      desc: "Crafted for elevated everyday living with premium leisure amenities. Designed to blend comfort, exclusivity, and indulgence, every space elevates.",
-      url1: `/Img/ex1.svg`,
-      text1:
-        "Rooftop temperature-controlled pool, sauna, sun deck with palace views",
-      url2: `/Img/ex2.svg`,
-      text2: "Rooftop temperature-controlled",
-      url3: `/Img/ex3.svg`,
-      text3: "Rooftop temperature",
-      url4: `/Img/ex4.svg`,
-      text4: "Rooftop temperature-controlled",
-    },
+
   ];
 
-  const [openindex, setOpenIndex] = useState(0);
+  const [openindex, setOpenIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
     if (openindex !== index) {
@@ -131,20 +107,24 @@ const NewAmenitiesSection = () => {
     }
   }, []);
 
+  // const SetClick = (index) => {
+  //   if (openindex === index) {
+  //     if (window.innerWidth < 780) {
+  //       setOpenIndex(null);
+  //     }
+  //   } else{
+  //     setOpenIndex(index);
+  //   }
+  // };
+
   const SetClick = (index) => {
-    if (openindex === index) {
-      if (window.innerWidth < 780) {
-        setOpenIndex(null);
-      }
-    } else{
-      setOpenIndex(index);
-    }
-  };
+  setOpenIndex((prev) => (prev === index ? null : index));
+};
 
   return (
     <div
       onMouseMove={MoveMouse}
-      className="w-full min-h-screen max-sm:min-h-fit bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pb-[50px] max-sm:pt-[60px] px-[2vw] relative max-sm:px-[20px]"
+      className="w-full min-h-fit max-sm:min-h-fit bg-[#F5F3EA] pt-[50px] pb-[100px] max-sm:pb-[50px] max-sm:pt-[60px] px-[2vw] relative max-sm:px-[20px]"
     >
       <div className=" bg-white max-sm:hidden opacity-0 CTO px-[20px] py-[10px] fixed top-0 left-0 ">
         <p className="CFF text-[14px] leading-[14px] text-[#9c6b25] pointer-events-none">

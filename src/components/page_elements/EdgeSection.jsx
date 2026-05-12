@@ -37,106 +37,97 @@ const EdgeSection = () => {
   ];
 
   useEffect(() => {
-    const tl = gsap.timeline({
+    if (window.innerWidth < 1024) return;
+
+    const movingCont = document.querySelector(".MOVINGCONT");
+
+    const moveAmount =
+      movingCont.offsetHeight - window.innerHeight;
+
+    gsap.to(".MOVINGCONT", {
+      y: -moveAmount,
+      ease: "none",
       scrollTrigger: {
         trigger: ".EG_CONT",
         start: "top top",
-        end: "top -20%",
+        end: "bottom bottom",
         scrub: true,
-        // markers:true
       },
     });
 
-    tl.to(".option1", {
-      opacity: 0,
-      ease: "linear",
-    });
-    tl.to(".option2", {
-      opacity: 1,
-      ease: "linear",
-    });
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
   }, []);
 
   return (
-    <div className="w-full EG_CONT min-h-[200vh] relative bg-[#FFFEFA]">
-      <div className="w-full h-screen sticky top-0 left-0  flex justify-center items-center z-10 pointer-events-none select-none">
-        <img
-          src={`/Img/edge/EdgeBG.svg`}
-          alt="SVG"
-          className="h-full object-cover object-center "
-        />
-        {/* Option-1 */}
-        <div className="w-full option1 h-screen absolute top-0 left-0 flex flex-col gap-[20px] text-center justify-center items-center">
-          <img
-            src={`/Img/edge/EdgeLogo.svg`}
-            alt="LGO"
-            className="w-[150px] "
-          />
-          <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#9c6b25] capitalize">
-            experience excellence <br className="max-sm:hidden" /> beyond
-            ownership
-          </h1>
-        </div>
-      </div>
-
-      {/* 2 COnt */}
-      <div className="w-full option2 opacity-0 h-full flex flex-col  max-sm:pt-[80vh] py-[100px] select-none ">
-        <div className="w-full h-fit flex flex-col justify-center max-sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
-          <img
-            src={`/Img/edge/EdgeLogo.svg`}
-            alt="LGO"
-            className="w-[150px] mb-[80px] max-sm:mb-[50px]"
-          />
-          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
-            Welcome to an exclusive world of lasting care, convenience, and
-            value with Elite Edge — the premier after-sales service program from
-            Elite Developers designed to elevate your property ownership
-            experience.
-          </p>
-        </div>
-
-        {/* SM */}
-        <div className="w-full h-fit flex  flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] max-sm:pt-[500px] justify-center max-sm:px-[20px]">
-          <div className="w-full h-fit flex flex-col justify-center sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
+    <>
+      <div className="w-full EG_CONT lg:h-[200svh] relative bg-[#F5F3EA]">
+        
+        {/* MAIN WRAPPER */}
+        <div className="w-full lg:h-[100svh] flex flex-col lg:flex-row lg:sticky top-0 left-0 overflow-hidden">
+          
+          {/* LEFT SECTION */}
+          <div className="w-full lg:w-1/2 h-[70svh] sm:h-[80svh] lg:h-[100svh] overflow-hidden relative">
+            
             <img
-              src={`/Img/edge/EdgeLogo.svg`}
-              alt="LGO"
-              className="w-[150px] mb-[80px] max-sm:mb-[50px]"
+              src={`/Img/edge/EdgeBG.svg`}
+              alt="SVG"
+              className="h-full w-full object-cover object-center lg:translate-y-[5%]"
             />
-            <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
-              Welcome to an exclusive world of lasting care, convenience, and
-              value with Elite Edge — the premier after-sales service program
-              from Elite Developers designed to elevate your property ownership
-              experience.
-            </p>
+
+            <div className="w-full h-fit absolute top-1/2 -translate-y-1/2 left-0 flex flex-col justify-center items-center px-[20px]">
+              
+              <img
+                src={`/Img/edge/EdgeLogo.svg`}
+                alt="LOGO"
+                className="w-[90px] sm:w-[120px] lg:w-[150px]"
+              />
+
+              <h1 className="CFF text-[34px] leading-[38px] sm:text-[48px] sm:leading-[52px] lg:text-[60px] lg:leading-[67px] mt-[3vh] text-[#9c6b25] text-center capitalize">
+                experience excellence
+                <br className="hidden sm:block" />
+                beyond ownership
+              </h1>
+            </div>
           </div>
-          {TU.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex sm:flex-col max-sm:gap-[20px] max-sm:max-w-full "
-              >
-                <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px] max-sm:mb-[40px]">
-                  <img
-                    src={item.url}
-                    alt="alt"
-                    className="w-full h-full object-center object-center"
-                  />
-                </div>
-                <div className="w-fit h-fit flex flex-col">
-                  <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] max-sm:text-[18px] max-sm:leading-[32px] ">
-                    {item.text}
+
+          {/* RIGHT SECTION */}
+          <div className="w-full lg:w-1/2 h-fit MOVINGCONT flex flex-col justify-center items-center gap-[10vh] lg:gap-[20vh] py-[10vh] lg:py-[20vh] px-[20px] sm:px-[40px]">
+            
+            {TU.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="w-full max-w-full sm:max-w-[500px] lg:max-w-[380px] xl:max-w-[420px] flex flex-col"
+                >
+                  
+                  <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] flex justify-center items-center mb-[25px]">
+                    
+                    <img
+                      src={item.url}
+                      alt="ICON"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px] max-sm:text-[14px] max-sm:leading-[16px]">
-                    {item.desc}
+
+                  <div className="w-full flex flex-col">
+                    
+                    <div className="CFF text-[20px] leading-[24px] sm:text-[24px] sm:leading-[30px] text-[#9c6b25]">
+                      {item.text}
+                    </div>
+
+                    <div className="mt-[15px] sm:mt-[20px] STF text-[15px] leading-[24px] sm:text-[18px] sm:leading-[28px] text-[#9c6b25] text-justify">
+                      {item.desc}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

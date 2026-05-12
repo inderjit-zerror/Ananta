@@ -13,35 +13,35 @@ const LegacyComponent = () => {
 
   const AllImgArr = [
     {
-      url: `/Img/legacyImg/L1.webp`,
+      url: `/Img/Ambalamukku.webp`,
       call: "legacyDiv1",
     },
     {
-      url: `/Img/legacyImg/L2.webp`,
+      url: `/Img/Kowdiar.png`,
       call: "legacyDiv2",
     },
     {
-      url: `/Img/legacyImg/L3.webp`,
+      url: `/Img/Pipinmoodu.webp`,
       call: "legacyDiv3",
     },
     {
-      url: `/Img/legacyImg/L4.webp`,
+      url: `/Img/Shasthamangala.webp`,
       call: "legacyDiv4",
     },
     {
-      url: `/Img/legacyImg/L5.webp`,
+      url: `/Img/Vellayambalam.webp`,
       call: "legacyDiv5",
     },
     {
-      url: `/Img/legacyImg/L6.webp`,
+      url: `/Img/Museum.webp`,
       call: "legacyDiv6",
     },
     {
-      url: `/Img/legacyImg/L7.webp`,
+      url: `/Img/Devaswom.webp`,
       call: "legacyDiv7",
     },
     {
-      url: `/Img/legacyImg/L7.webp`,
+      url: `/Img/Kuravankonam.webp`,
       call: "legacyDiv8",
     },
   ];

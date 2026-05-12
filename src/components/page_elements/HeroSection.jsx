@@ -15,7 +15,7 @@ const HeroSection = () => {
   useEffect(() => {
     // Disable animation on mobile
     if (window.innerWidth < 1024) return;
-    
+
     gsap.to(".heroVideo", {
       y: 400,
       scale: 1.2,
@@ -59,7 +59,7 @@ const HeroSection = () => {
         src={"/video/BgVideo1.mp4"}
       ></video>
 
-      <div className="w-full h-fit flex justify-center items-center absolute top-[80%] left-0 sm:hidden">
+      <div className="w-full h-fit flex justify-center items-center absolute top-[70%] left-0 sm:hidden">
         <div className="w-[20%] flex justify-end  max-[1030]:w-full lg:w-full max-sm:w-fit ">
           <a href="#form">
             <div
@@ -67,32 +67,52 @@ const HeroSection = () => {
               onMouseLeave={() => RotateFLowerDeActive()}
               className="bg-[#ffffff] text-[#B3976E]   w-fit h-fit px-[10px]  py-[10px] FSB select-none cursor-pointer flex gap-[10px] justify-center items-center max-sm:px-[20px] max-sm:py-[15px]"
             >
-              <img className='h-[18px] fl ' src={'/data/Flower2.svg'} alt="Flower" />
+              <img
+                className="h-[18px] fl "
+                src={"/data/Flower2.svg"}
+                alt="Flower"
+              />
               <p className="text-[0.875rem]  max-[1030]:text-[0.8rem] ">
                 Contact Us
               </p>
-              <img className='h-[18px] fl ' src={'/data/Flower2.svg'} alt="Flower" />
+              <img
+                className="h-[18px] fl "
+                src={"/data/Flower2.svg"}
+                alt="Flower"
+              />
             </div>
           </a>
         </div>
       </div>
 
-        {/* BOTTOM RIGHT BUTTON */}
-          <Link href="/video"><button
-            
-            className="absolute bottom-8 right-8 z-100 group"
-          >
-            <div className="flex items-center gap-4 group bg-white/10 backdrop-blur-md border cursor-pointer border-white/20 pr-5 px-3 py-3 rounded-full hover:bg-white text-white hover:text-black transition-all duration-300">
-              <div className="w-7 h-7 rounded-full overflow-hidden border border-white  group-hover:border-[#B18446] group-hover:bg-[#B18446] flex justify-center items-center">
-                <HiMiniPlay className="text-[white]" />
-              </div>
+      {/* BOTTOM RIGHT BUTTON */}
+      <Link href="/video" className="absolute bottom-8 right-8  max-md:bottom-4 max-md:right-4 z-100 group ">
+        <div className="relative overflow-hidden  border border-white/20 cursor-pointer">
+          {/* Thumbnail Image */}
+          <img
+            src="/Img/VideoPlayBackIMG.png"
+            alt="Watch Full Video"
+            className="w-[220px] h-[130px]  max-md:w-[140px] max-md:h-[80px] object-cover group-hover:scale-105 transition-transform duration-500"
+          />
 
-              <div className="text-left">
-                <p className="text-sm opacity-70 FSB tracking-tighter">Watch Full Video</p>
-              </div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 transition-all duration-300" />
+
+          {/* Play Icon */}
+          <div className="absolute inset-0 flex items-center justify-center  max-md:scale-75">
+            <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#B18446] transition-all duration-300">
+              <HiMiniPlay className="text-white text-2xl ml-1" />
             </div>
-          </button>
-          </Link >
+          </div>
+
+          {/* Bottom Text */}
+          <div className="absolute bottom-1 left-4 text-white  max-md:hidden">
+            <p className="text-sm tracking-tight FSB opacity-90">
+              Watch Full Video
+            </p>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 };

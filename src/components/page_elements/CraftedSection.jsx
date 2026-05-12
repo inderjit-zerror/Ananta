@@ -125,7 +125,7 @@ const CraftedSection = () => {
         </div>
 
         {/* 3-Section */}
-        <div className="w-full h-fit px-[40px] flex flex-col gap-[60px] max-sm:px-[0px] max-sm:mt-[80px] ">
+        <div className="w-full h-fit px-[40px] flex flex-col gap-[60px] max-sm:px-[0px] max-sm:mt-[80px] max-md:pb-[8vh] ">
           {/* TOP1 */}
           <div className="w-full h-fit flex justify-between text-white items-end max-sm:flex-col capitalize ">
             {/* IM! */}
@@ -158,9 +158,9 @@ const CraftedSection = () => {
           </div>
 
           {/* Bottom */}
-          <div   className="w-full h-[400px] overflow-hidden max-sm:mb-[80px]  max-sm:h-fit  ">
+          {/* <div   className="w-full h-[400px] overflow-hidden max-sm:mb-[80px]  max-sm:h-fit  ">
             <img src={'/Img/Crafted/craftBottom.webp'} className="w-full sm:h-full object-center object-cover" alt="Al" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

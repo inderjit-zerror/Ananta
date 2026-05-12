@@ -1,0 +1,147 @@
+"use client";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
+const EdgeSection = () => {
+  const TU = [
+    {
+      url: `/Img/edge/V1.svg`,
+      text: "Expert Maintenance Support",
+      desc: "Benefit from vetted vendors and a quick-response team for repairs and routine servicing, keeping your investment secure and hassle-free.",
+    },
+    {
+      url: `/Img/edge/V2.svg`,
+      text: "Warranty Guidance and Claims",
+      desc: "Count on Elite Edge to expedite warranty claims and coordinate timely repairs with vendors if any defects arise.",
+    },
+    {
+      url: `/Img/edge/V3.svg`,
+      text: "Loyalty Rewards",
+      desc: "Experience exclusive discounts and investment opportunities on future Elite projects, and special invitations as a cherished member of the Elite family.",
+    },
+    {
+      url: `/Img/edge/V4.svg`,
+      text: "Legal and Registration Assistance",
+      desc: "Our specialists ensure smooth handling of property registration, tax compliance, and all required formalities on your behalf.",
+    },
+    {
+      url: `/Img/edge/V5.svg`,
+      text: "Complete Upkeep & Care",
+      desc: "From regular housekeeping to preventive maintenance and security checks, our team will support to ensure your investment remains impeccable and ready for your return at any time.",
+    },
+  ];
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".EG_CONT",
+        start: "top top",
+        end: "top -20%",
+        scrub: true,
+        // markers:true
+      },
+    });
+
+    tl.to(".option1", {
+      opacity: 0,
+      ease: "linear",
+    });
+    tl.to(".option2", {
+      opacity: 1,
+      ease: "linear",
+    });
+  }, []);
+
+  return (
+    <>
+   
+    <div className="w-full EG_CONT min-h-[200vh] relative bg-[#FFFEFA]">
+      <div className="w-full h-screen sticky top-0 left-0  flex justify-center items-center z-10 pointer-events-none select-none">
+        <img
+          src={`/Img/edge/EdgeBG.svg`}
+          alt="SVG"
+          className="h-full object-cover object-center "
+        />
+        {/* Option-1 */}
+        <div className="w-full option1 h-screen absolute top-0 left-0 flex flex-col gap-[20px] text-center justify-center items-center">
+          <img
+            src={`/Img/edge/EdgeLogo.svg`}
+            alt="LGO"
+            className="w-[150px] "
+          />
+          <h1 className="CFF text-[60px] leading-[67px] max-sm:text-[42px] max-sm:leading-[44px] max-sm:px-[20px] text-[#9c6b25] capitalize">
+            experience excellence <br className="max-sm:hidden" /> beyond
+            ownership
+          </h1>
+        </div>
+      </div>
+
+      {/* 2 COnt */}
+      <div className="w-full option2 opacity-0 h-full flex flex-col  max-sm:pt-[80vh] py-[100px] select-none ">
+        <div className="w-full h-fit flex flex-col justify-center max-sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
+          <img
+            src={`/Img/edge/EdgeLogo.svg`}
+            alt="LGO"
+            className="w-[150px] mb-[80px] max-sm:mb-[50px]"
+          />
+          <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
+            Welcome to an exclusive world of lasting care, convenience, and
+            value with Elite Edge — the premier after-sales service program from
+            Elite Developers designed to elevate your property ownership
+            experience.
+          </p>
+        </div>
+
+        {/* SM */}
+        <div className="w-full h-fit flex  flex-wrap max-2xl:px-[2vw] px-[5vw] gap-[65px] max-sm:pt-[500px] justify-center max-sm:px-[20px]">
+          <div className="w-full h-fit flex flex-col justify-center sm:hidden  items-center mb-[200px] max-sm:mb-[100px]  max-sm:px-[20px]">
+            <img
+              src={`/Img/edge/EdgeLogo.svg`}
+              alt="LGO"
+              className="w-[150px] mb-[80px] max-sm:mb-[50px]"
+            />
+            <p className="w-full max-w-[582px] STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] max-sm:text-justify">
+              Welcome to an exclusive world of lasting care, convenience, and
+              value with Elite Edge — the premier after-sales service program
+              from Elite Developers designed to elevate your property ownership
+              experience.
+            </p>
+          </div>
+          {TU.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="w-full max-w-[380px] max-xl:max-w-[300px] h-fit flex sm:flex-col max-sm:gap-[20px] max-sm:max-w-full "
+              >
+                <div className="w-[80px] h-[80px] flex justify-center items-center mb-[80px] max-sm:mb-[40px]">
+                  <img
+                    src={item.url}
+                    alt="alt"
+                    className="w-full h-full object-center object-center"
+                  />
+                </div>
+                <div className="w-fit h-fit flex flex-col">
+                  <div className="w-full h-fit CFF text-[22px] leading-[22px] text-[#9c6b25] max-sm:text-[18px] max-sm:leading-[32px] ">
+                    {item.text}
+                  </div>
+                  <div className="w-full mt-[27px] h-fit STF text-[20px] leading-[20px] text-[#9c6b25] max-sm:text-justify  max-sm:mt-[15px] max-sm:text-[14px] max-sm:leading-[16px]">
+                    {item.desc}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+     </>
+  );
+};
+
+export default EdgeSection;

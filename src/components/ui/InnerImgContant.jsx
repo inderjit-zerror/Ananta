@@ -111,14 +111,13 @@ const InnerImgContant = () => {
                   height={1000}
                   alt="Cont_Img1"
                 /> */}
-                <img  className="w-full h-full object-cover object-bottom innerImgCont1Img scale-[1.5]" src="/Img/ContImg1.webp" alt="" />
+                <img  className="w-full h-full object-cover object-bottom innerImgCont1Img scale-[1.5]" src="/Img/amenities\AImg5.webp" alt="" />
               </div>
 
               {/* Text */}
               <div className=" w-[50%] h-full bg-[#F5F3EA91]  flex justify-center items-center px-[40px] max-sm:w-full max-sm:py-[40px]  ">
                 <p className="text-[20px] leading-[24px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
-                  Beyond its heritage, the location offers seamless access to
-                  the city`s civic, lifestyle, and institutional landmarks. 
+                  Ananta blends timeless heritage with refined modern living.
                 </p>
               </div>
             </div>
@@ -137,20 +136,17 @@ const InnerImgContant = () => {
                   height={1000}
                   alt="Cont_Img2"
                 /> */}
-                <img  className="w-full h-full object-cover object-center innerImgCont2Img scale-[1.5]" src="/Img/ContImg2.webp" alt="" />
+                <img  className="w-full h-full object-cover object-center innerImgCont2Img scale-[1.5]" src="/Img/Kowdiar.png" alt="" />
               </div>
 
               {/* Text-Cont */}
               <div className="w-[400px] h-[450px] max-sm:h-[250px] bg-[#F5F3EA91] p-[30px] max-sm:px-[40px]  flex flex-col justify-between max-sm:w-full">
                 <p className="text-[30px] leading-[32px] CFF max-sm:text-center text-[#9c6b25] ">
-                  At the Centre of <br className="max-sm:hidden" /> Significance.
+                  At THE HEART OF CITY’S SACRED <br className="max-sm:hidden" /> Heritag 
                 </p>
 
                 <p className="text-[20px] leading-[22px]  max-sm:text-[15px] max-sm:leading-[16px] text-center STF text-[#9c6b25] ">
-                  This neighbourhood is home to iconic temples, historic
-                  institutions, and a sense of dignity that has shaped the citys
-                  identity through generations. Within this storied setting,
-                  Ananta finds its place.
+                 Neighboring the Travancore Palace lies a precinct shaped by centuries of devotion and royal legacy. Here, heritage and modern life meet with quiet dignity, an address held by generations, reserved for a discerning few.
                 </p>
               </div>
             </div>
@@ -172,14 +168,13 @@ const InnerImgContant = () => {
                 height={1000}
                 alt="Cont_Img3"
               /> */}
-              <img src="/Img/ContImg3.webp" className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]" alt="load" />
+              <img src="/Img/amenities/AImg3.webp" className="w-full h-full object-cover object-center innerImgCont3Img scale-[1.5]" alt="load" />
             </div>
 
             {/* Text */}
             <div className=" w-[250px] h-[150px] bg-[#F5F3EA91] flex justify-center items-center px-[30px] max-sm:px-[40px] md:py-[80px] max-sm:w-full">
               <p className="text-[18px] leading-[20px]  max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25] STF text-center">
-                Beyond its heritage, the location offers seamless access to the
-                city`s civic, lifestyle, and institutional landmarks. 
+               Deep, thoughtfully proportioned balconies that frame the skyline and invite uninterrupted calm.
               </p>
             </div>
 

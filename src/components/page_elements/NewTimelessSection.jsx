@@ -214,12 +214,11 @@ const NewTimelessSection = () => {
         {/* Div-1-L-Side */}
         <div className="w-[350px] tc_1 h-fit absolute top-[12%] left-[5%] flex flex-col px-[25px] gap-[41px] translate-y-[25px] text-[#9c6b25] opacity-0">
           <h1 className="CFF text-[42px] leading-[44px] capitalize">
-            4,300 sq.ft{" "}
+            4,372 sq.ft{" "}
            
           </h1>
           <p className=" STF capitalize text-[20px] leading-[20px]">
-            single-level sky residences with 4 en-suite bedrooms, a family
-            lounge, staff room, utility, and expansive balconies.
+            A single residence per floor - expansive, efficient, and intuitively planned. Every space opens naturally, allowing light and movement to define the home.
            
           </p>
         </div>
@@ -292,11 +291,10 @@ const NewTimelessSection = () => {
         {/* Div-1-L-Side */}
         <div data-aos="fade-up" className="w-[95%] tc_1 h-fit  flex flex-col px-[25px] gap-[44px]  text-[#9c6b25] bg-[#F5F3EAF0] py-[20px]">
           <h1 className="CFF text-[32px] leading-[44px] max-sm:text-[32px] max-sm:leading-[32px] capitalize">
-            4,300 sq.ft{" "}
+             4,372 sq.ft{" "}
           </h1>
           <p className=" STF capitalize text-[14px] leading-[16px]">
-            single-level sky residences with 4 en-suite bedrooms, a family
-            lounge, staff room, utility, and expansive balconies.
+             A single residence per floor - expansive, efficient, and intuitively planned. Every space opens naturally, allowing light and movement to define the home.
           </p>
         </div>
 

@@ -1,0 +1,72 @@
+export const siteConfig = {
+  name: "Ananta",
+  description:
+    "Ananta by Elite Developers offers exclusive 4-bedroom sky villas in the heart of Thiruvananthapuram. One residence per floor, 4372 sq ft, rooftop pool & world-class amenities. RERA registered. Book your private preview today.",
+  url: "https://ananta-five.vercel.app/",
+  locale: "en_IN",
+  language: "en-IN",
+  ogImage: "/og.png",
+  keywords: [
+    "Ananta luxury residence",
+    "Luxury apartments in Thiruvananthapuram",
+    "Premium homes in Thiruvananthapuram",
+    "One home per floor residence",
+    "Luxury living Kerala",
+    "Exclusive apartments Kerala",
+    "Modern luxury homes Thiruvananthapuram",
+    "High-end residences Kerala",
+    "Luxury real estate Thiruvananthapuram",
+    "Private luxury apartments",
+    "Architectural luxury homes",
+    "Premium residential project Kerala",
+    "Elegant homes Thiruvananthapuram",
+    "Legacy homes Kerala",
+    "Spacious luxury apartments",
+    "Refined living spaces",
+    "Luxury lifestyle Kerala",
+    "Contemporary residences India",
+    "Exclusive floor residences",
+    "Luxury property Kerala",
+  ],
+  contact: {
+    phone: "+91 9946811111",
+    email: "info@elitehomesindia.co.in",
+  },
+  address: {
+    street: "Elite Gardenia Hills, Near Reliance Petrol Pump, Puzhakkal PO",
+    city: "Thrissur",
+    state: "Kerala",
+    postalCode: "680553",
+    country: "IN",
+  },
+  socials: {
+    facebook: "",
+    instagram: "",
+    twitter: "",
+    linkedin: "",
+  },
+};
+
+export const siteRoutes = [
+  {
+    path: "/",
+    label: "Home",
+    title: "Ananta by Elite — Luxury Sky Villas in Thiruvananthapuram",
+    description: siteConfig.description,
+    priority: 1,
+  },
+  // {
+  //   path: "/about",
+  //   label: "About",
+  //   title: "About",
+  //   description: "",
+  //   priority: 0.8,
+  // },
+  // {
+  //   path: "/contact",
+  //   label: "Contact",
+  //   title: "Contact",
+  //   description: "",
+  //   priority: 0.7,
+  // },
+];

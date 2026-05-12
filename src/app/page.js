@@ -1,68 +1,15 @@
-'use client'
-import BTN from "@/components/common/BTN";
-import Footer from "@/components/common/Footer";
-import AmenitiesSection from "@/components/page_elements/AmenitiesSection";
-import BgWhiteHoverComponent from "@/components/page_elements/BgWhiteHoverComponent";
-import CraftedSection from "@/components/page_elements/CraftedSection";
-import EdgeSection from "@/components/page_elements/EdgeSection";
-import FormSection from "@/components/page_elements/FormSection";
-import HeroSection from "@/components/page_elements/HeroSection";
-import ImelessSection from "@/components/page_elements/ImelessSection";
-import LegacyComponent from "@/components/page_elements/LegacyComponent";
-import ModrenAra from "@/components/page_elements/ModrenAra";
-import NewAmenitiesSection from "@/components/page_elements/NewAmenitiesSection";
-import NewTimelessSection from "@/components/page_elements/NewTimelessSection";
-import PrecinctSection from "@/components/page_elements/PrecinctSection";
-import ResidenceSection from "@/components/page_elements/ResidenceSection";
+import Home from '@/components/Home'
+import { createPageMetadata } from "@/lib/seo";
 
-export default function Home() {
+const page = () => {
   return (
-    <>
-      {/* ☑️ Full-WebPage-Wraper-Container */}
-      <div className="w-full h-fit flex flex-col relative text-black  ">
-
-        {/* Nav-Btn-Screen BTN */}
-        <div className="w-fit NAVALLOPTION fixed top-[2%] right-[2%] z-100  max-sm:hidden">
-          <a href="#form">
-            <BTN text={"Contact Us"} />
-          </a>
-        </div>
-
-        {/* ☑️ Hero-Section */}
-        <HeroSection />
-
-        {/* Imeless */}
-        {/* <ImelessSection /> */}
-        <NewTimelessSection />
-
-        {/* ☑️ Legacy-Section */}
-        <LegacyComponent />
-
-        {/* ☑️ Precinct-Section */}
-        <PrecinctSection />
-
-        {/* ☑️ Modren Ara */}
-        <ModrenAra />
-
-        {/* ☑️ Residence-Section */}
-        <ResidenceSection />
-
-        {/* ☑️ Amenities-Section */}
-        {/* <AmenitiesSection /> */}
-        <NewAmenitiesSection />
-
-        {/* Crafted Section */}
-        <CraftedSection />
-
-        {/* ☑️ EdgeSection */}
-        <EdgeSection />
-
-        {/* ☑️ Form-Section */}
-        <FormSection />
-
-        {/* ☑️ Footer */}
-        <Footer />
-      </div>
-    </>
-  );
+    <Home/>
+  )
 }
+
+export default page
+
+export async function generateMetadata() {
+  return createPageMetadata("/");
+}
+

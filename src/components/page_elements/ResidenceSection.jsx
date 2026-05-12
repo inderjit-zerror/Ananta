@@ -31,7 +31,7 @@ const ResidenceSection = () => {
           scrub: true,
           // markers:true
         },
-      }
+      },
     );
   }, []);
 
@@ -71,26 +71,26 @@ const ResidenceSection = () => {
           {/* Left-Desc */}
           <div className="w-full max-w-[400px] max-lg:max-w-[300px] flex text-justify STF">
             <p>
-              honour heritage while embracing modern luxury. Its architecture
-              balances classical symmetry with contemporary minimalism, built
-              not just for today but for the next century.
+              A living room designed around proportion and openness. Textural
+              finishes that elevate simplicity into quiet luxury. Seamless
+              transitions between spaces, crafted for intuitive living.
             </p>
           </div>
 
           {/* Right-Desc */}
           <div className="w-full max-w-[400px] max-lg:max-w-[300px] flex text-justify STF">
             <p>
-              honour heritage while embracing modern luxury. Its architecture
-              balances classical symmetry with contemporary minimalism, built
-              not just for today but for the next century.
+              Bedrooms shaped for rest and retreat. Restrooms designed with
+              balance, precision, and serene materiality. A home where privacy,
+              light, and spaciousness come together in quiet harmony.
             </p>
           </div>
         </div>
 
         {/* Small-Info */}
-        <p className="text-white mx-auto mt-[50px] text-[14px] leading-[14px]">
+        {/* <p className="text-white mx-auto mt-[50px] text-[14px] leading-[14px]">
           360° Integrated Design
-        </p>
+        </p> */}
 
         {/* 3D Canvas With Model Container */}
         <Component3DModel />
@@ -128,7 +128,12 @@ const ResidenceSection = () => {
               />
             </div>
 
-            <DownBTN text={"Download Now"} />
+            <a
+              href="/brochure/Ananta.pdf"
+              download
+            >
+            <DownBTN text={"Download Brochure"} />
+            </a>
           </div>
         </div>
       </div>
