@@ -85,7 +85,7 @@ const LegacyComponent = () => {
           repeat: -1,
           delay: randomDelay(),
           ease: "power2.out",
-        }
+        },
       );
     });
 
@@ -151,7 +151,15 @@ const LegacyComponent = () => {
             height={1000}
             alt="Legacy Title"
           />
-          <p className="w-[90%] max-w-[700px] max-sm:w-full text-center STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25]">Set in Kowdiar, Trivandrum’s elite enclave, Elite Ananta offers quick access to Kowdiar Palace, the Golf and Tennis Clubs, and key business districts—while maintaining a calm, tree-lined neighbourhood feel.</p>
+          <p className="w-[90%] max-w-[700px] max-sm:w-full text-center STF text-[20px] leading-[20px] max-sm:text-[15px] max-sm:leading-[16px] text-[#9c6b25]">
+            Ananta reflects the calm, balance, and elegance of
+            Thiruvananthapuram. One home per floor - crafted with light,
+            proportion, and refined detail. A residence not built for display,
+            but for legacy. Built around a simple idea: that true luxury is
+            calm, spacious, and deeply personal. Every curve, every finish,
+            every proportion reflects a design philosophy centred on balance and
+            longevity.
+          </p>
         </div>
 
         {/* Hover Div */}
@@ -173,7 +181,6 @@ const LegacyComponent = () => {
                 height={1000}
                 alt="Intreaction SVG"
               /> */}
-              
 
               {/* HoverDiv1 */}
               <div
