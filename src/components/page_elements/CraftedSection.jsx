@@ -130,7 +130,7 @@ const CraftedSection = () => {
           <div className="w-full h-fit flex justify-between text-white items-end max-sm:flex-col capitalize ">
             {/* IM! */}
             <div className="w-full h-fit max-w-[500px] flex flex-col gap-[31px] ">
-              <h1 className="text-[60px] CFF leading-[62px] max-sm:hidden ">From the house of Elite</h1>
+              <h1 className="text-[60px] CFF leading-[62px] max-sm:hidden ">From <br /> the house of Elite</h1>
               <h1 className="text-[40px] CFF leading-[42px] sm:hidden "> ELITE <br /> DEVELOPERS</h1>
               <p className="text-[20px] STF leading-[20px] max-sm:text-[15px] max-sm:leading-[16px]">
                 Elite Developers, headquartered in Thrissur and a key division

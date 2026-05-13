@@ -76,7 +76,7 @@ const EdgeSection = () => {
               className="h-full w-full object-cover object-center lg:translate-y-[5%]"
             />
 
-            <div className="w-full h-fit absolute top-1/2 -translate-y-1/2 left-0 flex flex-col justify-center items-center px-[20px]">
+            {/* <div className="w-full h-fit absolute top-1/2 -translate-y-1/2 left-0 flex flex-col justify-center items-center px-[20px]">
               
               <img
                 src={`/Img/edge/EdgeLogo.svg`}
@@ -89,12 +89,27 @@ const EdgeSection = () => {
                 <br className="hidden sm:block" />
                 beyond ownership
               </h1>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT SECTION */}
           <div className="w-full lg:w-1/2 h-fit MOVINGCONT flex flex-col justify-center items-center gap-[10vh] lg:gap-[20vh] py-[10vh] lg:py-[20vh] px-[20px] sm:px-[40px]">
             
+             <div className="w-[90%] max-sm:w-full h-fit flex flex-col justify-center ml-auto items-center px-[20px]">
+              
+              {/* <img
+                src={`/Img/edge/EdgeLogo.svg`}
+                alt="LOGO"
+                className="w-[90px] sm:w-[120px] lg:w-[150px]"
+              /> */}
+
+              <h1 className="CFF text-[34px] leading-[38px] sm:text-[48px] sm:leading-[52px] max-md:text-center  lg:text-[60px] lg:leading-[67px] mt-[3vh] text-[#9c6b25]  capitalize">
+                experience excellence
+                <br className="hidden sm:block" />
+                beyond ownership
+              </h1>
+            </div>
+
             {TU.map((item, index) => {
               return (
                 <div
