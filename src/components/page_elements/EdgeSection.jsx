@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +8,9 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const EdgeSection = () => {
+  const sectionRef = useRef(null);
+  const movingRef = useRef(null);
+
   const TU = [
     {
       url: `/Img/edge/V1.svg`,
@@ -42,7 +45,7 @@ const EdgeSection = () => {
     const movingCont = document.querySelector(".MOVINGCONT");
 
     const moveAmount =
-      movingCont.offsetHeight - window.innerHeight;
+      movingCont.getBoundingClientRect().height - window.innerHeight;
 
     gsap.to(".MOVINGCONT", {
       y: -moveAmount,
@@ -62,14 +65,14 @@ const EdgeSection = () => {
 
   return (
     <>
-      <div className="w-full EG_CONT lg:h-[200svh] relative bg-[#F5F3EA]">
-        
+      <div
+        ref={sectionRef}
+        className="w-full EG_CONT lg:h-[200svh] relative bg-[#F5F3EA]"
+      >
         {/* MAIN WRAPPER */}
         <div className="w-full lg:h-[100svh] flex flex-col lg:flex-row lg:sticky top-0 left-0 overflow-hidden">
-          
           {/* LEFT SECTION */}
           <div className="w-full lg:w-1/2 h-[70svh] sm:h-[80svh] lg:h-[100svh] overflow-hidden relative">
-            
             <img
               src={`/Img/edge/EdgeBG.svg`}
               alt="SVG"
@@ -93,10 +96,11 @@ const EdgeSection = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="w-full lg:w-1/2 h-fit MOVINGCONT flex flex-col justify-center items-center gap-[10vh] lg:gap-[20vh] py-[10vh] lg:py-[20vh] px-[20px] sm:px-[40px]">
-            
-             <div className="w-[90%] max-sm:w-full h-fit flex flex-col justify-center ml-auto items-center px-[20px]">
-              
+          <div
+            ref={movingRef}
+            className="w-full lg:w-1/2 h-fit MOVINGCONT flex flex-col justify-center items-center gap-[10vh] lg:gap-[20vh] py-[10vh] lg:py-[20vh] px-[20px] sm:px-[40px]"
+          >
+            <div className="w-[90%] max-sm:w-full h-fit flex flex-col justify-center ml-auto items-center px-[20px]">
               {/* <img
                 src={`/Img/edge/EdgeLogo.svg`}
                 alt="LOGO"
@@ -116,9 +120,7 @@ const EdgeSection = () => {
                   key={index}
                   className="w-full max-w-full sm:max-w-[500px] lg:max-w-[380px] xl:max-w-[420px] flex flex-col"
                 >
-                  
                   <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] flex justify-center items-center mb-[25px]">
-                    
                     <img
                       src={item.url}
                       alt="ICON"
@@ -127,7 +129,6 @@ const EdgeSection = () => {
                   </div>
 
                   <div className="w-full flex flex-col">
-                    
                     <div className="CFF text-[20px] leading-[24px] sm:text-[24px] sm:leading-[30px] text-[#9c6b25]">
                       {item.text}
                     </div>
