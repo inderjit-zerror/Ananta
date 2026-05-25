@@ -55,8 +55,16 @@ const HeroSection = () => {
         autoPlay
         playsInline
         loop
-        className="heroVideo brightness-100 w-full h-full object-cover"
-        src={"/video/BgVideo1.mp4"}
+        className="heroVideo brightness-100 w-full h-full object-cover max-sm:hidden"
+        src={"/video/FullVideo.mp4"}
+      ></video>
+      <video
+        muted
+        autoPlay
+        playsInline
+        loop
+        className="heroVideo brightness-100 w-full h-full object-cover sm:hidden"
+        src={"/video/SMVIDEO.mp4"}
       ></video>
 
       <div className="w-full h-fit flex justify-center items-center absolute top-[70%] left-0 sm:hidden">
