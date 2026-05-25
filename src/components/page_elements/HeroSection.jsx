@@ -86,7 +86,7 @@ const HeroSection = () => {
        delay:0.7,
       scale:1,
       duration:1,
-      ease: "none",
+      ease: "power2.inOut",
     },'a')
   },[])
 
