@@ -80,7 +80,7 @@ const HeroSection = () => {
        delay:0.7,
       translateY:"0%",
       duration:1,
-      ease: "power2.Out",
+      ease: "power2.inOut",
     },'a')
     preTFT.to('.VDO',{
        delay:0.7,
