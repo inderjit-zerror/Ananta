@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
       > 
-        <IntroLoader />
+        {/* <IntroLoader /> */}
         <Suspense fallback={null}>
           <SmoothScrolling />
         </Suspense>

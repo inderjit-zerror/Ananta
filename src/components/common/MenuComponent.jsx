@@ -124,7 +124,7 @@ const MenuComponent = ({ navStatus, SetNavStatus }) => {
   }, [navStatus]);
 
   return (
-    <div className="MenuMainCont  w-full h-[100dvh] fixed top-[0%] gap-[30px] left-[0%] z-[98] bg-[#F5F3EA] flex flex-col justify-center items-center overflow-hidden  mix-blend-normal">
+    <div className="MenuMainCont  w-full h-[100dvh] md:hidden fixed top-[0%] gap-[30px] left-[0%] z-[98] bg-[#F5F3EA] flex flex-col justify-center items-center overflow-hidden  mix-blend-normal">
       
       {/* Menu1 */}
       <div
