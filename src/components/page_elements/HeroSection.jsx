@@ -151,7 +151,7 @@ const HeroSection = () => {
             playsInline
             loop
             preload="auto"
-            className="heroVideo brightness-100 VDO scale-[5] w-full h-full object-cover sm:hidden"
+            className="heroVideo brightness-100 VDO scale-[3] w-full h-full object-cover sm:hidden"
             src="/video/SMVIDEO.mp4"
           />
 
