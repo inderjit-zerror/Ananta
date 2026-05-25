@@ -64,7 +64,7 @@ const HeroSection = () => {
     // PreTFT
     const preTFT = gsap.timeline()
     preTFT.to('.PRETXT',{
-      delay:0.5,
+      delay:0.2,
       opacity:1,
       duration:1,
       stagger:0.2,
@@ -80,13 +80,13 @@ const HeroSection = () => {
        delay:0.7,
       translateY:"0%",
       duration:1,
-      ease: "power3.inOut",
+      ease: "power2.Out",
     },'a')
     preTFT.to('.VDO',{
        delay:0.7,
       scale:1,
       duration:1,
-      ease: "power3.inOut",
+      ease: "none",
     },'a')
   },[])
 
