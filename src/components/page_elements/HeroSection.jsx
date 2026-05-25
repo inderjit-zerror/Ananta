@@ -8,20 +8,20 @@ import { HiMiniPlay } from "react-icons/hi2";
 import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import Link from "next/link";
 
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HeroSection = () => {
-  // CRITICAL FIX: Start as TRUE (muted) so browsers allow autoplay.
   const [isMuted, setIsMuted] = useState(true);
 
   const desktopVideoRef = useRef(null);
   const mobileVideoRef = useRef(null);
 
+  // -----------------------------
+  // VIDEO AUTOPLAY
+  // -----------------------------
   useEffect(() => {
     const playVideos = async () => {
       try {
-        // We keep them muted initially to guarantee autoplay success
         if (desktopVideoRef.current) {
           desktopVideoRef.current.muted = true;
           await desktopVideoRef.current.play();
@@ -37,62 +37,158 @@ const HeroSection = () => {
     };
 
     playVideos();
+  }, []);
 
-    // Disable GSAP animation on mobile
+  // -----------------------------
+  // HERO SCROLL ANIMATION
+  // -----------------------------
+  useGSAP(() => {
     if (window.innerWidth < 1024) return;
 
     gsap.to(".heroVideo", {
-      y: 400,
-      scale: 1.2,
+      y: 350,
+      scale: 1.15,
       filter: "brightness(0)",
-      ease: "linear",
+      ease: "none",
+      force3D: true,
       scrollTrigger: {
         trigger: ".HeroSectionCont",
         start: "top top",
         end: "bottom top",
-        scrub: true,
+        scrub: 1.2,
+      },
+    });
+  });
+
+  // -----------------------------
+  // PRELOADER ANIMATION
+  // -----------------------------
+  useGSAP(() => {
+    // Better GPU acceleration
+    gsap.set(".PRETXT", {
+      opacity: 0,
+      y: 50,
+      force3D: true,
+    });
+
+    gsap.set(".VVVVV", {
+      yPercent: 100,
+      force3D: true,
+    });
+
+    gsap.set(".VDO", {
+      scale: 1.4,
+      force3D: true,
+    });
+
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "power3.out",
       },
     });
 
+    // Text Reveal
+    tl.to(".PRETXT", {
+      delay: 0.5,
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      stagger: {
+        each: 0.12,
+      },
+    });
 
+    // Smooth Pause
+    tl.to({}, { duration: 0.3 });
 
-    
+    // Text Hide
+    tl.to(
+      ".PRETXT",
+      {
+        opacity: 0,
+        y: -50,
+        duration: 0.9,
+        stagger: {
+          each: 0.06,
+          from: "end",
+        },
+        ease: "power2.inOut",
+      },
+      "start",
+    );
+    tl.to(
+      ".VVVVV",
+      {
+        opacity: 1,
+      },
+      "start",
+    );
 
-  }, []);
+    // Wrapper Reveal
+    tl.to(
+      ".VVVVV",
+      {
+        yPercent: 0,
+        duration: 1.6,
+        ease: "expo.inOut",
+        force3D: true,
+      },
+      "start",
+    );
 
-  useEffect(()=>{
-    // PreTFT
-    const preTFT = gsap.timeline()
-    preTFT.to('.PRETXT',{
-      delay:0.2,
-      opacity:1,
-      duration:1,
-      stagger:0.2,
+    // Video Zoom Smooth
+    tl.to(
+      ".VDO",
+      {
+        scale: 1,
+        duration: 1.8,
+        ease: "expo.out",
+        force3D: true,
+      },
+      "start",
+    );
+  });
+
+  useGSAP(() => {
+    // if (window.innerWidth < 1024) return;
+
+    gsap.to(".heroVideo", {
+      y: 350,
+      scale: 1.15,
+      filter: "brightness(0)",
       ease: "none",
-    })
-    preTFT.to('.PRETXT',{
-       delay:0.7,
-      opacity:0,
-      duration:1,
-      ease: "none",
-    },'a')
-    preTFT.to('.VVVVV',{
-       delay:0.7,
-      translateY:"0%",
-      duration:1,
-      ease: "power2.inOut",
-    },'a')
-    preTFT.to('.VDO',{
-       delay:0.7,
-      scale:1,
-      duration:1,
-      ease: "power2.inOut",
-    },'a')
-  },[])
+      force3D: true,
+      scrollTrigger: {
+        trigger: ".HeroSectionCont",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1.2,
 
-  // Toggle Sound Handler
+        // 🔥 When bottom touches top
+        onLeave: () => {
+          // Only mute if sound is ON
+          if (!isMuted) {
+            setIsMuted(true);
+
+            if (desktopVideoRef.current) {
+              desktopVideoRef.current.muted = true;
+            }
+
+            if (mobileVideoRef.current) {
+              mobileVideoRef.current.muted = true;
+            }
+          }
+        },
+      },
+    });
+  }, [isMuted]);
+
+  // -----------------------------
+  // SOUND TOGGLE
+  // -----------------------------
   const toggleMute = () => {
     const newMuteState = !isMuted;
+
     setIsMuted(newMuteState);
 
     if (desktopVideoRef.current) {
@@ -104,129 +200,137 @@ const HeroSection = () => {
     }
   };
 
-  // Flower Rotate Animations
+  // -----------------------------
+  // FLOWER ANIMATION
+  // -----------------------------
   const RotateFLowerActive = () => {
     gsap.to(".fl", {
-      rotateZ: "360deg",
+      rotate: 360,
       duration: 0.7,
-      ease: "linear",
+      ease: "power2.out",
     });
   };
 
   const RotateFLowerDeActive = () => {
     gsap.to(".fl", {
-      rotateZ: "0deg",
+      rotate: 0,
       duration: 0.7,
-      ease: "linear",
+      ease: "power2.out",
     });
   };
 
   return (
-    <>
-      <div className="HeroSectionCont w-full h-[100svh] relative overflow-hidden z-50  bg-[#F5F3EA]">
-        <div className="w-full h-full absolute top-0 left-0 CFF text-[2rem] text-[#9C6B25] sm:text-[2.5rem] flex gap-2 justify-center items-center z-49">
-          <p className="PRETXT opacity-0">Ananta</p>
-          <p className="PRETXT opacity-0">By</p>
-          <p className="PRETXT opacity-0">Elite.</p>
+    <div className="HeroSectionCont relative w-full h-[100svh] overflow-hidden bg-[#F5F3EA] z-50">
+      {/* PRELOADER TEXT */}
+      <div className="absolute inset-0 z-[60] flex items-center justify-center gap-2 text-[2rem] sm:text-[2.5rem] text-[#9C6B25] CFF pointer-events-none">
+        <p className="PRETXT opacity-0 transform-gpu will-change-transform">
+          Ananta
+        </p>
+
+        <p className="PRETXT opacity-0 transform-gpu will-change-transform">
+          By
+        </p>
+
+        <p className="PRETXT opacity-0 transform-gpu will-change-transform">
+          Elite.
+        </p>
+      </div>
+
+      {/* VIDEO WRAPPER */}
+      <div className="VVVVV relative w-full h-full overflow-hidden  transform-gpu will-change-transform opacity-0">
+        {/* Desktop Video */}
+        <video
+          ref={desktopVideoRef}
+          muted={isMuted}
+          autoPlay
+          loop
+          playsInline
+          preload="auto"
+          className="heroVideo VDO w-full h-full object-cover brightness-100 scale-[1.4] max-sm:hidden transform-gpu will-change-transform"
+          src="/video/FullVideo.mp4"
+        />
+
+        {/* Mobile Video */}
+        <video
+          ref={mobileVideoRef}
+          muted={isMuted}
+          autoPlay
+          loop
+          playsInline
+          preload="auto"
+          className="heroVideo VDO w-full h-full object-cover brightness-100 scale-[1.8] sm:hidden transform-gpu will-change-transform"
+          src="/video/SMVIDEO.mp4"
+        />
+
+        {/* SOUND BUTTON */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-[2rem] left-[2rem] z-[100] flex justify-center items-center w-[3rem] h-[3rem] max-md:w-[2.7rem] max-md:h-[2.7rem] rounded-full border border-white/20 bg-black/30 backdrop-blur-md text-white hover:bg-[#B18446] transition-all duration-300"
+        >
+          {isMuted ? (
+            <HiSpeakerXMark className="text-[1.4rem]" />
+          ) : (
+            <HiSpeakerWave className="text-[1.4rem]" />
+          )}
+        </button>
+
+        {/* CONTACT BUTTON MOBILE */}
+        <div className="absolute top-[70%] left-0 w-full flex justify-center sm:hidden">
+          <div className="w-fit">
+            <a href="#form">
+              <div
+                onMouseEnter={RotateFLowerActive}
+                onMouseLeave={RotateFLowerDeActive}
+                className="flex items-center justify-center gap-[10px] px-[20px] py-[15px] bg-white text-[#B3976E] cursor-pointer select-none"
+              >
+                <img
+                  className="h-[18px] fl"
+                  src="/data/Flower2.svg"
+                  alt="Flower"
+                />
+
+                <p className="text-[0.875rem] FSB">Contact Us</p>
+
+                <img
+                  className="h-[18px] fl"
+                  src="/data/Flower2.svg"
+                  alt="Flower"
+                />
+              </div>
+            </a>
+          </div>
         </div>
 
-        <div className=" w-full h-full relative VVVVV overflow-hidden translate-y-[-150%] z-50">
-          {/* Desktop Video */}
-          <video
-            ref={desktopVideoRef}
-            muted={isMuted}
-            autoPlay
-            playsInline
-            loop
-            preload="auto"
-            className="heroVideo brightness-100 VDO scale-[2] w-full h-full object-cover max-sm:hidden"
-            src="/video/FullVideo.mp4"
-          />
+        {/* WATCH VIDEO BUTTON */}
+        <Link
+          href="/video"
+          className="absolute bottom-8 right-8 max-md:bottom-4 max-md:right-4 z-[100] group"
+        >
+          <div className="relative overflow-hidden border border-white/20 cursor-pointer">
+            {/* Thumbnail */}
+            <img
+              src="/Img/VideoPlayBackIMG.png"
+              alt="Watch Full Video"
+              className="w-[220px] h-[130px] max-md:w-[140px] max-md:h-[80px] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
 
-          {/* Mobile Video */}
-          <video
-            ref={mobileVideoRef}
-            muted={isMuted}
-            autoPlay
-            playsInline
-            loop
-            preload="auto"
-            className="heroVideo brightness-100 VDO scale-[3] w-full h-full object-cover sm:hidden"
-            src="/video/SMVIDEO.mp4"
-          />
+            {/* Play Icon */}
+            <div className="absolute inset-0 flex items-center justify-center max-md:scale-75">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full border border-white/30 bg-white/20 backdrop-blur-md group-hover:bg-[#B18446] transition-all duration-300">
+                <HiMiniPlay className="text-white text-2xl ml-1" />
+              </div>
+            </div>
 
-          {/* Sound Button */}
-          <button
-            onClick={toggleMute}
-            className="absolute bottom-[2rem] left-[2rem] z-[100] w-[3rem] h-[3rem] rounded-full bg-black/30 backdrop-blur-md border border-white/20 text-white flex justify-center items-center hover:bg-[#B18446] transition-all duration-300 max-md:w-[2.7rem] max-md:h-[2.7rem]"
-          >
-            {isMuted ? (
-              <HiSpeakerXMark className="text-[1.4rem]" />
-            ) : (
-              <HiSpeakerWave className="text-[1.4rem]" />
-            )}
-          </button>
-
-          {/* Contact Button Mobile */}
-          <div className="w-full h-fit flex justify-center items-center absolute top-[70%] left-0 sm:hidden">
-            <div className="w-[20%] flex justify-end max-[1030]:w-full lg:w-full max-sm:w-fit">
-              <a href="#form">
-                <div
-                  onMouseEnter={RotateFLowerActive}
-                  onMouseLeave={RotateFLowerDeActive}
-                  className="bg-[#ffffff] text-[#B3976E] w-fit h-fit px-[10px] py-[10px] FSB select-none cursor-pointer flex gap-[10px] justify-center items-center max-sm:px-[20px] max-sm:py-[15px]"
-                >
-                  <img
-                    className="h-[18px] fl"
-                    src="/data/Flower2.svg"
-                    alt="Flower"
-                  />
-
-                  <p className="text-[0.875rem] max-[1030]:text-[0.8rem]">
-                    Contact Us
-                  </p>
-
-                  <img
-                    className="h-[18px] fl"
-                    src="/data/Flower2.svg"
-                    alt="Flower"
-                  />
-                </div>
-              </a>
+            {/* Text */}
+            <div className="absolute bottom-1 left-4 text-white max-md:hidden">
+              <p className="text-sm tracking-tight FSB opacity-90">
+                Watch Full Video
+              </p>
             </div>
           </div>
-
-          {/* Bottom Right Video Button */}
-          <Link
-            href="/video"
-            className="absolute bottom-8 right-8 max-md:bottom-4 max-md:right-4 z-[100] group"
-          >
-            <div className="relative overflow-hidden border border-white/20 cursor-pointer">
-              {/* Thumbnail */}
-              <img
-                src="/Img/VideoPlayBackIMG.png"
-                alt="Watch Full Video"
-                className="w-[220px] h-[130px] max-md:w-[140px] max-md:h-[80px] object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-
-              {/* Play Icon */}
-              <div className="absolute inset-0 flex items-center justify-center max-md:scale-75">
-                <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#B18446] transition-all duration-300">
-                  <HiMiniPlay className="text-white text-2xl ml-1" />
-                </div>
-              </div>
-
-              {/* Text */}
-              <div className="absolute bottom-1 left-4 text-white max-md:hidden">
-                <p className="text-sm tracking-tight FSB opacity-90">
-                  Watch Full Video
-                </p>
-              </div>
-            </div>
-          </Link>
-        </div>
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 
